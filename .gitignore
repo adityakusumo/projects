@@ -1,0 +1,26 @@
+# --- KiCad Temporary and Backup Files ---
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+
+# --- Netlist and Intermediate Files ---
+*.net
+*.xml
+
+# --- Board Manufacture Files (Gerbers) ---
+# It is usually better to generate these fresh, but
+# uncomment the line below if you want to ignore the whole directory
+# /plots/
+
+# --- Output and Log Files ---
+*.log
+*.erc
+*.drc
+*.rpt
+
+# --- Lock files (created when a file is open) ---
+*.lck
