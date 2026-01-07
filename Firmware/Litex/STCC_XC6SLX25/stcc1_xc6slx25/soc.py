@@ -8,6 +8,7 @@ from litex.soc.cores.gpio import *
 from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
 from litex.soc.cores.led import LedChaser
+from litex.soc.interconnect.csr import *
 from litex.soc.doc import generate_docs
 
 from litex.build.parser import LiteXArgumentParser
@@ -29,27 +30,54 @@ class CRG(Module):
         self.comb += self.cd_sys.clk.eq(clk)
         self.specials += AsyncResetSynchronizer(self.cd_sys, ~rst_n)
 
-# Create a led blinker module
-class Blink(Module):
-    def __init__(self, led):
-        self.counter = Signal(26)
+# # Create a led blinker module
+# class Blink(Module):
+#     def __init__(self, led):
+#         self.counter = Signal(26)
         
-        # combinatorial assignment
-        self.comb += [
-            led.eq(self.counter[20])
+#         # combinatorial assignment
+#         self.comb += [
+#             led.eq(self.counter[25])
+#         ]
+        
+#         # synchronous assignment
+#         self.sync += self.counter.eq(self.counter + 1)
+
+class LEDDriver(Module, AutoCSR):
+    def __init__(self, led_pin):
+        self.output = CSRStorage(1, description="LED Control Register")
+        # drive the passed led_pin with constant 1 (High)
+        self.comb += led_pin.eq(self.output.storage)
+        
+class MyModule(Module, AutoCSR):
+    def __init__(self, sys_clk_freq):
+        # 1. Define a CSRStatus so the CPU can read the counter value
+        self.count_out = CSRStatus(3, description="1Hz Counter (0-7)")
+        
+        # 2. Define our internal signals
+        counter = Signal(3)
+        timer = Signal(max=int(sys_clk_freq)) # Counter to track the 1s interval
+
+        # 3. Synchronous Logic (Sequential)
+        self.sync += [
+            If(timer == int(sys_clk_freq) - 1,
+                timer.eq(0),            # Reset timer after 1 second
+                counter.eq(counter + 1) # Increment our 3-bit counter
+            ).Else(
+                timer.eq(timer + 1)     # Keep counting clock cycles
+            )
         ]
+
+        # 4. Connect the internal counter to the CSRStatus
+        self.comb += self.count_out.status.eq(counter)
         
-        # synchronous assignment
-        self.sync += self.counter.eq(self.counter + 1)
-
-
 # BaseSoC ------------------------------------------------------------------------------------------
 class BaseSoC(SoCCore):
     def __init__(self, sys_clk_freq=int(50e6), toolchain="ise", **kwargs):
 
         platform = spartan6_board.Platform(toolchain=toolchain)
 
-        # kwargs["integrated_rom_size"] = 0xC000
+        kwargs["integrated_rom_size"] = 0x10000
         
         SoCCore.__init__(self, platform, sys_clk_freq,      
             ident                   = "LiteX SoC on Spartan6.",
@@ -59,12 +87,10 @@ class BaseSoC(SoCCore):
         self.submodules.crg = CRG(platform, sys_clk_freq)
         
         # RAM for BootLoader -----------------------------------------------------------------------
-        BASE_MEM1_ORIGIN        = 0x60000000
+        BASE_MEM1_ORIGIN        = 0x40000000
         self.add_ram(name="main_ram", origin=BASE_MEM1_ORIGIN, size=32*kB)          
-
-        # ledsanim = LedsAnim(pads=platform.request_all("user_led"), sys_clk_freq=sys_clk_freq, period=0.03)
-        # self.submodules.ledsanim = ledsanim
-        # self.add_csr("ledsanim")
+     
+        self.other_signals = Signal(3)
         
         # self.leds = LedChaser(
         #         pads         = platform.request_all("user_led"),
@@ -77,10 +103,22 @@ class BaseSoC(SoCCore):
         pad_i2c = platform.request("i2c", 0)
         self.submodules.i2c = LiteI2C(pads=pad_i2c, sys_clk_freq=sys_clk_freq)
 
-        #blink led
-        led1 = platform.request("user_led", 0)
-        self.submodules.blink = Blink(led1)
-                 
+        # #blink led
+        # led1 = platform.request("user_led", 0)
+        # self.submodules.blink = Blink(led1)
+        
+        led = platform.request("user_led", 0) # Requests the first LED from platform
+        # self.submodules.led_drive = LEDDriver(led)   
+        
+        # CSRs.
+        self.ctrl = CSRStorage(4, description="4-bit Control Bus")
+        self.comb += [
+            led.eq(self.ctrl.storage[0]),           # 1st bit
+            self.other_signals.eq(self.ctrl.storage[1:4])    # 2nd through 4th bits
+        ]
+        
+        self.submodules.my_module = MyModule(sys_clk_freq=int(50e6))
+                        
 
 # Build --------------------------------------------------------------------------------------------
 def main():    

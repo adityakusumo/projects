@@ -92,7 +92,7 @@ case "$1" in
         fi
         ;;
     all)
-        $0 c && $0 f
+        $0 b && $0 m && $0 f
         ;;
     h|--help)
         show_help

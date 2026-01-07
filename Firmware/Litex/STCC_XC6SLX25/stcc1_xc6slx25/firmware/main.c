@@ -109,19 +109,33 @@ void i2c_scan(void)
     }
 }
 
+void check_hardware_value(void) {
+    char buffer[64];
+    
+    // Read the value driven by the Migen logic
+    uint32_t hw_val = my_module_count_out_read();
+    
+    // Format and print it
+    snprintf(buffer, sizeof(buffer), "Value from Migen: 0x%lx\n", hw_val);
+    
+    // Output to your console
+    printf("%s", buffer);
+}
+
 int main(void)
 {
     char buffer[32];
 
     uart_init();
-    printf("i love anomali sawit >< <3\n\r");
+    printf("i love sawit!!! >< <3\n\r");
 
     i2c_master_active_write(1);
 
     while (1)
     {
-
         snprintf(buffer, sizeof(buffer), "qiuqiu");
+        check_hardware_value();
+        main_ctrl_write(!main_ctrl_read());
         uart_write_word(buffer);
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x17, 0x02);
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x00, 0x1E);
