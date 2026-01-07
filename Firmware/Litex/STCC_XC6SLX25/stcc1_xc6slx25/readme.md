@@ -61,4 +61,5 @@ Executing booted program at 0x60000000
 --============= Liftoff! ===============--
 
 i love anomali sawit >< <3
+
 qiuqiu
