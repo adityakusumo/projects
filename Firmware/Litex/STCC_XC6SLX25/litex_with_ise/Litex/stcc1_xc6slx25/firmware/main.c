@@ -109,44 +109,59 @@ void i2c_scan(void)
     }
 }
 
-void check_hardware_value(void) {
+void check_hardware_value(void)
+{
     char buffer[64];
-    
+
     // Read the value driven by the Migen logic
     uint32_t hw_val = my_module_count_out_read();
-    
+
     // Format and print it
     snprintf(buffer, sizeof(buffer), "Value from Migen: 0x%lx\n", hw_val);
-    
+
     // Output to your console
     printf("%s", buffer);
 }
 
 uint8_t shift_pos = 0;
+void vga_color_control(void)
+{
+    // Calculate the value: 0xFF shifted by 0, 8, or 16 bits
+    uint32_t color_val = (0xAA << (shift_pos * 4));
+    main_ctrl_reg_write(color_val);
+    // main_ctrl_reg_write(0x7FFFF0);
+    
+    // Increment position: 0 -> 1 -> 2 -> 0...
+    shift_pos++;
+    if (shift_pos > 5)
+    {
+        shift_pos = 0;
+    }
+}
 
 int main(void)
 {
     char buffer[32];
 
     uart_init();
-    printf("i love sawit >< <3\n\r");
+    printf("i love sawit menn >< <3\n\r");
 
     i2c_master_active_write(1);
 
     while (1)
     {
-        // Calculate the value: 0xFF shifted by 0, 8, or 16 bits
-        uint32_t color_val = (0xFF << (shift_pos * 4));
-        main_ctrl_reg_write(color_val);
-        // Increment position: 0 -> 1 -> 2 -> 0...
-        shift_pos++;
-        if (shift_pos > 5) {
-            shift_pos = 0;
-        }     
-        // main_ctrl_reg_write(0x7FFFF0);   
-        snprintf(buffer, sizeof(buffer), "qiuqiu");
+        vga_color_control();
+        // snprintf(buffer, sizeof(buffer), "qiuqiu");
         check_hardware_value();
-        main_ctrl_write(!main_ctrl_read());
+        // main_ctrl_write(!main_ctrl_read());
+        if (main_button_read())
+        {
+            main_ctrl_write(0);
+        }
+        else
+        {
+            main_ctrl_write(1);
+        }
         uart_write_word(buffer);
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x17, 0x02);
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x00, 0x1E);
@@ -157,7 +172,7 @@ int main(void)
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x8D, 0x8A);
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x8E, 0x09);
         adv7391_write(ADV7390_SLAVE_ADDRESS_WRITE, 0x8F, 0x2A);
-        busy_wait(100);
+        busy_wait(50);
     }
 
     return 0;

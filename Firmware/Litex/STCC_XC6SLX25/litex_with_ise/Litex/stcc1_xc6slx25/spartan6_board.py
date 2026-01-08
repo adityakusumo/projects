@@ -14,8 +14,8 @@ _io = [
     # ("user_led", 1, Pins("P118"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),   
     
     # Button
+    ("rst_btn", 0, Pins("M12"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),  
     ("user_btn", 0, Pins("T6"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),  
-    # ("user_btn", 1, Pins("P123"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),  
 
     # Serial
     ("serial", 0,

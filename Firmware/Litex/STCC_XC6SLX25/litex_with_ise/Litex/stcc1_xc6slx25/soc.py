@@ -26,7 +26,7 @@ class CRG(Module):
         self.clock_domains.cd_sys = ClockDomain()
 
         clk = platform.request("clk100")
-        rst_n = platform.request("user_btn", 0) # Menjadikan button0 sebagai reset
+        rst_n = platform.request("rst_btn", 0) # Menjadikan button0 sebagai reset
 
         self.comb += self.cd_sys.clk.eq(clk)
         self.specials += AsyncResetSynchronizer(self.cd_sys, ~rst_n)
@@ -107,31 +107,34 @@ class BaseSoC(SoCCore):
         # #blink led
         # led1 = platform.request("user_led", 0)
         # self.submodules.blink = Blink(led1)
+
+        # Push Button input
+        user_button = platform.request("user_btn")
         
+        # Led output
         led = platform.request("user_led", 0) # Requests the first LED from platform
         # self.submodules.led_drive = LEDDriver(led)   
         
         # CSRs   
         # Led CSR - From Firmware to Hardware
-        self.ctrl = CSRStorage(4, description="4-bit Control Bus")
-        self.comb += [
-            led.eq(self.ctrl.storage[0]),           # 1st bit
-            self.other_signals.eq(self.ctrl.storage[1:4])    # 2nd through 4th bits
-        ]
+        self.ctrl = CSRStorage(1, description="1-bit CSR LED")
+        self.comb += led.eq(self.ctrl.storage[0])
         # UART CSR - From Hardware to Firmware
         self.submodules.my_module = MyModule(sys_clk_freq=int(50e6))
-        
-        # CSR for ISE
+        # CSR for ISE from Firmware to Hardware
         my_external_bus = [
             ("from_litex_ctrl", 0, Pins(24))
-        ]
+        ]   # Create external bus pin for ISE connection
         platform.add_extension(my_external_bus)
         self.ctrl_reg   = CSRStorage(24)
         user_bus = platform.request("from_litex_ctrl")
         self.comb += [
             user_bus.eq(self.ctrl_reg.storage),  # CPU writes to CSR -> value appears on top-level port
         ]
-                        
+        # Button CSR - From Hardware to Firmware
+        self.button = CSRStatus(1, description="External User Button")
+        self.comb += self.button.status.eq(user_button)
+
 
 # Build --------------------------------------------------------------------------------------------
 def main():    
