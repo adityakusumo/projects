@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/spartan6_board.ncd
+OUTFILE=/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/spartan6_board.bit
+FAMILY=Spartan6
+PART=xc6slx25-2ftg256
+WORKINGDIR=/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA
+LICENSE=WebPack
+USER_INFO=__0_0_0

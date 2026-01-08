@@ -1,0 +1,1579 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: topmod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "topmod.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "topmod"
+Output Format                      : NGC
+Target Device                      : xc6slx25-2-ftg256
+
+---- Source Options
+Top Module Name                    : topmod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_state.v" into library work
+Parsing module <serv_state>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_if.v" into library work
+Parsing module <serv_rf_if>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_mem_if.v" into library work
+Parsing module <serv_mem_if>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_immdec.v" into library work
+Parsing module <serv_immdec>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_decode.v" into library work
+Parsing module <serv_decode>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_ctrl.v" into library work
+Parsing module <serv_ctrl>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_csr.v" into library work
+Parsing module <serv_csr>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_compdec.v" into library work
+Parsing module <serv_compdec>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_bufreg2.v" into library work
+Parsing module <serv_bufreg2>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_bufreg.v" into library work
+Parsing module <serv_bufreg>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_alu.v" into library work
+Parsing module <serv_alu>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_aligner.v" into library work
+Parsing module <serv_aligner>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_top.v" into library work
+Parsing module <serv_top>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_ram_if.v" into library work
+Parsing module <serv_rf_ram_if>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_ram.v" into library work
+Parsing module <serv_rf_ram>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_top.v" into library work
+Parsing module <serv_rf_top>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/image_gen.v" into library work
+Parsing module <image_gen>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v" into library work
+Parsing module <VGA_Controller>.
+Analyzing Verilog file "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" into library work
+Parsing module <spartan6_board>.
+Analyzing Verilog file "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/topmod.v" into library work
+Parsing module <topmod>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <topmod>.
+WARNING:HDLCompiler:1016 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2897: Port o_ext_rs1 is not connected to this instance
+
+Elaborating module <spartan6_board>.
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 307: Using initial value of builder_interface0_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 386: Using initial value of main_basesoc_adr_burst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 388: Using initial value of main_basesoc_basesoc_adr_burst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 397: Using initial value of main_basesoc_basesoc_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 401: Using initial value of main_basesoc_bus_error since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 404: Using initial value of main_basesoc_cpu_rst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 409: Using initial value of main_basesoc_dbus_bte since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 410: Using initial value of main_basesoc_dbus_cti since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 420: Using initial value of main_basesoc_ibus_bte since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 421: Using initial value of main_basesoc_ibus_cti since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 424: Using initial value of main_basesoc_ibus_dat_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 428: Using initial value of main_basesoc_ibus_we since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 452: Using initial value of main_basesoc_ram_adr_burst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 460: Using initial value of main_basesoc_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 468: Using initial value of main_basesoc_ram_bus_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 489: Using initial value of main_basesoc_rx_source_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 490: Using initial value of main_basesoc_rx_source_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 497: Using initial value of main_basesoc_soc_rst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 569: Using initial value of main_basesoc_uart_rx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 627: Using initial value of main_basesoc_uart_tx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 628: Using initial value of main_basesoc_uart_tx_fifo_sink_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 629: Using initial value of main_basesoc_uart_tx_fifo_sink_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 795: Using initial value of main_master_tx_fifo_sink_sink_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 854: Using initial value of main_phy_source_first since it is never assigned
+Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_rom.init\".
+Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_sram.init\".
+WARNING:HDLCompiler:1670 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2805: Signal <sram> in initial block is partially initialized.
+Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_mem.init\".
+Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_main_ram.init\".
+WARNING:HDLCompiler:1670 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2881: Signal <main_ram> in initial block is partially initialized.
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 910: Assignment to main_other_signals ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 921: Assignment to main_basesoc_ibus_err ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 932: Assignment to main_basesoc_dbus_err ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 957: Assignment to main_basesoc_basesoc_ram_bus_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 958: Assignment to main_basesoc_basesoc_ram_bus_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 960: Assignment to main_basesoc_basesoc_ram_bus_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 961: Assignment to main_basesoc_basesoc_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 962: Assignment to main_basesoc_basesoc_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 968: Assignment to main_basesoc_ram_bus_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 969: Assignment to main_basesoc_ram_bus_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 975: Assignment to main_basesoc_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 976: Assignment to main_basesoc_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 982: Assignment to builder_interface0_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 983: Assignment to builder_interface0_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 990: Assignment to builder_error ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1003: Assignment to main_basesoc_bus_errors_status ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1096: Assignment to main_basesoc_rx_source_ready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1102: Assignment to main_basesoc_tx_sink_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1103: Assignment to main_basesoc_tx_sink_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1141: Assignment to main_basesoc_uart_irq ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1157: Assignment to main_basesoc_uart_tx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1182: Assignment to main_basesoc_uart_rx_fifo_source_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1183: Assignment to main_basesoc_uart_rx_fifo_source_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1187: Assignment to main_basesoc_uart_rx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1213: Assignment to main_basesoc_timer_irq ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1246: Assignment to main_phy_sink_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1247: Assignment to main_phy_sink_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1687: Assignment to builder_litei2c_request ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1834: Assignment to main_master_rx_fifo_source_source_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1835: Assignment to main_master_rx_fifo_source_source_last ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1859: Result of 30-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1869: Assignment to builder_csr_bankarray_csrbank0_phy_speed_mode0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1878: Assignment to builder_csr_bankarray_csrbank0_master_active0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1887: Assignment to builder_csr_bankarray_csrbank0_master_settings0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1896: Assignment to builder_csr_bankarray_csrbank0_master_addr0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1913: Assignment to builder_csr_bankarray_csrbank0_master_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1938: Assignment to main_master_status_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1949: Assignment to builder_csr_bankarray_csrbank1_ctrl0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1958: Assignment to builder_csr_bankarray_csrbank1_ctrl_reg0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1969: Assignment to builder_csr_bankarray_csrbank2_count_out_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1979: Assignment to main_my_module_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1982: Assignment to builder_csr_bankarray_csrbank3_load0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1991: Assignment to builder_csr_bankarray_csrbank3_reload0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2000: Assignment to builder_csr_bankarray_csrbank3_en0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2009: Assignment to builder_csr_bankarray_csrbank3_update_value0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2017: Assignment to builder_csr_bankarray_csrbank3_value_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2026: Assignment to builder_csr_bankarray_csrbank3_ev_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2045: Assignment to builder_csr_bankarray_csrbank3_ev_enable0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2058: Assignment to main_basesoc_timer_value_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2061: Assignment to main_basesoc_timer_status_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2064: Assignment to main_basesoc_timer_pending_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2065: Assignment to main_basesoc_timer_zero2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2077: Assignment to builder_csr_bankarray_csrbank4_txfull_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2086: Assignment to builder_csr_bankarray_csrbank4_rxempty_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2095: Assignment to builder_csr_bankarray_csrbank4_ev_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2114: Assignment to builder_csr_bankarray_csrbank4_ev_enable0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2122: Assignment to builder_csr_bankarray_csrbank4_txempty_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2131: Assignment to builder_csr_bankarray_csrbank4_rxfull_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2141: Assignment to main_basesoc_uart_txfull_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2143: Assignment to main_basesoc_uart_rxempty_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2150: Assignment to main_basesoc_uart_status_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2157: Assignment to main_basesoc_uart_pending_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2158: Assignment to main_basesoc_uart_tx2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2159: Assignment to main_basesoc_uart_rx2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2162: Assignment to main_basesoc_uart_txempty_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2164: Assignment to main_basesoc_uart_rxfull_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2181: Assignment to builder_csr_bankarray_sram_bus_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2187: Assignment to builder_csr_bankarray_sram_bus_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2193: Assignment to builder_csr_bankarray_sram_bus_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2291: Assignment to main_phy_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2850: Assignment to main_basesoc_uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2871: Assignment to main_basesoc_uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
+
+Elaborating module <serv_rf_top(RESET_PC=1'b0)>.
+
+Elaborating module <serv_rf_ram_if(width=2,reset_strategy="MINI",csr_regs=4)>.
+WARNING:HDLCompiler:413 - "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_ram_if.v" Line 80: Result of 32-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <serv_rf_ram(width=2,csr_regs=4)>.
+
+Elaborating module <serv_top(RESET_PC=1'b0,PRE_REGISTER=1,RESET_STRATEGY="MINI",WITH_CSR=1,MDU=1'b0,COMPRESSED=1'b0,ALIGN=1'b0)>.
+
+Elaborating module <serv_state(RESET_STRATEGY="MINI",WITH_CSR=1'b1,MDU=1'b0,ALIGN=1'b0)>.
+
+Elaborating module <serv_decode(PRE_REGISTER=1,MDU=1'b0)>.
+
+Elaborating module <serv_immdec>.
+
+Elaborating module <serv_bufreg(MDU=1'b0)>.
+
+Elaborating module <serv_bufreg2>.
+
+Elaborating module <serv_ctrl(RESET_PC=1'b0,RESET_STRATEGY="MINI",WITH_CSR=1)>.
+
+Elaborating module <serv_alu>.
+
+Elaborating module <serv_rf_if(WITH_CSR=1)>.
+
+Elaborating module <serv_mem_if(WITH_CSR=1'b1)>.
+
+Elaborating module <serv_csr(RESET_STRATEGY="MINI")>.
+
+Elaborating module <FDPE(INIT=1'b1)>.
+
+Elaborating module <IOBUF>.
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2963: Assignment to builder_impl_xilinxsdrtristateimpl0__i ignored, since the identifier is never used
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="C0",INIT=1'b0,SRTYPE="ASYNC")>.
+
+Elaborating module <IDDR2(DDR_ALIGNMENT="C0",INIT_Q0=1'b0,INIT_Q1=1'b0,SRTYPE="ASYNC")>.
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 3092: Assignment to builder_impl ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2900: Input port i_ext_rd[31] is not connected on this instance
+
+Elaborating module <VGA_Controller>.
+
+Elaborating module <image_gen>.
+WARNING:HDLCompiler:1127 - "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v" Line 63: Assignment to vga_sync_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v" Line 64: Assignment to vga_blank_n ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v" Line 82: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v" Line 86: Result of 13-bit expression is truncated to fit in 12-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <topmod>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/topmod.v".
+    Summary:
+	no macro.
+Unit <topmod> synthesized.
+
+Synthesizing Unit <spartan6_board>.
+    Related source file is "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v".
+    Set property "KEEP = TRUE" for signal <clk100>.
+    Set property "register_balancing = no" for signal <builder_impl_xilinxmultiregimpl0>.
+    Set property "shreg_extract = no" for signal <builder_impl_xilinxmultiregimpl0>.
+    Set property "register_balancing = no" for signal <builder_impl_xilinxmultiregimpl1>.
+    Set property "shreg_extract = no" for signal <builder_impl_xilinxmultiregimpl1>.
+WARNING:Xst:2898 - Port 'i_ext_rd', unconnected in block instance 'serv_rf_top', is tied to GND.
+WARNING:Xst:2898 - Port 'i_ext_ready', unconnected in block instance 'serv_rf_top', is tied to GND.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_ext_rs1> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_ext_rs2> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_ext_funct3> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_mdu_valid> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'spartan6_board', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'mem', unconnected in block 'spartan6_board', is tied to its initial value.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <rom>, simulation mismatch.
+    Found 6069x32-bit single-port Read Only RAM <Mram_rom> for signal <rom>.
+    Found 2048x32-bit dual-port RAM <Mram_sram> for signal <sram>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem>, simulation mismatch.
+    Found 43x8-bit single-port Read Only RAM <Mram_mem> for signal <mem>.
+    Found 16x10-bit dual-port RAM <Mram_storage> for signal <storage>.
+    Found 16x10-bit dual-port RAM <Mram_storage_1> for signal <storage_1>.
+    Found 8192x32-bit dual-port RAM <Mram_main_ram> for signal <main_ram>.
+    Found 4-bit register for signal <builder_slave_sel_r>.
+    Found 20-bit register for signal <builder_count>.
+    Found 1-bit register for signal <main_basesoc_basesoc_ram_bus_ack>.
+    Found 1-bit register for signal <main_basesoc_ram_bus_ram_bus_ack>.
+    Found 32-bit register for signal <main_basesoc_tx_phase>.
+    Found 1-bit register for signal <main_basesoc_tx_tick>.
+    Found 1-bit register for signal <main_basesoc_tx_enable>.
+    Found 4-bit register for signal <main_basesoc_tx_count>.
+    Found 1-bit register for signal <serial_tx>.
+    Found 8-bit register for signal <main_basesoc_tx_data>.
+    Found 1-bit register for signal <main_basesoc_rx_rx_d>.
+    Found 32-bit register for signal <main_basesoc_rx_phase>.
+    Found 1-bit register for signal <main_basesoc_rx_tick>.
+    Found 1-bit register for signal <main_basesoc_rx_enable>.
+    Found 4-bit register for signal <main_basesoc_rx_count>.
+    Found 8-bit register for signal <main_basesoc_rx_data>.
+    Found 1-bit register for signal <main_basesoc_uart_tx_pending>.
+    Found 1-bit register for signal <main_basesoc_uart_tx_trigger_d>.
+    Found 1-bit register for signal <main_basesoc_uart_rx_pending>.
+    Found 1-bit register for signal <main_basesoc_uart_rx_trigger_d>.
+    Found 1-bit register for signal <main_basesoc_uart_tx_fifo_readable>.
+    Found 4-bit register for signal <main_basesoc_uart_tx_fifo_produce>.
+    Found 4-bit register for signal <main_basesoc_uart_tx_fifo_consume>.
+    Found 5-bit register for signal <main_basesoc_uart_tx_fifo_level0>.
+    Found 1-bit register for signal <main_basesoc_uart_rx_fifo_readable>.
+    Found 4-bit register for signal <main_basesoc_uart_rx_fifo_produce>.
+    Found 4-bit register for signal <main_basesoc_uart_rx_fifo_consume>.
+    Found 5-bit register for signal <main_basesoc_uart_rx_fifo_level0>.
+    Found 32-bit register for signal <main_basesoc_timer_value>.
+    Found 32-bit register for signal <main_basesoc_timer_value_status>.
+    Found 1-bit register for signal <main_basesoc_timer_zero_pending>.
+    Found 1-bit register for signal <main_basesoc_timer_zero_trigger_d>.
+    Found 1-bit register for signal <main_basesoc_ram_bus_ack>.
+    Found 2-bit register for signal <main_phy_i2c_speed_mode_delayed>.
+    Found 32-bit register for signal <main_phy_sr_out>.
+    Found 32-bit register for signal <main_phy_sr_in>.
+    Found 7-bit register for signal <main_phy_cnt>.
+    Found 1-bit register for signal <main_phy_clk>.
+    Found 2-bit register for signal <main_phy_sub_cnt>.
+    Found 5-bit register for signal <builder_litei2c_state>.
+    Found 1-bit register for signal <main_phy_nack>.
+    Found 1-bit register for signal <main_phy_tx_done>.
+    Found 7-bit register for signal <main_phy_sr_addr>.
+    Found 8-bit register for signal <main_phy_sr_cnt>.
+    Found 3-bit register for signal <main_phy_bytes_send>.
+    Found 3-bit register for signal <main_phy_bytes_recv>.
+    Found 1-bit register for signal <main_master_tx_fifo_pipe_valid_source_valid>.
+    Found 32-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_data>.
+    Found 7-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_addr>.
+    Found 3-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_len_tx>.
+    Found 3-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_len_rx>.
+    Found 1-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_recover>.
+    Found 1-bit register for signal <main_master_rx_fifo_pipe_valid_source_valid>.
+    Found 32-bit register for signal <main_master_rx_fifo_pipe_valid_source_payload_data>.
+    Found 1-bit register for signal <main_master_rx_fifo_pipe_valid_source_payload_nack>.
+    Found 1-bit register for signal <main_master_rx_fifo_pipe_valid_source_payload_unfinished_tx>.
+    Found 1-bit register for signal <main_master_rx_fifo_pipe_valid_source_payload_unfinished_rx>.
+    Found 26-bit register for signal <main_my_module_timer>.
+    Found 3-bit register for signal <main_my_module_counter>.
+    Found 1-bit register for signal <builder_interface0_ack>.
+    Found 32-bit register for signal <builder_csr_bankarray_interface0_bank_bus_dat_r>.
+    Found 2-bit register for signal <main_phy_storage>.
+    Found 1-bit register for signal <main_crossbar_active>.
+    Found 17-bit register for signal <main_master_settings_storage>.
+    Found 7-bit register for signal <main_master_addr_storage>.
+    Found 1-bit register for signal <builder_csr_bankarray_sel_r>.
+    Found 32-bit register for signal <builder_csr_bankarray_interface1_bank_bus_dat_r>.
+    Found 4-bit register for signal <main_ctrl_storage>.
+    Found 24-bit register for signal <main_ctrl_reg_storage>.
+    Found 32-bit register for signal <builder_csr_bankarray_interface2_bank_bus_dat_r>.
+    Found 32-bit register for signal <builder_csr_bankarray_interface3_bank_bus_dat_r>.
+    Found 32-bit register for signal <main_basesoc_timer_load_storage>.
+    Found 32-bit register for signal <main_basesoc_timer_reload_storage>.
+    Found 1-bit register for signal <main_basesoc_timer_en_storage>.
+    Found 1-bit register for signal <main_basesoc_timer_update_value_storage>.
+    Found 1-bit register for signal <main_basesoc_timer_update_value_re>.
+    Found 1-bit register for signal <main_basesoc_timer_pending_r>.
+    Found 1-bit register for signal <main_basesoc_timer_pending_re>.
+    Found 1-bit register for signal <main_basesoc_timer_enable_storage>.
+    Found 32-bit register for signal <builder_csr_bankarray_interface4_bank_bus_dat_r>.
+    Found 2-bit register for signal <main_basesoc_uart_pending_r>.
+    Found 1-bit register for signal <main_basesoc_uart_pending_re>.
+    Found 2-bit register for signal <main_basesoc_uart_enable_storage>.
+    Found 1-bit register for signal <builder_impl_xilinxmultiregimpl0>.
+    Found 1-bit register for signal <builder_impl_xilinxmultiregimpl1>.
+    Found 32-bit register for signal <rom_dat0>.
+    Found 11-bit register for signal <sram_adr0>.
+    Found 6-bit register for signal <mem_adr0>.
+    Found 10-bit register for signal <storage_dat1>.
+    Found 10-bit register for signal <storage_1_dat1>.
+    Found 13-bit register for signal <main_ram_adr0>.
+    Found 1-bit register for signal <builder_grant>.
+    Found finite state machine <FSM_0> for signal <builder_litei2c_state>.
+    -----------------------------------------------------------------------
+    | States             | 29                                             |
+    | Transitions        | 123                                            |
+    | Inputs             | 20                                             |
+    | Outputs            | 16                                             |
+    | Clock              | clk100 (rising_edge)                           |
+    | Reset              | sys_rst (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 20-bit subtractor for signal <builder_count[19]_GND_2_o_sub_396_OUT> created at line 2311.
+    Found 5-bit subtractor for signal <main_basesoc_uart_tx_fifo_level0[4]_GND_2_o_sub_414_OUT> created at line 2388.
+    Found 5-bit subtractor for signal <main_basesoc_uart_rx_fifo_level0[4]_GND_2_o_sub_423_OUT> created at line 2410.
+    Found 32-bit subtractor for signal <main_basesoc_timer_value[31]_GND_2_o_sub_427_OUT> created at line 2417.
+    Found 6-bit subtractor for signal <PWR_2_o_main_phy_len_tx_capped[2]_sub_432_OUT> created at line 2440.
+    Found 4-bit adder for signal <main_basesoc_tx_count[3]_GND_2_o_add_66_OUT> created at line 1036.
+    Found 4-bit adder for signal <main_basesoc_rx_count[3]_GND_2_o_add_74_OUT> created at line 1075.
+    Found 3-bit adder for signal <main_phy_bytes_send[2]_GND_2_o_add_158_OUT> created at line 1410.
+    Found 3-bit adder for signal <main_phy_bytes_recv[2]_GND_2_o_add_185_OUT> created at line 1521.
+    Found 8-bit adder for signal <main_phy_sr_cnt[7]_GND_2_o_add_206_OUT> created at line 1624.
+    Found 33-bit adder for signal <n1538> created at line 2331.
+    Found 33-bit adder for signal <n1540> created at line 2346.
+    Found 4-bit adder for signal <main_basesoc_uart_tx_fifo_produce[3]_GND_2_o_add_407_OUT> created at line 2377.
+    Found 4-bit adder for signal <main_basesoc_uart_tx_fifo_consume[3]_GND_2_o_add_409_OUT> created at line 2380.
+    Found 5-bit adder for signal <main_basesoc_uart_tx_fifo_level0[4]_GND_2_o_add_411_OUT> created at line 2384.
+    Found 4-bit adder for signal <main_basesoc_uart_rx_fifo_produce[3]_GND_2_o_add_416_OUT> created at line 2399.
+    Found 4-bit adder for signal <main_basesoc_uart_rx_fifo_consume[3]_GND_2_o_add_418_OUT> created at line 2402.
+    Found 5-bit adder for signal <main_basesoc_uart_rx_fifo_level0[4]_GND_2_o_add_420_OUT> created at line 2406.
+    Found 7-bit adder for signal <main_phy_cnt[6]_GND_2_o_add_437_OUT> created at line 2450.
+    Found 2-bit adder for signal <main_phy_sub_cnt[1]_GND_2_o_add_439_OUT> created at line 2455.
+    Found 3-bit adder for signal <main_my_module_counter[2]_GND_2_o_add_456_OUT> created at line 2508.
+    Found 26-bit adder for signal <main_my_module_timer[25]_GND_2_o_add_457_OUT> created at line 2510.
+    Found 32-bit shifter logical left for signal <main_phy_sink_payload_data[31]_PWR_2_o_shift_left_432_OUT> created at line 2440
+    Found 4x7-bit Read Only RAM for signal <main_phy_div>
+    Found 32-bit 7-to-1 multiplexer for signal <_n2330> created at line 2515.
+    Found 32-bit 8-to-1 multiplexer for signal <_n2349> created at line 2584.
+    Found 1-bit 8-to-1 multiplexer for signal <_n2377> created at line 2639.
+    Found 3-bit comparator greater for signal <PWR_2_o_main_phy_sink_payload_len_tx[2]_LessThan_130_o> created at line 1263
+    Found 7-bit comparator equal for signal <main_phy_cnt[6]_main_phy_div[6]_equal_135_o> created at line 1284
+    Found 3-bit comparator greater for signal <GND_2_o_main_phy_sink_payload_len_tx[2]_LessThan_151_o> created at line 1379
+    Found 3-bit comparator greater for signal <main_phy_bytes_send[2]_main_phy_sink_payload_len_tx[2]_LessThan_169_o> created at line 1430
+    Found 3-bit comparator greater for signal <GND_2_o_main_phy_sink_payload_len_rx[2]_LessThan_170_o> created at line 1435
+    Found 3-bit comparator greater for signal <main_phy_bytes_recv[2]_main_phy_sink_payload_len_rx[2]_LessThan_193_o> created at line 1530
+    Found 8-bit comparator greater for signal <main_phy_sr_cnt[7]_GND_2_o_LessThan_206_o> created at line 1622
+    Found 7-bit comparator greater for signal <main_phy_cnt[6]_main_phy_div[6]_LessThan_437_o> created at line 2449
+    Found 2-bit comparator greater for signal <main_phy_sub_cnt[1]_PWR_2_o_LessThan_439_o> created at line 2454
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal clk100 may hinder XST clustering optimizations.
+    Summary:
+	inferred   7 RAM(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred 807 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred 161 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <spartan6_board> synthesized.
+
+Synthesizing Unit <serv_rf_top>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_top.v".
+        RESET_PC = 1'b0
+        COMPRESSED = 1'b0
+        ALIGN = 1'b0
+        MDU = 1'b0
+        PRE_REGISTER = 1
+        RESET_STRATEGY = "MINI"
+        WITH_CSR = 1
+        RF_WIDTH = 2
+        RF_L2D = 10
+    Summary:
+	no macro.
+Unit <serv_rf_top> synthesized.
+
+Synthesizing Unit <serv_rf_ram_if>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_ram_if.v".
+        width = 2
+        reset_strategy = "MINI"
+        csr_regs = 4
+        depth = 576
+        l2w = 1
+    Found 1-bit register for signal <wen0_r>.
+    Found 1-bit register for signal <wen1_r>.
+    Found 2-bit register for signal <wdata1_r>.
+    Found 1-bit register for signal <rdata1>.
+    Found 1-bit register for signal <rtrig1>.
+    Found 5-bit register for signal <rcnt>.
+    Found 1-bit register for signal <rreq_r>.
+    Found 1-bit register for signal <rgnt>.
+    Found 2-bit register for signal <rdata0>.
+    Found 1-bit register for signal <wdata0_r>.
+    Found 5-bit adder for signal <rcnt[4]_GND_5_o_add_12_OUT> created at line 127.
+    Found 5-bit subtractor for signal <wcnt> created at line 40.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <serv_rf_ram_if> synthesized.
+
+Synthesizing Unit <serv_rf_ram>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_ram.v".
+        width = 2
+        csr_regs = 4
+        depth = 576
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <memory>, simulation mismatch.
+    Found 576x2-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 1-bit register for signal <regzero>.
+    Found 2-bit register for signal <rdata>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 D-type flip-flop(s).
+Unit <serv_rf_ram> synthesized.
+
+Synthesizing Unit <serv_top>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_top.v".
+        WITH_CSR = 1
+        PRE_REGISTER = 1
+        RESET_STRATEGY = "MINI"
+        RESET_PC = 1'b0
+        MDU = 1'b0
+        COMPRESSED = 1'b0
+        ALIGN = 1'b0
+WARNING:Xst:647 - Input <i_ext_rd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <serv_top> synthesized.
+
+Synthesizing Unit <serv_state>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_state.v".
+        RESET_STRATEGY = "MINI"
+        WITH_CSR = 1'b1
+        ALIGN = 1'b0
+        MDU = 1'b0
+WARNING:Xst:647 - Input <i_mdu_op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_mdu_ready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <init_done>.
+    Found 1-bit register for signal <o_ctrl_jump>.
+    Found 1-bit register for signal <o_cnt_done>.
+    Found 1-bit register for signal <stage_two_req>.
+    Found 3-bit register for signal <o_cnt>.
+    Found 4-bit register for signal <o_cnt_r>.
+    Found 1-bit register for signal <misalign_trap_sync_r>.
+    Found 1-bit register for signal <ibus_cyc>.
+    Found 3-bit adder for signal <o_cnt[4]_GND_8_o_add_11_OUT> created at line 168.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+Unit <serv_state> synthesized.
+
+Synthesizing Unit <serv_decode>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_decode.v".
+        PRE_REGISTER = 1'b1
+        MDU = 1'b0
+WARNING:Xst:647 - Input <i_wb_rdt<11:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_wb_rdt<19:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_wb_rdt<25:23>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_wb_rdt<29:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_wb_rdt<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <imm30>.
+    Found 5-bit register for signal <opcode>.
+    Found 1-bit register for signal <op20>.
+    Found 1-bit register for signal <op21>.
+    Found 1-bit register for signal <op22>.
+    Found 1-bit register for signal <op26>.
+    Found 3-bit register for signal <funct3>.
+    Summary:
+	inferred  13 D-type flip-flop(s).
+Unit <serv_decode> synthesized.
+
+Synthesizing Unit <serv_immdec>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_immdec.v".
+        SHARED_RFADDR_IMM_REGS = 1
+    Found 9-bit register for signal <imm19_12_20>.
+    Found 1-bit register for signal <imm7>.
+    Found 6-bit register for signal <imm30_25>.
+    Found 5-bit register for signal <imm24_20>.
+    Found 5-bit register for signal <imm11_7>.
+    Found 1-bit register for signal <imm31>.
+    Summary:
+	inferred  27 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+Unit <serv_immdec> synthesized.
+
+Synthesizing Unit <serv_bufreg>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_bufreg.v".
+        MDU = 1'b0
+WARNING:Xst:647 - Input <i_mdu_op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 30-bit register for signal <data>.
+    Found 2-bit register for signal <lsb>.
+    Found 1-bit register for signal <c_r>.
+    Found 2-bit adder for signal <n0040> created at line 33.
+    Found 2-bit adder for signal <n0030> created at line 33.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <serv_bufreg> synthesized.
+
+Synthesizing Unit <serv_bufreg2>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_bufreg2.v".
+    Found 32-bit register for signal <dat>.
+    Found 7-bit subtractor for signal <GND_12_o_GND_12_o_sub_1_OUT> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <serv_bufreg2> synthesized.
+
+Synthesizing Unit <serv_ctrl>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_ctrl.v".
+        RESET_STRATEGY = "MINI"
+        RESET_PC = 1'b0
+        WITH_CSR = 1
+    Found 1-bit register for signal <pc_plus_offset_cy_r>.
+    Found 32-bit register for signal <o_ibus_adr>.
+    Found 1-bit register for signal <pc_plus_4_cy_r>.
+    Found 2-bit adder for signal <n0041> created at line 53.
+    Found 2-bit adder for signal <n0031> created at line 53.
+    Found 2-bit adder for signal <n0047> created at line 65.
+    Found 2-bit adder for signal <n0032> created at line 65.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <serv_ctrl> synthesized.
+
+Synthesizing Unit <serv_alu>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_alu.v".
+    Found 1-bit register for signal <cmp_r>.
+    Found 1-bit register for signal <add_cy_r>.
+    Found 2-bit adder for signal <n0040> created at line 34.
+    Found 2-bit adder for signal <n0033> created at line 34.
+    Found 1-bit adder for signal <n0046> created at line 36.
+    Found 1-bit adder for signal <result_lt> created at line 36.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <serv_alu> synthesized.
+
+Synthesizing Unit <serv_rf_if>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_if.v".
+        WITH_CSR = 1
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <serv_rf_if> synthesized.
+
+Synthesizing Unit <serv_mem_if>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_mem_if.v".
+        WITH_CSR = 1'b1
+    Found 1-bit register for signal <signbit>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <serv_mem_if> synthesized.
+
+Synthesizing Unit <serv_csr>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_csr.v".
+        RESET_STRATEGY = "MINI"
+    Found 1-bit register for signal <o_new_irq>.
+    Found 1-bit register for signal <mstatus_mie>.
+    Found 1-bit register for signal <mstatus_mpie>.
+    Found 4-bit register for signal <mcause3_0>.
+    Found 1-bit register for signal <mcause31>.
+    Found 1-bit 4-to-1 multiplexer for signal <csr_in> created at line 49.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <serv_csr> synthesized.
+
+Synthesizing Unit <VGA_Controller>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v".
+        H_PIXELS = 800
+        V_PIXELS = 600
+        H_FRONTPORCH = 56
+        H_SYNC_PULSE = 120
+        H_BACKPORCH = 64
+        V_FRONTPORCH = 37
+        V_SYNC_PULSE = 6
+        V_BACKPORCH = 23
+        H_POLARITY = 1'b1
+        V_POLARITY = 1'b1
+    Found 12-bit register for signal <h_count>.
+    Found 12-bit register for signal <v_count>.
+    Found 32-bit register for signal <row>.
+    Found 32-bit register for signal <col>.
+    Found 1-bit register for signal <vga_vsync>.
+    Found 1-bit register for signal <vga_hsync>.
+    Found 12-bit adder for signal <h_count[11]_GND_22_o_add_5_OUT> created at line 82.
+    Found 12-bit adder for signal <v_count[11]_GND_22_o_add_7_OUT> created at line 86.
+    Found 12-bit comparator greater for signal <n0004> created at line 81
+    Found 12-bit comparator lessequal for signal <n0007> created at line 85
+    Found 12-bit comparator greater for signal <h_count[11]_GND_22_o_LessThan_12_o> created at line 93
+    Found 12-bit comparator greater for signal <v_count[11]_GND_22_o_LessThan_14_o> created at line 96
+    Found 12-bit comparator lessequal for signal <n0017> created at line 101
+    Found 12-bit comparator greater for signal <h_count[11]_GND_22_o_LessThan_17_o> created at line 102
+    Found 12-bit comparator lessequal for signal <n0021> created at line 109
+    Found 12-bit comparator greater for signal <v_count[11]_GND_22_o_LessThan_19_o> created at line 110
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  90 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <VGA_Controller> synthesized.
+
+Synthesizing Unit <image_gen>.
+    Related source file is "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/image_gen.v".
+        PIXELS_Y = 600
+        PIXELS_X = 800
+WARNING:Xst:2999 - Signal 'imageData', unconnected in block 'image_gen', is tied to its initial value.
+    Found 8-bit register for signal <red>.
+    Found 8-bit register for signal <green>.
+    Found 8-bit register for signal <blue>.
+    Found 1-bit register for signal <pixel_on>.
+    Found 32-bit subtractor for signal <col[31]_GND_23_o_sub_7_OUT> created at line 78.
+    Found 6-bit subtractor for signal <row[31]_GND_23_o_sub_6_OUT<5:0>> created at line 78.
+    Found 6-bit subtractor for signal <GND_23_o_col[31]_sub_8_OUT<5:0>> created at line 78.
+    Found 4096x1-bit Read Only RAM for signal <row[31]_read_port_8_OUT<0>>
+    Found 32-bit comparator lessequal for signal <n0000> created at line 76
+    Found 32-bit comparator lessequal for signal <n0002> created at line 76
+    Found 32-bit comparator lessequal for signal <n0005> created at line 76
+    Found 32-bit comparator lessequal for signal <n0007> created at line 76
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <image_gen> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 9
+ 16x10-bit dual-port RAM                               : 2
+ 2048x32-bit dual-port RAM                             : 1
+ 4096x1-bit single-port Read Only RAM                  : 1
+ 43x8-bit single-port Read Only RAM                    : 1
+ 4x7-bit single-port Read Only RAM                     : 1
+ 576x2-bit dual-port RAM                               : 1
+ 6069x32-bit single-port Read Only RAM                 : 1
+ 8192x32-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 39
+ 1-bit adder                                           : 2
+ 12-bit adder                                          : 2
+ 2-bit adder                                           : 9
+ 20-bit subtractor                                     : 1
+ 26-bit adder                                          : 1
+ 3-bit adder                                           : 4
+ 32-bit subtractor                                     : 2
+ 33-bit adder                                          : 2
+ 4-bit adder                                           : 6
+ 5-bit adder                                           : 1
+ 5-bit addsub                                          : 2
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 3
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 148
+ 1-bit register                                        : 72
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 2
+ 13-bit register                                       : 1
+ 17-bit register                                       : 1
+ 2-bit register                                        : 9
+ 20-bit register                                       : 1
+ 24-bit register                                       : 1
+ 26-bit register                                       : 1
+ 3-bit register                                        : 7
+ 30-bit register                                       : 1
+ 32-bit register                                       : 20
+ 4-bit register                                        : 10
+ 5-bit register                                        : 6
+ 6-bit register                                        : 2
+ 7-bit register                                        : 4
+ 8-bit register                                        : 6
+ 9-bit register                                        : 1
+# Comparators                                          : 21
+ 12-bit comparator greater                             : 5
+ 12-bit comparator lessequal                           : 3
+ 2-bit comparator greater                              : 1
+ 3-bit comparator greater                              : 5
+ 32-bit comparator lessequal                           : 4
+ 7-bit comparator equal                                : 1
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 202
+ 1-bit 2-to-1 multiplexer                              : 129
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 3
+ 20-bit 2-to-1 multiplexer                             : 1
+ 26-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 7
+ 30-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 14
+ 32-bit 7-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 5
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 23
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# FSMs                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <sram_adr0_0> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_0> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_1> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_1> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_2> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_2> 
+INFO:Xst:2261 - The FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_8> in Unit <u1> is equivalent to the following 23 FFs/Latches, which will be removed : <builder_csr_bankarray_interface4_bank_bus_dat_r_9> <builder_csr_bankarray_interface4_bank_bus_dat_r_10> <builder_csr_bankarray_interface4_bank_bus_dat_r_11> <builder_csr_bankarray_interface4_bank_bus_dat_r_12> <builder_csr_bankarray_interface4_bank_bus_dat_r_13> <builder_csr_bankarray_interface4_bank_bus_dat_r_14> <builder_csr_bankarray_interface4_bank_bus_dat_r_15> <builder_csr_bankarray_interface4_bank_bus_dat_r_16> <builder_csr_bankarray_interface4_bank_bus_dat_r_17> <builder_csr_bankarray_interface4_bank_bus_dat_r_18> <builder_csr_bankarray_interface4_bank_bus_dat_r_19> <builder_csr_bankarray_interface4_bank_bus_dat_r_20> <builder_csr_bankarray_interface4_bank_bus_dat_r_21> <builder_csr_bankarray_interface4_bank_bus_dat_r_22> <builder_csr_bankarray_interface4_bank_bus_dat_r_23> <builder_csr_bankarray_interface4_bank_bus_dat_r_24>
+   <builder_csr_bankarray_interface4_bank_bus_dat_r_25> <builder_csr_bankarray_interface4_bank_bus_dat_r_26> <builder_csr_bankarray_interface4_bank_bus_dat_r_27> <builder_csr_bankarray_interface4_bank_bus_dat_r_28> <builder_csr_bankarray_interface4_bank_bus_dat_r_29> <builder_csr_bankarray_interface4_bank_bus_dat_r_30> <builder_csr_bankarray_interface4_bank_bus_dat_r_31> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_3> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_3> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_4> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_4> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_5> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_5> 
+INFO:Xst:2261 - The FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_3> in Unit <u1> is equivalent to the following 28 FFs/Latches, which will be removed : <builder_csr_bankarray_interface2_bank_bus_dat_r_4> <builder_csr_bankarray_interface2_bank_bus_dat_r_5> <builder_csr_bankarray_interface2_bank_bus_dat_r_6> <builder_csr_bankarray_interface2_bank_bus_dat_r_7> <builder_csr_bankarray_interface2_bank_bus_dat_r_8> <builder_csr_bankarray_interface2_bank_bus_dat_r_9> <builder_csr_bankarray_interface2_bank_bus_dat_r_10> <builder_csr_bankarray_interface2_bank_bus_dat_r_11> <builder_csr_bankarray_interface2_bank_bus_dat_r_12> <builder_csr_bankarray_interface2_bank_bus_dat_r_13> <builder_csr_bankarray_interface2_bank_bus_dat_r_14> <builder_csr_bankarray_interface2_bank_bus_dat_r_15> <builder_csr_bankarray_interface2_bank_bus_dat_r_16> <builder_csr_bankarray_interface2_bank_bus_dat_r_17> <builder_csr_bankarray_interface2_bank_bus_dat_r_18> <builder_csr_bankarray_interface2_bank_bus_dat_r_19>
+   <builder_csr_bankarray_interface2_bank_bus_dat_r_20> <builder_csr_bankarray_interface2_bank_bus_dat_r_21> <builder_csr_bankarray_interface2_bank_bus_dat_r_22> <builder_csr_bankarray_interface2_bank_bus_dat_r_23> <builder_csr_bankarray_interface2_bank_bus_dat_r_24> <builder_csr_bankarray_interface2_bank_bus_dat_r_25> <builder_csr_bankarray_interface2_bank_bus_dat_r_26> <builder_csr_bankarray_interface2_bank_bus_dat_r_27> <builder_csr_bankarray_interface2_bank_bus_dat_r_28> <builder_csr_bankarray_interface2_bank_bus_dat_r_29> <builder_csr_bankarray_interface2_bank_bus_dat_r_30> <builder_csr_bankarray_interface2_bank_bus_dat_r_31> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_6> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_6> 
+INFO:Xst:2261 - The FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_24> in Unit <u1> is equivalent to the following 7 FFs/Latches, which will be removed : <builder_csr_bankarray_interface1_bank_bus_dat_r_25> <builder_csr_bankarray_interface1_bank_bus_dat_r_26> <builder_csr_bankarray_interface1_bank_bus_dat_r_27> <builder_csr_bankarray_interface1_bank_bus_dat_r_28> <builder_csr_bankarray_interface1_bank_bus_dat_r_29> <builder_csr_bankarray_interface1_bank_bus_dat_r_30> <builder_csr_bankarray_interface1_bank_bus_dat_r_31> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_7> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_7> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_8> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_8> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_9> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_9> 
+INFO:Xst:2261 - The FF/Latch <sram_adr0_10> in Unit <u1> is equivalent to the following FF/Latch, which will be removed : <main_ram_adr0_10> 
+INFO:Xst:2261 - The FF/Latch <row_12> in Unit <u2> is equivalent to the following 19 FFs/Latches, which will be removed : <row_13> <row_14> <row_15> <row_16> <row_17> <row_18> <row_19> <row_20> <row_21> <row_22> <row_23> <row_24> <row_25> <row_26> <row_27> <row_28> <row_29> <row_30> <row_31> 
+INFO:Xst:2261 - The FF/Latch <col_12> in Unit <u2> is equivalent to the following 19 FFs/Latches, which will be removed : <col_13> <col_14> <col_15> <col_16> <col_17> <col_18> <col_19> <col_20> <col_21> <col_22> <col_23> <col_24> <col_25> <col_26> <col_27> <col_28> <col_29> <col_30> <col_31> 
+WARNING:Xst:1293 - FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_3> has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_24> has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_8> has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <col_12> has a constant value of 0 in block <u2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <row_12> has a constant value of 0 in block <u2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <storage_dat1_8> of sequential type is unconnected in block <u1>.
+WARNING:Xst:2677 - Node <storage_dat1_9> of sequential type is unconnected in block <u1>.
+WARNING:Xst:2677 - Node <storage_1_dat1_8> of sequential type is unconnected in block <u1>.
+WARNING:Xst:2677 - Node <storage_1_dat1_9> of sequential type is unconnected in block <u1>.
+
+Synthesizing (advanced) Unit <VGA_Controller>.
+The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
+The following registers are absorbed into counter <v_count>: 1 register on signal <v_count>.
+Unit <VGA_Controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <image_gen>.
+INFO:Xst:3226 - The RAM <Mram_row[31]_read_port_8_OUT<0>> will be implemented as a BLOCK RAM, absorbing the following register(s): <pixel_on>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 1-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(row[31]_GND_23_o_sub_6_OUT,GND_23_o_col[31]_sub_8_OUT)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <pixel_on>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <image_gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serv_rf_ram>.
+INFO:Xst:3226 - The RAM <Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <rdata>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 576-word x 2-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <i_clk>         | rise     |
+    |     weA            | connected to signal <i_wen>         | high     |
+    |     addrA          | connected to signal <i_waddr>       |          |
+    |     diA            | connected to signal <i_wdata>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 576-word x 2-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <i_clk>         | rise     |
+    |     addrB          | connected to signal <i_raddr>       |          |
+    |     doB            | connected to signal <rdata>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <serv_rf_ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serv_rf_ram_if>.
+The following registers are absorbed into counter <rcnt>: 1 register on signal <rcnt>.
+Unit <serv_rf_ram_if> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serv_state>.
+The following registers are absorbed into accumulator <o_cnt>: 1 register on signal <o_cnt>.
+Unit <serv_state> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spartan6_board>.
+The following registers are absorbed into counter <main_my_module_timer>: 1 register on signal <main_my_module_timer>.
+The following registers are absorbed into counter <main_phy_cnt>: 1 register on signal <main_phy_cnt>.
+The following registers are absorbed into counter <main_basesoc_uart_tx_fifo_produce>: 1 register on signal <main_basesoc_uart_tx_fifo_produce>.
+The following registers are absorbed into counter <main_basesoc_uart_tx_fifo_consume>: 1 register on signal <main_basesoc_uart_tx_fifo_consume>.
+The following registers are absorbed into counter <main_basesoc_uart_tx_fifo_level0>: 1 register on signal <main_basesoc_uart_tx_fifo_level0>.
+The following registers are absorbed into counter <main_basesoc_uart_rx_fifo_produce>: 1 register on signal <main_basesoc_uart_rx_fifo_produce>.
+The following registers are absorbed into counter <main_basesoc_uart_rx_fifo_level0>: 1 register on signal <main_basesoc_uart_rx_fifo_level0>.
+The following registers are absorbed into counter <main_basesoc_uart_rx_fifo_consume>: 1 register on signal <main_basesoc_uart_rx_fifo_consume>.
+The following registers are absorbed into counter <main_my_module_counter>: 1 register on signal <main_my_module_counter>.
+The following registers are absorbed into counter <builder_count>: 1 register on signal <builder_count>.
+The following registers are absorbed into counter <main_basesoc_tx_count>: 1 register on signal <main_basesoc_tx_count>.
+The following registers are absorbed into counter <main_basesoc_rx_count>: 1 register on signal <main_basesoc_rx_count>.
+The following registers are absorbed into counter <main_phy_sub_cnt>: 1 register on signal <main_phy_sub_cnt>.
+INFO:Xst:3231 - The small RAM <Mram_storage_1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     clkA           | connected to signal <clk100>        | rise     |
+    |     weA            | connected to signal <main_basesoc_uart_rx_fifo_wrport_we> | high     |
+    |     addrA          | connected to signal <main_basesoc_uart_rx_fifo_produce> |          |
+    |     diA            | connected to signal <("00",main_basesoc_rx_source_payload_data)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     addrB          | connected to signal <main_basesoc_uart_rx_fifo_consume> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 43-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <mem_adr0>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <main_phy_i2c_speed_mode_delayed> prevents it from being combined with the RAM <Mram_main_phy_div> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 7-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <main_phy_i2c_speed_mode_delayed> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <main_phy_div>  |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_sram> will be implemented as a BLOCK RAM, absorbing the following register(s): <sram_adr0>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk100>        | rise     |
+    |     weA<3>         | connected to signal <main_basesoc_ram_we<3>> | high     |
+    |     weA<2>         | connected to signal <main_basesoc_ram_we<2>> | high     |
+    |     weA<1>         | connected to signal <main_basesoc_ram_we<1>> | high     |
+    |     weA<0>         | connected to signal <main_basesoc_ram_we<0>> | high     |
+    |     addrA          | connected to signal <builder_self0<10:0>> |          |
+    |     diA            | connected to signal <builder_self1> |          |
+    |     doA            | connected to signal <main_basesoc_ram_bus_ram_bus_dat_r> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_storage> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     clkA           | connected to signal <clk100>        | rise     |
+    |     weA            | connected to signal <main_basesoc_uart_tx_fifo_wrport_we> | high     |
+    |     addrA          | connected to signal <main_basesoc_uart_tx_fifo_produce> |          |
+    |     diA            | connected to signal <("00",builder_interface1_dat_w<7:0>)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     addrB          | connected to signal <main_basesoc_uart_tx_fifo_consume> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_main_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <main_ram_adr0>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk100>        | rise     |
+    |     weA<3>         | connected to signal <main_basesoc_we<3>> | high     |
+    |     weA<2>         | connected to signal <main_basesoc_we<2>> | high     |
+    |     weA<1>         | connected to signal <main_basesoc_we<1>> | high     |
+    |     weA<0>         | connected to signal <main_basesoc_we<0>> | high     |
+    |     addrA          | connected to signal <builder_self0<12:0>> |          |
+    |     diA            | connected to signal <builder_self1> |          |
+    |     doA            | connected to signal <main_basesoc_ram_bus_dat_r> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <rom_dat0>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 6069-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk100>        | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <builder_self0<12:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <rom_dat0>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <spartan6_board> synthesized (advanced).
+WARNING:Xst:2677 - Node <storage_dat1_8> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <storage_dat1_9> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <storage_1_dat1_8> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <storage_1_dat1_9> of sequential type is unconnected in block <spartan6_board>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 9
+ 16x10-bit dual-port distributed RAM                   : 2
+ 2048x32-bit single-port block RAM                     : 1
+ 4096x1-bit single-port block Read Only RAM            : 1
+ 43x8-bit single-port distributed Read Only RAM        : 1
+ 4x7-bit single-port distributed Read Only RAM         : 1
+ 576x2-bit dual-port block RAM                         : 1
+ 6069x32-bit single-port block Read Only RAM           : 1
+ 8192x32-bit single-port block RAM                     : 1
+# Adders/Subtractors                                   : 17
+ 1-bit adder carry in                                  : 1
+ 2-bit adder carry in                                  : 4
+ 3-bit adder                                           : 2
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 2
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 4
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 16
+ 12-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 20-bit down counter                                   : 1
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 6
+ 5-bit up counter                                      : 1
+ 5-bit updown counter                                  : 2
+ 7-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 3-bit up accumulator                                  : 1
+# Registers                                            : 918
+ Flip-Flops                                            : 918
+# Comparators                                          : 21
+ 12-bit comparator greater                             : 5
+ 12-bit comparator lessequal                           : 3
+ 2-bit comparator greater                              : 1
+ 3-bit comparator greater                              : 5
+ 32-bit comparator lessequal                           : 4
+ 7-bit comparator equal                                : 1
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 293
+ 1-bit 2-to-1 multiplexer                              : 242
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 14-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 7
+ 30-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 11
+ 32-bit 7-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 5
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 15
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# FSMs                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_26> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_27> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_28> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_29> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_30> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_31> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_8> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_9> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_10> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_11> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_12> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_13> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_14> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_15> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_16> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_17> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_18> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_19> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_20> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_21> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_22> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_23> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_24> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_25> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_26> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_27> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_28> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_29> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_30> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface4_bank_bus_dat_r_31> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_3> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_4> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_5> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_6> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_7> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_8> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_9> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_10> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_11> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_12> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_13> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_14> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_15> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_16> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_17> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_18> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_19> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_20> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_21> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_22> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_23> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_24> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_25> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_26> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_27> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_28> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_29> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_30> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface2_bank_bus_dat_r_31> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_24> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <builder_csr_bankarray_interface1_bank_bus_dat_r_25> has a constant value of 0 in block <spartan6_board>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <row_12> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_13> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_14> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_15> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_16> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_17> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_18> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_19> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_20> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_21> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_22> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_23> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_24> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_25> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_26> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_27> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_28> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_29> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_30> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_31> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_12> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_13> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_14> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_15> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_16> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_17> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_18> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_19> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_20> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_21> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_22> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_23> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_24> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_25> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_26> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_27> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_28> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_29> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_30> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <col_31> has a constant value of 0 in block <VGA_Controller>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u1/FSM_0> on signal <builder_litei2c_state[1:29]> with one-hot encoding.
+----------------------------------------
+ State | Encoding
+----------------------------------------
+ 00000 | 00000000000000000000000000001
+ 00001 | 00000000000000000000000000010
+ 00010 | 00000000000000000000000000100
+ 11011 | 00000000000000000000000001000
+ 00011 | 00000000000000000000000010000
+ 00100 | 00000000000000000000000100000
+ 01111 | 00000000000000000000001000000
+ 10110 | 00000000000000000000010000000
+ 00101 | 00000000000000000000100000000
+ 01100 | 00000000000000000001000000000
+ 00110 | 00000000000000000010000000000
+ 00111 | 00000000000000000100000000000
+ 01101 | 00000000000000001000000000000
+ 01000 | 00000000000000010000000000000
+ 01001 | 00000000000000100000000000000
+ 01010 | 00000000000001000000000000000
+ 01011 | 00000000000010000000000000000
+ 10111 | 00000000000100000000000000000
+ 01110 | 00000000001000000000000000000
+ 10000 | 00000000010000000000000000000
+ 10001 | 00000000100000000000000000000
+ 10011 | 00000001000000000000000000000
+ 10010 | 00000010000000000000000000000
+ 10100 | 00000100000000000000000000000
+ 10101 | 00001000000000000000000000000
+ 11000 | 00010000000000000000000000000
+ 11001 | 00100000000000000000000000000
+ 11010 | 01000000000000000000000000000
+ 11100 | 10000000000000000000000000000
+----------------------------------------
+WARNING:Xst:2677 - Node <Mram_storage_123> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <Mram_storage_124> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <Mram_storage24> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <Mram_storage23> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <main_basesoc_tx_phase_0> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <main_basesoc_tx_phase_1> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <main_basesoc_rx_phase_0> of sequential type is unconnected in block <spartan6_board>.
+WARNING:Xst:2677 - Node <main_basesoc_rx_phase_1> of sequential type is unconnected in block <spartan6_board>.
+INFO:Xst:2261 - The FF/Latch <inst_LPM_FF_1> in Unit <spartan6_board> is equivalent to the following FF/Latch, which will be removed : <inst_LPM_FF1_3> 
+INFO:Xst:2261 - The FF/Latch <inst_LPM_FF_0> in Unit <spartan6_board> is equivalent to the following FF/Latch, which will be removed : <inst_LPM_FF1_2> 
+
+Optimizing unit <topmod> ...
+
+Optimizing unit <spartan6_board> ...
+
+Optimizing unit <serv_top> ...
+
+Optimizing unit <serv_bufreg2> ...
+
+Optimizing unit <serv_state> ...
+
+Optimizing unit <serv_decode> ...
+
+Optimizing unit <serv_immdec> ...
+
+Optimizing unit <serv_bufreg> ...
+
+Optimizing unit <serv_ctrl> ...
+
+Optimizing unit <serv_alu> ...
+
+Optimizing unit <serv_mem_if> ...
+
+Optimizing unit <serv_csr> ...
+
+Optimizing unit <serv_rf_ram_if> ...
+
+Optimizing unit <VGA_Controller> ...
+
+Optimizing unit <image_gen> ...
+WARNING:Xst:1293 - FF/Latch <u2/v_count_11> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/v_count_10> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/h_count_11> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/col_10> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/row_11> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/row_10> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/col_11> has a constant value of 0 in block <topmod>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block topmod, actual ratio is 13.
+FlipFlop u1/builder_grant has been replicated 2 time(s)
+FlipFlop u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_1 has been replicated 1 time(s)
+FlipFlop u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_2 has been replicated 1 time(s)
+FlipFlop u1/serv_rf_top/cpu/decode/funct3_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 968
+ Flip-Flops                                            : 968
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : topmod.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2044
+#      GND                         : 1
+#      INV                         : 78
+#      LUT1                        : 56
+#      LUT2                        : 127
+#      LUT3                        : 298
+#      LUT4                        : 145
+#      LUT5                        : 340
+#      LUT6                        : 581
+#      MUXCY                       : 154
+#      MUXF7                       : 72
+#      MUXF8                       : 32
+#      VCC                         : 1
+#      XORCY                       : 159
+# FlipFlops/Latches                : 973
+#      FD                          : 107
+#      FDC                         : 13
+#      FDCE                        : 30
+#      FDE                         : 124
+#      FDP                         : 2
+#      FDR                         : 266
+#      FDRE                        : 417
+#      FDS                         : 2
+#      FDSE                        : 7
+#      IDDR2                       : 1
+#      ODDR2                       : 4
+# RAMS                             : 44
+#      RAM16X1D                    : 4
+#      RAM32M                      : 2
+#      RAMB16BWER                  : 36
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 34
+#      IBUF                        : 3
+#      IOBUF                       : 2
+#      OBUF                        : 29
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             973  out of  30064     3%  
+ Number of Slice LUTs:                 1641  out of  15032    10%  
+    Number used as Logic:              1625  out of  15032    10%  
+    Number used as Memory:               16  out of   3664     0%  
+       Number used as RAM:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1806
+   Number with an unused Flip Flop:     833  out of   1806    46%  
+   Number with an unused LUT:           165  out of   1806     9%  
+   Number of fully used LUT-FF pairs:   808  out of   1806    44%  
+   Number of unique control sets:        57
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    186    18%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               37  out of     52    71%  
+    Number using Block RAM only:         37
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk100                             | IBUF+BUFG              | 1022  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 10.850ns (Maximum Frequency: 92.166MHz)
+   Minimum input arrival time before clock: 4.459ns
+   Maximum output required time after clock: 4.202ns
+   Maximum combinational path delay: 4.921ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk100'
+  Clock period: 10.850ns (frequency: 92.166MHz)
+  Total number of paths / destination ports: 225190 / 3410
+-------------------------------------------------------------------------
+Delay:               5.425ns (Levels of Logic = 3)
+  Source:            u1/main_phy_cnt_4 (FF)
+  Destination:       u1/ODDR2_3 (FF)
+  Source Clock:      clk100 rising
+  Destination Clock: clk100 falling
+
+  Data Path: u1/main_phy_cnt_4 to u1/ODDR2_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.525   1.340  u1/main_phy_cnt_4 (u1/main_phy_cnt_4)
+     LUT6:I1->O            1   0.254   0.910  u1/main_phy_cnt[6]_main_phy_div[6]_equal_135_o75_SW0 (N187)
+     LUT6:I3->O           16   0.235   1.182  u1/main_phy_cnt[6]_main_phy_div[6]_equal_135_o75 (u1/main_phy_cnt[6]_main_phy_div[6]_equal_135_o)
+     LUT6:I5->O            2   0.254   0.725  u1/main_phy_sda_oe_INV_248_o5 (u1/main_phy_sda_oe_INV_248_o)
+     ODDR2:D1                  0.000          u1/ODDR2_3
+    ----------------------------------------
+    Total                      5.425ns (1.268ns logic, 4.157ns route)
+                                       (23.4% logic, 76.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk100'
+  Total number of paths / destination ports: 47 / 47
+-------------------------------------------------------------------------
+Offset:              4.459ns (Levels of Logic = 2)
+  Source:            user_btn0 (PAD)
+  Destination:       u2/v_count_9 (FF)
+  Destination Clock: clk100 rising
+
+  Data Path: user_btn0 to u2/v_count_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  user_btn0_IBUF (user_btn0_IBUF)
+     INV:I->O             45   0.255   1.736  u1/builder_impl_xilinxasyncresetsynchronizerimpl1_INV_0 (u1/builder_impl_xilinxasyncresetsynchronizerimpl)
+     FDC:CLR                   0.459          u2/vga_vsync
+    ----------------------------------------
+    Total                      4.459ns (2.042ns logic, 2.417ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk100'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              4.202ns (Levels of Logic = 1)
+  Source:            u1/main_ctrl_storage_0 (FF)
+  Destination:       user_led0 (PAD)
+  Source Clock:      clk100 rising
+
+  Data Path: u1/main_ctrl_storage_0 to user_led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.525   0.765  u1/main_ctrl_storage_0 (u1/main_ctrl_storage_0)
+     OBUF:I->O                 2.912          user_led0_OBUF (user_led0)
+    ----------------------------------------
+    Total                      4.202ns (3.437ns logic, 0.765ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.921ns (Levels of Logic = 2)
+  Source:            clk100 (PAD)
+  Destination:       vga_clk_out (PAD)
+
+  Data Path: clk100 to vga_clk_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  clk100_IBUF (u1/clk100)
+     OBUF:I->O                 2.912          vga_clk_out_OBUF (vga_clk_out)
+    ----------------------------------------
+    Total                      4.921ns (4.240ns logic, 0.681ns route)
+                                       (86.2% logic, 13.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk100         |   10.174|         |    5.425|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.68 secs
+ 
+--> 
+
+
+Total memory usage is 402376 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  253 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

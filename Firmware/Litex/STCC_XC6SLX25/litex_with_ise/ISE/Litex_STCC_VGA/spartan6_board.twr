@@ -1,0 +1,558 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml spartan6_board.twx spartan6_board.ncd -o spartan6_board.twr
+spartan6_board.pcf -ucf spartan6_board.ucf
+
+Design file:              spartan6_board.ncd
+Physical constraint file: spartan6_board.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TSclk100 = PERIOD TIMEGRP "PRDclk100" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 107531 paths analyzed, 6368 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.955ns.
+--------------------------------------------------------------------------------
+
+Paths for end point main_basesoc_timer_update_value_storage (SLICE_X31Y16.A4), 149 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.045ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FDPE_1_1 (FF)
+  Destination:          main_basesoc_timer_update_value_storage (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      11.749ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.171ns (0.417 - 0.588)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FDPE_1_1 to main_basesoc_timer_update_value_storage
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y1.AQ       Tcko                  0.476   sys_rst
+                                                       FDPE_1_1
+    SLICE_X14Y29.B5      net (fanout=243)      3.589   sys_rst
+    SLICE_X14Y29.B       Tilo                  0.254   main_basesoc_ibus_cyc
+                                                       serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X29Y34.C4      net (fanout=7)        1.676   main_basesoc_ibus_cyc
+    SLICE_X29Y34.C       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr41
+    SLICE_X15Y25.C3      net (fanout=10)       2.326   builder_interface1_adr<12>
+    SLICE_X15Y25.C       Tilo                  0.259   main_basesoc_timer_en_storage_669
+                                                       builder_csr_bankarray_csrbank3_sel<13>1
+    SLICE_X31Y16.A4      net (fanout=65)       2.537   builder_csr_bankarray_csrbank3_sel
+    SLICE_X31Y16.CLK     Tas                   0.373   main_basesoc_timer_update_value_storage_670
+                                                       main_basesoc_timer_update_value_storage_rstpot
+                                                       main_basesoc_timer_update_value_storage
+    -------------------------------------------------  ---------------------------
+    Total                                     11.749ns (1.621ns logic, 10.128ns route)
+                                                       (13.8% logic, 86.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               builder_grant (FF)
+  Destination:          main_basesoc_timer_update_value_storage (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      11.684ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.186ns (0.417 - 0.603)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: builder_grant to main_basesoc_timer_update_value_storage
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y27.AQ       Tcko                  0.430   builder_grant_687
+                                                       builder_grant
+    SLICE_X47Y20.D3      net (fanout=140)      3.293   builder_grant_687
+    SLICE_X47Y20.D       Tilo                  0.259   inst_LPM_FF_1_1520
+                                                       Mmux_builder_self0301
+    SLICE_X29Y34.D6      net (fanout=49)       2.381   builder_self0<9>
+    SLICE_X29Y34.D       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr141
+    SLICE_X15Y25.C4      net (fanout=10)       1.893   builder_interface1_adr<9>
+    SLICE_X15Y25.C       Tilo                  0.259   main_basesoc_timer_en_storage_669
+                                                       builder_csr_bankarray_csrbank3_sel<13>1
+    SLICE_X31Y16.A4      net (fanout=65)       2.537   builder_csr_bankarray_csrbank3_sel
+    SLICE_X31Y16.CLK     Tas                   0.373   main_basesoc_timer_update_value_storage_670
+                                                       main_basesoc_timer_update_value_storage_rstpot
+                                                       main_basesoc_timer_update_value_storage
+    -------------------------------------------------  ---------------------------
+    Total                                     11.684ns (1.580ns logic, 10.104ns route)
+                                                       (13.5% logic, 86.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.508ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FDPE_1_1 (FF)
+  Destination:          main_basesoc_timer_update_value_storage (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      11.286ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.171ns (0.417 - 0.588)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FDPE_1_1 to main_basesoc_timer_update_value_storage
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y1.AQ       Tcko                  0.476   sys_rst
+                                                       FDPE_1_1
+    SLICE_X14Y29.B5      net (fanout=243)      3.589   sys_rst
+    SLICE_X14Y29.B       Tilo                  0.254   main_basesoc_ibus_cyc
+                                                       serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X29Y34.D4      net (fanout=7)        1.646   main_basesoc_ibus_cyc
+    SLICE_X29Y34.D       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr141
+    SLICE_X15Y25.C4      net (fanout=10)       1.893   builder_interface1_adr<9>
+    SLICE_X15Y25.C       Tilo                  0.259   main_basesoc_timer_en_storage_669
+                                                       builder_csr_bankarray_csrbank3_sel<13>1
+    SLICE_X31Y16.A4      net (fanout=65)       2.537   builder_csr_bankarray_csrbank3_sel
+    SLICE_X31Y16.CLK     Tas                   0.373   main_basesoc_timer_update_value_storage_670
+                                                       main_basesoc_timer_update_value_storage_rstpot
+                                                       main_basesoc_timer_update_value_storage
+    -------------------------------------------------  ---------------------------
+    Total                                     11.286ns (1.621ns logic, 9.665ns route)
+                                                       (14.4% logic, 85.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point builder_litei2c_state_FSM_FFd3 (SLICE_X30Y7.C6), 149 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.344ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               builder_grant (FF)
+  Destination:          builder_litei2c_state_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      11.424ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.197ns (0.406 - 0.603)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: builder_grant to builder_litei2c_state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y27.AQ       Tcko                  0.430   builder_grant_687
+                                                       builder_grant
+    SLICE_X47Y20.D3      net (fanout=140)      3.293   builder_grant_687
+    SLICE_X47Y20.D       Tilo                  0.259   inst_LPM_FF_1_1520
+                                                       Mmux_builder_self0301
+    SLICE_X29Y34.D6      net (fanout=49)       2.381   builder_self0<9>
+    SLICE_X29Y34.D       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr141
+    SLICE_X23Y23.C1      net (fanout=10)       1.579   builder_interface1_adr<9>
+    SLICE_X23Y23.C       Tilo                  0.259   main_master_active_storage_576
+                                                       builder_csr_bankarray_csrbank0_sel<13>1
+    SLICE_X30Y7.C6       net (fanout=40)       2.625   builder_csr_bankarray_csrbank0_sel
+    SLICE_X30Y7.CLK      Tas                   0.339   builder_litei2c_state_FSM_FFd11_833
+                                                       builder_litei2c_state_FSM_FFd3-In1
+                                                       builder_litei2c_state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                     11.424ns (1.546ns logic, 9.878ns route)
+                                                       (13.5% logic, 86.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.757ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FDPE_1_1 (FF)
+  Destination:          builder_litei2c_state_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      11.026ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.182ns (0.406 - 0.588)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FDPE_1_1 to builder_litei2c_state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y1.AQ       Tcko                  0.476   sys_rst
+                                                       FDPE_1_1
+    SLICE_X14Y29.B5      net (fanout=243)      3.589   sys_rst
+    SLICE_X14Y29.B       Tilo                  0.254   main_basesoc_ibus_cyc
+                                                       serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X29Y34.D4      net (fanout=7)        1.646   main_basesoc_ibus_cyc
+    SLICE_X29Y34.D       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr141
+    SLICE_X23Y23.C1      net (fanout=10)       1.579   builder_interface1_adr<9>
+    SLICE_X23Y23.C       Tilo                  0.259   main_master_active_storage_576
+                                                       builder_csr_bankarray_csrbank0_sel<13>1
+    SLICE_X30Y7.C6       net (fanout=40)       2.625   builder_csr_bankarray_csrbank0_sel
+    SLICE_X30Y7.CLK      Tas                   0.339   builder_litei2c_state_FSM_FFd11_833
+                                                       builder_litei2c_state_FSM_FFd3-In1
+                                                       builder_litei2c_state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                     11.026ns (1.587ns logic, 9.439ns route)
+                                                       (14.4% logic, 85.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.141ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FDPE_1_1 (FF)
+  Destination:          builder_litei2c_state_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.642ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.182ns (0.406 - 0.588)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FDPE_1_1 to builder_litei2c_state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y1.AQ       Tcko                  0.476   sys_rst
+                                                       FDPE_1_1
+    SLICE_X14Y29.B5      net (fanout=243)      3.589   sys_rst
+    SLICE_X14Y29.B       Tilo                  0.254   main_basesoc_ibus_cyc
+                                                       serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X29Y34.C4      net (fanout=7)        1.676   main_basesoc_ibus_cyc
+    SLICE_X29Y34.C       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr41
+    SLICE_X23Y23.C6      net (fanout=10)       1.165   builder_interface1_adr<12>
+    SLICE_X23Y23.C       Tilo                  0.259   main_master_active_storage_576
+                                                       builder_csr_bankarray_csrbank0_sel<13>1
+    SLICE_X30Y7.C6       net (fanout=40)       2.625   builder_csr_bankarray_csrbank0_sel
+    SLICE_X30Y7.CLK      Tas                   0.339   builder_litei2c_state_FSM_FFd11_833
+                                                       builder_litei2c_state_FSM_FFd3-In1
+                                                       builder_litei2c_state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                     10.642ns (1.587ns logic, 9.055ns route)
+                                                       (14.9% logic, 85.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point builder_litei2c_state_FSM_FFd6 (SLICE_X28Y5.A4), 149 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.506ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               builder_grant (FF)
+  Destination:          builder_litei2c_state_FSM_FFd6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      11.279ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.180ns (0.423 - 0.603)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: builder_grant to builder_litei2c_state_FSM_FFd6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y27.AQ       Tcko                  0.430   builder_grant_687
+                                                       builder_grant
+    SLICE_X47Y20.D3      net (fanout=140)      3.293   builder_grant_687
+    SLICE_X47Y20.D       Tilo                  0.259   inst_LPM_FF_1_1520
+                                                       Mmux_builder_self0301
+    SLICE_X29Y34.D6      net (fanout=49)       2.381   builder_self0<9>
+    SLICE_X29Y34.D       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr141
+    SLICE_X23Y23.C1      net (fanout=10)       1.579   builder_interface1_adr<9>
+    SLICE_X23Y23.C       Tilo                  0.259   main_master_active_storage_576
+                                                       builder_csr_bankarray_csrbank0_sel<13>1
+    SLICE_X28Y5.A4       net (fanout=40)       2.470   builder_csr_bankarray_csrbank0_sel
+    SLICE_X28Y5.CLK      Tas                   0.349   builder_litei2c_state_FSM_FFd6_413
+                                                       builder_litei2c_state_FSM_FFd6-In1
+                                                       builder_litei2c_state_FSM_FFd6
+    -------------------------------------------------  ---------------------------
+    Total                                     11.279ns (1.556ns logic, 9.723ns route)
+                                                       (13.8% logic, 86.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.926ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FDPE_1_1 (FF)
+  Destination:          builder_litei2c_state_FSM_FFd6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.881ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.158ns (0.300 - 0.458)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FDPE_1_1 to builder_litei2c_state_FSM_FFd6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y1.AQ       Tcko                  0.476   sys_rst
+                                                       FDPE_1_1
+    SLICE_X14Y29.B5      net (fanout=243)      3.589   sys_rst
+    SLICE_X14Y29.B       Tilo                  0.254   main_basesoc_ibus_cyc
+                                                       serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X29Y34.D4      net (fanout=7)        1.646   main_basesoc_ibus_cyc
+    SLICE_X29Y34.D       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr141
+    SLICE_X23Y23.C1      net (fanout=10)       1.579   builder_interface1_adr<9>
+    SLICE_X23Y23.C       Tilo                  0.259   main_master_active_storage_576
+                                                       builder_csr_bankarray_csrbank0_sel<13>1
+    SLICE_X28Y5.A4       net (fanout=40)       2.470   builder_csr_bankarray_csrbank0_sel
+    SLICE_X28Y5.CLK      Tas                   0.349   builder_litei2c_state_FSM_FFd6_413
+                                                       builder_litei2c_state_FSM_FFd6-In1
+                                                       builder_litei2c_state_FSM_FFd6
+    -------------------------------------------------  ---------------------------
+    Total                                     10.881ns (1.597ns logic, 9.284ns route)
+                                                       (14.7% logic, 85.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.310ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FDPE_1_1 (FF)
+  Destination:          builder_litei2c_state_FSM_FFd6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.497ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.158ns (0.300 - 0.458)
+  Source Clock:         clk100_BUFGP_1 rising at 0.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FDPE_1_1 to builder_litei2c_state_FSM_FFd6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y1.AQ       Tcko                  0.476   sys_rst
+                                                       FDPE_1_1
+    SLICE_X14Y29.B5      net (fanout=243)      3.589   sys_rst
+    SLICE_X14Y29.B       Tilo                  0.254   main_basesoc_ibus_cyc
+                                                       serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X29Y34.C4      net (fanout=7)        1.676   main_basesoc_ibus_cyc
+    SLICE_X29Y34.C       Tilo                  0.259   builder_interface1_adr<9>
+                                                       Mmux_builder_interface1_adr41
+    SLICE_X23Y23.C6      net (fanout=10)       1.165   builder_interface1_adr<12>
+    SLICE_X23Y23.C       Tilo                  0.259   main_master_active_storage_576
+                                                       builder_csr_bankarray_csrbank0_sel<13>1
+    SLICE_X28Y5.A4       net (fanout=40)       2.470   builder_csr_bankarray_csrbank0_sel
+    SLICE_X28Y5.CLK      Tas                   0.349   builder_litei2c_state_FSM_FFd6_413
+                                                       builder_litei2c_state_FSM_FFd6-In1
+                                                       builder_litei2c_state_FSM_FFd6
+    -------------------------------------------------  ---------------------------
+    Total                                     10.497ns (1.597ns logic, 8.900ns route)
+                                                       (15.2% logic, 84.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TSclk100 = PERIOD TIMEGRP "PRDclk100" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point serv_rf_top/rf_ram/Mram_memory (RAMB8_X1Y9.ADDRBRDADDR3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.283ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               serv_rf_top/rf_ram_if/rcnt_3 (FF)
+  Destination:          serv_rf_top/rf_ram/Mram_memory (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.272ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.011ns (0.181 - 0.192)
+  Source Clock:         clk100_BUFGP_1 rising at 20.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: serv_rf_top/rf_ram_if/rcnt_3 to serv_rf_top/rf_ram/Mram_memory
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X16Y19.BQ         Tcko                  0.200   serv_rf_top/rf_ram_if/rcnt<4>
+                                                          serv_rf_top/rf_ram_if/rcnt_3
+    RAMB8_X1Y9.ADDRBRDADDR3 net (fanout=3)        0.138   serv_rf_top/rf_ram_if/rcnt<3>
+    RAMB8_X1Y9.CLKBRDCLK    Trckc_ADDRB (-Th)     0.066   serv_rf_top/rf_ram/Mram_memory
+                                                          serv_rf_top/rf_ram/Mram_memory
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.272ns (0.134ns logic, 0.138ns route)
+                                                          (49.3% logic, 50.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_storage_18/DP (SLICE_X26Y52.D2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.304ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               main_basesoc_uart_rx_fifo_produce_0 (FF)
+  Destination:          Mram_storage_18/DP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.304ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk100_BUFGP_1 rising at 20.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: main_basesoc_uart_rx_fifo_produce_0 to Mram_storage_18/DP
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y51.AQ      Tcko                  0.198   main_basesoc_uart_rx_fifo_produce<2>
+                                                       main_basesoc_uart_rx_fifo_produce_0
+    SLICE_X26Y52.D2      net (fanout=7)        0.401   main_basesoc_uart_rx_fifo_produce<0>
+    SLICE_X26Y52.CLK     Tah         (-Th)     0.295   storage_1_dat1<3>
+                                                       Mram_storage_18/DP
+    -------------------------------------------------  ---------------------------
+    Total                                      0.304ns (-0.097ns logic, 0.401ns route)
+                                                       (-31.9% logic, 131.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_storage_15/DP (SLICE_X26Y52.D2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.304ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               main_basesoc_uart_rx_fifo_produce_0 (FF)
+  Destination:          Mram_storage_15/DP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.304ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk100_BUFGP_1 rising at 20.000ns
+  Destination Clock:    clk100_BUFGP_1 rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: main_basesoc_uart_rx_fifo_produce_0 to Mram_storage_15/DP
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y51.AQ      Tcko                  0.198   main_basesoc_uart_rx_fifo_produce<2>
+                                                       main_basesoc_uart_rx_fifo_produce_0
+    SLICE_X26Y52.D2      net (fanout=7)        0.401   main_basesoc_uart_rx_fifo_produce<0>
+    SLICE_X26Y52.CLK     Tah         (-Th)     0.295   storage_1_dat1<3>
+                                                       Mram_storage_15/DP
+    -------------------------------------------------  ---------------------------
+    Total                                      0.304ns (-0.097ns logic, 0.401ns route)
+                                                       (-31.9% logic, 131.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TSclk100 = PERIOD TIMEGRP "PRDclk100" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: Mram_rom10/CLKA
+  Logical resource: Mram_rom10/CLKA
+  Location pin: RAMB16_X1Y22.CLKA
+  Clock network: clk100_BUFGP_1
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: Mram_rom11/CLKA
+  Logical resource: Mram_rom11/CLKA
+  Location pin: RAMB16_X1Y18.CLKA
+  Clock network: clk100_BUFGP_1
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: Mram_rom12/CLKA
+  Logical resource: Mram_rom12/CLKA
+  Location pin: RAMB16_X2Y30.CLKA
+  Clock network: clk100_BUFGP_1
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk100         |   11.955|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 107531 paths, 0 nets, and 9362 connections
+
+Design statistics:
+   Minimum period:  11.955ns{1}   (Maximum frequency:  83.647MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jan  8 09:52:01 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 442 MB
+
+
+

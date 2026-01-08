@@ -1,0 +1,877 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jan 08 11:05:24 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "i2c0_sda" LOCATE = SITE "P9" LEVEL 1;
+COMP "i2c0_scl" LOCATE = SITE "N5" LEVEL 1;
+COMP "vga_clk_out" LOCATE = SITE "E11" LEVEL 1;
+COMP "vga_hsync" LOCATE = SITE "N16" LEVEL 1;
+COMP "clk100" LOCATE = SITE "M9" LEVEL 1;
+COMP "serial_rx" LOCATE = SITE "E15" LEVEL 1;
+COMP "serial_tx" LOCATE = SITE "D16" LEVEL 1;
+COMP "vga_vsync" LOCATE = SITE "P15" LEVEL 1;
+COMP "vga_b<0>" LOCATE = SITE "M13" LEVEL 1;
+COMP "vga_b<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "vga_b<2>" LOCATE = SITE "L14" LEVEL 1;
+COMP "vga_b<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "vga_b<4>" LOCATE = SITE "H13" LEVEL 1;
+COMP "vga_b<5>" LOCATE = SITE "G14" LEVEL 1;
+COMP "vga_b<6>" LOCATE = SITE "E13" LEVEL 1;
+COMP "vga_b<7>" LOCATE = SITE "D14" LEVEL 1;
+COMP "vga_g<0>" LOCATE = SITE "J16" LEVEL 1;
+COMP "vga_g<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "vga_g<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "vga_g<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "vga_g<4>" LOCATE = SITE "L16" LEVEL 1;
+COMP "vga_g<5>" LOCATE = SITE "M15" LEVEL 1;
+COMP "vga_g<6>" LOCATE = SITE "M16" LEVEL 1;
+COMP "vga_g<7>" LOCATE = SITE "N14" LEVEL 1;
+COMP "vga_r<0>" LOCATE = SITE "E16" LEVEL 1;
+COMP "vga_r<1>" LOCATE = SITE "F15" LEVEL 1;
+COMP "vga_r<2>" LOCATE = SITE "F16" LEVEL 1;
+COMP "vga_r<3>" LOCATE = SITE "F14" LEVEL 1;
+COMP "vga_r<4>" LOCATE = SITE "G16" LEVEL 1;
+COMP "vga_r<5>" LOCATE = SITE "H15" LEVEL 1;
+COMP "vga_r<6>" LOCATE = SITE "H16" LEVEL 1;
+COMP "vga_r<7>" LOCATE = SITE "H14" LEVEL 1;
+COMP "user_led0" LOCATE = SITE "P16" LEVEL 1;
+COMP "user_btn0" LOCATE = SITE "T6" LEVEL 1;
+PIN u1/IDDR2_pins<1> = BEL "u1/IDDR2" PINNAME CLK0;
+PIN u1/IDDR2_pins<2> = BEL "u1/IDDR2" PINNAME CLK1;
+PIN u1/Mram_main_ram15_pins<9> = BEL "u1/Mram_main_ram15" PINNAME CLKA;
+PIN u1/Mram_main_ram14_pins<9> = BEL "u1/Mram_main_ram14" PINNAME CLKA;
+PIN u1/Mram_main_ram16_pins<9> = BEL "u1/Mram_main_ram16" PINNAME CLKA;
+PIN u1/Mram_main_ram12_pins<9> = BEL "u1/Mram_main_ram12" PINNAME CLKA;
+PIN u1/Mram_main_ram11_pins<9> = BEL "u1/Mram_main_ram11" PINNAME CLKA;
+PIN u1/Mram_main_ram13_pins<9> = BEL "u1/Mram_main_ram13" PINNAME CLKA;
+PIN u1/Mram_main_ram10_pins<9> = BEL "u1/Mram_main_ram10" PINNAME CLKA;
+PIN u1/Mram_main_ram9_pins<9> = BEL "u1/Mram_main_ram9" PINNAME CLKA;
+PIN u1/Mram_main_ram8_pins<9> = BEL "u1/Mram_main_ram8" PINNAME CLKA;
+PIN u1/Mram_main_ram7_pins<9> = BEL "u1/Mram_main_ram7" PINNAME CLKA;
+PIN u1/Mram_main_ram5_pins<9> = BEL "u1/Mram_main_ram5" PINNAME CLKA;
+PIN u1/Mram_main_ram4_pins<9> = BEL "u1/Mram_main_ram4" PINNAME CLKA;
+PIN u1/Mram_main_ram6_pins<9> = BEL "u1/Mram_main_ram6" PINNAME CLKA;
+PIN u1/Mram_main_ram2_pins<9> = BEL "u1/Mram_main_ram2" PINNAME CLKA;
+PIN u1/Mram_main_ram1_pins<9> = BEL "u1/Mram_main_ram1" PINNAME CLKA;
+PIN u1/Mram_main_ram3_pins<9> = BEL "u1/Mram_main_ram3" PINNAME CLKA;
+PIN u1/Mram_sram4_pins<9> = BEL "u1/Mram_sram4" PINNAME CLKA;
+PIN u1/Mram_sram2_pins<9> = BEL "u1/Mram_sram2" PINNAME CLKA;
+PIN u1/Mram_sram1_pins<9> = BEL "u1/Mram_sram1" PINNAME CLKA;
+PIN u1/Mram_sram3_pins<9> = BEL "u1/Mram_sram3" PINNAME CLKA;
+PIN u1/serv_rf_top/rf_ram/Mram_memory_pins<24> = BEL
+        "u1/serv_rf_top/rf_ram/Mram_memory" PINNAME CLKAWRCLK;
+PIN u1/serv_rf_top/rf_ram/Mram_memory_pins<25> = BEL
+        "u1/serv_rf_top/rf_ram/Mram_memory" PINNAME CLKBRDCLK;
+PIN u1_Mram_rom16_pins<13> = BEL "u1_Mram_rom16" PINNAME CLKA;
+PIN u1_Mram_rom15_pins<13> = BEL "u1_Mram_rom15" PINNAME CLKA;
+PIN u1_Mram_rom14_pins<13> = BEL "u1_Mram_rom14" PINNAME CLKA;
+PIN u1_Mram_rom13_pins<13> = BEL "u1_Mram_rom13" PINNAME CLKA;
+PIN u1_Mram_rom12_pins<13> = BEL "u1_Mram_rom12" PINNAME CLKA;
+PIN u1_Mram_rom11_pins<13> = BEL "u1_Mram_rom11" PINNAME CLKA;
+PIN u1_Mram_rom10_pins<13> = BEL "u1_Mram_rom10" PINNAME CLKA;
+PIN u1_Mram_rom9_pins<13> = BEL "u1_Mram_rom9" PINNAME CLKA;
+PIN u1_Mram_rom8_pins<13> = BEL "u1_Mram_rom8" PINNAME CLKA;
+PIN u1_Mram_rom7_pins<13> = BEL "u1_Mram_rom7" PINNAME CLKA;
+PIN u1_Mram_rom6_pins<13> = BEL "u1_Mram_rom6" PINNAME CLKA;
+PIN u1_Mram_rom5_pins<13> = BEL "u1_Mram_rom5" PINNAME CLKA;
+PIN u1_Mram_rom4_pins<13> = BEL "u1_Mram_rom4" PINNAME CLKA;
+PIN u1_Mram_rom3_pins<13> = BEL "u1_Mram_rom3" PINNAME CLKA;
+PIN u1_Mram_rom2_pins<13> = BEL "u1_Mram_rom2" PINNAME CLKA;
+PIN u1_Mram_rom1_pins<13> = BEL "u1_Mram_rom1" PINNAME CLKA;
+PIN u2/u1_Mram_row[31]_read_port_8_OUT<0>_pins<13> = BEL
+        "u2/u1_Mram_row[31]_read_port_8_OUT<0>" PINNAME CLKAWRCLK;
+PIN u1/ODDR2_pins<1> = BEL "u1/ODDR2" PINNAME CK0;
+PIN u1/ODDR2_pins<2> = BEL "u1/ODDR2" PINNAME CK1;
+PIN u1/ODDR2_1_pins<1> = BEL "u1/ODDR2_1" PINNAME CK0;
+PIN u1/ODDR2_1_pins<2> = BEL "u1/ODDR2_1" PINNAME CK1;
+PIN u1/ODDR2_2_pins<1> = BEL "u1/ODDR2_2" PINNAME CK0;
+PIN u1/ODDR2_2_pins<2> = BEL "u1/ODDR2_2" PINNAME CK1;
+PIN u1/ODDR2_3_pins<1> = BEL "u1/ODDR2_3" PINNAME CK0;
+PIN u1/ODDR2_3_pins<2> = BEL "u1/ODDR2_3" PINNAME CK1;
+TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
+        "u1/inst_LPM_FF_0" BEL "u1/inst_LPM_FF_1" BEL
+        "u1/main_basesoc_rx_count_3" BEL "u1/main_basesoc_rx_count_2" BEL
+        "u1/main_basesoc_rx_count_1" BEL "u1/main_basesoc_rx_count_0" BEL
+        "u1/main_basesoc_tx_count_3" BEL "u1/main_basesoc_tx_count_2" BEL
+        "u1/main_basesoc_tx_count_0" BEL "u1/main_basesoc_tx_count_1" BEL
+        "u1/main_my_module_counter_2" BEL "u1/main_my_module_counter_1" BEL
+        "u1/main_my_module_counter_0" BEL "u1/main_phy_sub_cnt_1" BEL
+        "u1/main_phy_sub_cnt_0" BEL "u1/builder_litei2c_state_FSM_FFd2" BEL
+        "u1/builder_litei2c_state_FSM_FFd3" BEL
+        "u1/builder_litei2c_state_FSM_FFd1" BEL
+        "u1/builder_litei2c_state_FSM_FFd5" BEL
+        "u1/builder_litei2c_state_FSM_FFd7" BEL
+        "u1/builder_litei2c_state_FSM_FFd8" BEL
+        "u1/builder_litei2c_state_FSM_FFd6" BEL
+        "u1/builder_litei2c_state_FSM_FFd9" BEL
+        "u1/builder_litei2c_state_FSM_FFd10" BEL
+        "u1/builder_litei2c_state_FSM_FFd12" BEL
+        "u1/builder_litei2c_state_FSM_FFd13" BEL
+        "u1/builder_litei2c_state_FSM_FFd11" BEL
+        "u1/builder_litei2c_state_FSM_FFd15" BEL
+        "u1/builder_litei2c_state_FSM_FFd16" BEL
+        "u1/builder_litei2c_state_FSM_FFd14" BEL
+        "u1/builder_litei2c_state_FSM_FFd18" BEL
+        "u1/builder_litei2c_state_FSM_FFd19" BEL
+        "u1/builder_litei2c_state_FSM_FFd17" BEL
+        "u1/builder_litei2c_state_FSM_FFd20" BEL
+        "u1/builder_litei2c_state_FSM_FFd21" BEL
+        "u1/builder_litei2c_state_FSM_FFd23" BEL
+        "u1/builder_litei2c_state_FSM_FFd24" BEL
+        "u1/builder_litei2c_state_FSM_FFd22" BEL
+        "u1/builder_litei2c_state_FSM_FFd26" BEL
+        "u1/builder_litei2c_state_FSM_FFd27" BEL
+        "u1/builder_litei2c_state_FSM_FFd25" BEL
+        "u1/builder_litei2c_state_FSM_FFd29" BEL
+        "u1/builder_litei2c_state_FSM_FFd28" BEL "u1/main_phy_cnt_5" BEL
+        "u1/main_phy_cnt_4" BEL "u1/main_phy_cnt_6" BEL "u1/main_phy_cnt_2"
+        BEL "u1/main_phy_cnt_1" BEL "u1/main_phy_cnt_3" BEL
+        "u1/main_phy_cnt_0" BEL "u1/builder_count_18" BEL
+        "u1/builder_count_17" BEL "u1/builder_count_19" BEL
+        "u1/builder_count_16" BEL "u1/builder_count_15" BEL
+        "u1/builder_count_13" BEL "u1/builder_count_12" BEL
+        "u1/builder_count_14" BEL "u1/builder_count_10" BEL
+        "u1/builder_count_9" BEL "u1/builder_count_11" BEL
+        "u1/builder_count_7" BEL "u1/builder_count_6" BEL "u1/builder_count_8"
+        BEL "u1/builder_count_5" BEL "u1/builder_count_4" BEL
+        "u1/builder_count_2" BEL "u1/builder_count_1" BEL "u1/builder_count_3"
+        BEL "u1/builder_count_0" BEL "u1/main_basesoc_uart_rx_fifo_level0_4"
+        BEL "u1/main_basesoc_uart_rx_fifo_level0_3" BEL
+        "u1/main_basesoc_uart_rx_fifo_level0_2" BEL
+        "u1/main_basesoc_uart_rx_fifo_level0_1" BEL
+        "u1/main_basesoc_uart_rx_fifo_level0_0" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_3" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_2" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_1" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_0" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_3" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_2" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_1" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_0" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_4" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_3" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_2" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_1" BEL
+        "u1/main_basesoc_uart_tx_fifo_produce_3" BEL
+        "u1/main_basesoc_uart_tx_fifo_produce_2" BEL
+        "u1/main_basesoc_uart_tx_fifo_produce_1" BEL
+        "u1/main_basesoc_uart_tx_fifo_produce_0" BEL
+        "u1/main_basesoc_uart_tx_fifo_consume_3" BEL
+        "u1/main_basesoc_uart_tx_fifo_consume_2" BEL
+        "u1/main_basesoc_uart_tx_fifo_consume_1" BEL
+        "u1/main_basesoc_uart_tx_fifo_consume_0" BEL
+        "u1/main_my_module_timer_25" BEL "u1/main_my_module_timer_24" BEL
+        "u1/main_my_module_timer_23" BEL "u1/main_my_module_timer_22" BEL
+        "u1/main_my_module_timer_21" BEL "u1/main_my_module_timer_20" BEL
+        "u1/main_my_module_timer_19" BEL "u1/main_my_module_timer_18" BEL
+        "u1/main_my_module_timer_17" BEL "u1/main_my_module_timer_16" BEL
+        "u1/main_my_module_timer_15" BEL "u1/main_my_module_timer_14" BEL
+        "u1/main_my_module_timer_13" BEL "u1/main_my_module_timer_12" BEL
+        "u1/main_my_module_timer_11" BEL "u1/main_my_module_timer_10" BEL
+        "u1/main_my_module_timer_9" BEL "u1/main_my_module_timer_8" BEL
+        "u1/main_my_module_timer_7" BEL "u1/main_my_module_timer_6" BEL
+        "u1/main_my_module_timer_5" BEL "u1/main_my_module_timer_4" BEL
+        "u1/main_my_module_timer_3" BEL "u1/main_my_module_timer_2" BEL
+        "u1/main_my_module_timer_1" BEL "u1/main_my_module_timer_0" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_17" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_16" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_15" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_14" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_13" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_12" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_11" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_10" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_9" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_8" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_1" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_nack" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_31" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_30" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_29" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_28" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_27" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_26" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_25" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_24" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_23" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_22" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_21" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_20" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_19" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_18" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_17" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_16" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_15" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_14" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_13" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_12" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_11" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_10" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_9" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_8" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_7" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_6" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_5" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_4" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_3" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_2" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_1" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_data_0" BEL
+        "u1/main_phy_sr_out_31" BEL "u1/main_phy_sr_out_30" BEL
+        "u1/main_phy_sr_out_29" BEL "u1/main_phy_sr_out_28" BEL
+        "u1/main_phy_sr_out_27" BEL "u1/main_phy_sr_out_26" BEL
+        "u1/main_phy_sr_out_25" BEL "u1/main_phy_sr_out_24" BEL
+        "u1/main_phy_sr_out_23" BEL "u1/main_phy_sr_out_22" BEL
+        "u1/main_phy_sr_out_21" BEL "u1/main_phy_sr_out_20" BEL
+        "u1/main_phy_sr_out_19" BEL "u1/main_phy_sr_out_18" BEL
+        "u1/main_phy_sr_out_17" BEL "u1/main_phy_sr_out_16" BEL
+        "u1/main_phy_sr_out_15" BEL "u1/main_phy_sr_out_14" BEL
+        "u1/main_phy_sr_out_13" BEL "u1/main_phy_sr_out_12" BEL
+        "u1/main_phy_sr_out_11" BEL "u1/main_phy_sr_out_10" BEL
+        "u1/main_phy_sr_out_9" BEL "u1/main_phy_sr_out_8" BEL
+        "u1/main_phy_sr_out_7" BEL "u1/main_phy_sr_out_6" BEL
+        "u1/main_phy_sr_out_5" BEL "u1/main_phy_sr_out_4" BEL
+        "u1/main_phy_sr_out_3" BEL "u1/main_phy_sr_out_2" BEL
+        "u1/main_phy_sr_out_1" BEL "u1/main_phy_sr_out_0" BEL
+        "u1/main_phy_sr_in_31" BEL "u1/main_phy_sr_in_30" BEL
+        "u1/main_phy_sr_in_29" BEL "u1/main_phy_sr_in_28" BEL
+        "u1/main_phy_sr_in_27" BEL "u1/main_phy_sr_in_26" BEL
+        "u1/main_phy_sr_in_25" BEL "u1/main_phy_sr_in_24" BEL
+        "u1/main_phy_sr_in_23" BEL "u1/main_phy_sr_in_22" BEL
+        "u1/main_phy_sr_in_21" BEL "u1/main_phy_sr_in_20" BEL
+        "u1/main_phy_sr_in_19" BEL "u1/main_phy_sr_in_18" BEL
+        "u1/main_phy_sr_in_17" BEL "u1/main_phy_sr_in_16" BEL
+        "u1/main_phy_sr_in_15" BEL "u1/main_phy_sr_in_14" BEL
+        "u1/main_phy_sr_in_13" BEL "u1/main_phy_sr_in_12" BEL
+        "u1/main_phy_sr_in_11" BEL "u1/main_phy_sr_in_10" BEL
+        "u1/main_phy_sr_in_9" BEL "u1/main_phy_sr_in_8" BEL
+        "u1/main_phy_sr_in_7" BEL "u1/main_phy_sr_in_6" BEL
+        "u1/main_phy_sr_in_5" BEL "u1/main_phy_sr_in_4" BEL
+        "u1/main_phy_sr_in_3" BEL "u1/main_phy_sr_in_2" BEL
+        "u1/main_phy_sr_in_1" BEL "u1/main_phy_sr_in_0" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_unfinished_rx" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_payload_unfinished_tx" BEL
+        "u1/main_master_rx_fifo_pipe_valid_source_valid" BEL
+        "u1/storage_1_dat1_7" BEL "u1/storage_1_dat1_6" BEL
+        "u1/storage_1_dat1_5" BEL "u1/storage_1_dat1_4" BEL
+        "u1/storage_1_dat1_3" BEL "u1/storage_1_dat1_2" BEL
+        "u1/storage_1_dat1_1" BEL "u1/storage_1_dat1_0" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_31" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_30" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_29" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_28" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_27" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_26" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_25" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_24" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_23" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_22" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_21" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_20" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_19" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_18" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_17" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_16" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_15" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_14" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_13" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_10" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_9" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_8" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_1" BEL
+        "u1/main_basesoc_timer_value_status_31" BEL
+        "u1/main_basesoc_timer_value_status_30" BEL
+        "u1/main_basesoc_timer_value_status_29" BEL
+        "u1/main_basesoc_timer_value_status_28" BEL
+        "u1/main_basesoc_timer_value_status_27" BEL
+        "u1/main_basesoc_timer_value_status_26" BEL
+        "u1/main_basesoc_timer_value_status_25" BEL
+        "u1/main_basesoc_timer_value_status_24" BEL
+        "u1/main_basesoc_timer_value_status_23" BEL
+        "u1/main_basesoc_timer_value_status_22" BEL
+        "u1/main_basesoc_timer_value_status_21" BEL
+        "u1/main_basesoc_timer_value_status_20" BEL
+        "u1/main_basesoc_timer_value_status_19" BEL
+        "u1/main_basesoc_timer_value_status_18" BEL
+        "u1/main_basesoc_timer_value_status_17" BEL
+        "u1/main_basesoc_timer_value_status_16" BEL
+        "u1/main_basesoc_timer_value_status_15" BEL
+        "u1/main_basesoc_timer_value_status_14" BEL
+        "u1/main_basesoc_timer_value_status_13" BEL
+        "u1/main_basesoc_timer_value_status_12" BEL
+        "u1/main_basesoc_timer_value_status_11" BEL
+        "u1/main_basesoc_timer_value_status_10" BEL
+        "u1/main_basesoc_timer_value_status_9" BEL
+        "u1/main_basesoc_timer_value_status_8" BEL
+        "u1/main_basesoc_timer_value_status_7" BEL
+        "u1/main_basesoc_timer_value_status_6" BEL
+        "u1/main_basesoc_timer_value_status_5" BEL
+        "u1/main_basesoc_timer_value_status_4" BEL
+        "u1/main_basesoc_timer_value_status_3" BEL
+        "u1/main_basesoc_timer_value_status_2" BEL
+        "u1/main_basesoc_timer_value_status_1" BEL
+        "u1/main_basesoc_timer_value_status_0" BEL "u1/main_phy_sr_addr_6" BEL
+        "u1/main_phy_sr_addr_5" BEL "u1/main_phy_sr_addr_4" BEL
+        "u1/main_phy_sr_addr_3" BEL "u1/main_phy_sr_addr_2" BEL
+        "u1/main_phy_sr_addr_1" BEL "u1/main_phy_sr_addr_0" BEL
+        "u1/main_basesoc_tx_data_7" BEL "u1/main_basesoc_tx_data_6" BEL
+        "u1/main_basesoc_tx_data_5" BEL "u1/main_basesoc_tx_data_4" BEL
+        "u1/main_basesoc_tx_data_3" BEL "u1/main_basesoc_tx_data_2" BEL
+        "u1/main_basesoc_tx_data_1" BEL "u1/main_basesoc_tx_data_0" BEL
+        "u1/main_basesoc_timer_value_31" BEL "u1/main_basesoc_timer_value_30"
+        BEL "u1/main_basesoc_timer_value_29" BEL
+        "u1/main_basesoc_timer_value_28" BEL "u1/main_basesoc_timer_value_27"
+        BEL "u1/main_basesoc_timer_value_26" BEL
+        "u1/main_basesoc_timer_value_25" BEL "u1/main_basesoc_timer_value_24"
+        BEL "u1/main_basesoc_timer_value_23" BEL
+        "u1/main_basesoc_timer_value_22" BEL "u1/main_basesoc_timer_value_21"
+        BEL "u1/main_basesoc_timer_value_20" BEL
+        "u1/main_basesoc_timer_value_19" BEL "u1/main_basesoc_timer_value_18"
+        BEL "u1/main_basesoc_timer_value_17" BEL
+        "u1/main_basesoc_timer_value_16" BEL "u1/main_basesoc_timer_value_15"
+        BEL "u1/main_basesoc_timer_value_14" BEL
+        "u1/main_basesoc_timer_value_13" BEL "u1/main_basesoc_timer_value_12"
+        BEL "u1/main_basesoc_timer_value_11" BEL
+        "u1/main_basesoc_timer_value_10" BEL "u1/main_basesoc_timer_value_9"
+        BEL "u1/main_basesoc_timer_value_8" BEL
+        "u1/main_basesoc_timer_value_7" BEL "u1/main_basesoc_timer_value_6"
+        BEL "u1/main_basesoc_timer_value_5" BEL
+        "u1/main_basesoc_timer_value_4" BEL "u1/main_basesoc_timer_value_3"
+        BEL "u1/main_basesoc_timer_value_2" BEL
+        "u1/main_basesoc_timer_value_1" BEL "u1/main_basesoc_timer_value_0"
+        BEL "u1/main_basesoc_rx_data_7" BEL "u1/main_basesoc_rx_data_6" BEL
+        "u1/main_basesoc_rx_data_5" BEL "u1/main_basesoc_rx_data_4" BEL
+        "u1/main_basesoc_rx_data_3" BEL "u1/main_basesoc_rx_data_2" BEL
+        "u1/main_basesoc_rx_data_1" BEL "u1/main_basesoc_rx_data_0" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_rx_2" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_rx_1" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_rx_0" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_2" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_1" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_0" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_recover" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_6" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_5" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_4" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_3" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_2" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_1" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_addr_0" BEL
+        "u1/main_phy_i2c_speed_mode_delayed_1" BEL
+        "u1/main_phy_i2c_speed_mode_delayed_0" BEL "u1/storage_dat1_7" BEL
+        "u1/storage_dat1_6" BEL "u1/storage_dat1_5" BEL "u1/storage_dat1_4"
+        BEL "u1/storage_dat1_3" BEL "u1/storage_dat1_2" BEL
+        "u1/storage_dat1_1" BEL "u1/storage_dat1_0" BEL "u1/mem_adr0_5" BEL
+        "u1/mem_adr0_4" BEL "u1/mem_adr0_3" BEL "u1/mem_adr0_2" BEL
+        "u1/mem_adr0_1" BEL "u1/mem_adr0_0" BEL
+        "u1/main_basesoc_uart_enable_storage_1" BEL
+        "u1/main_basesoc_uart_enable_storage_0" BEL
+        "u1/main_basesoc_uart_pending_r_1" BEL
+        "u1/main_basesoc_uart_pending_r_0" BEL
+        "u1/main_basesoc_timer_reload_storage_31" BEL
+        "u1/main_basesoc_timer_reload_storage_30" BEL
+        "u1/main_basesoc_timer_reload_storage_29" BEL
+        "u1/main_basesoc_timer_reload_storage_28" BEL
+        "u1/main_basesoc_timer_reload_storage_27" BEL
+        "u1/main_basesoc_timer_reload_storage_26" BEL
+        "u1/main_basesoc_timer_reload_storage_25" BEL
+        "u1/main_basesoc_timer_reload_storage_24" BEL
+        "u1/main_basesoc_timer_reload_storage_23" BEL
+        "u1/main_basesoc_timer_reload_storage_22" BEL
+        "u1/main_basesoc_timer_reload_storage_21" BEL
+        "u1/main_basesoc_timer_reload_storage_20" BEL
+        "u1/main_basesoc_timer_reload_storage_19" BEL
+        "u1/main_basesoc_timer_reload_storage_18" BEL
+        "u1/main_basesoc_timer_reload_storage_17" BEL
+        "u1/main_basesoc_timer_reload_storage_16" BEL
+        "u1/main_basesoc_timer_reload_storage_15" BEL
+        "u1/main_basesoc_timer_reload_storage_14" BEL
+        "u1/main_basesoc_timer_reload_storage_13" BEL
+        "u1/main_basesoc_timer_reload_storage_12" BEL
+        "u1/main_basesoc_timer_reload_storage_11" BEL
+        "u1/main_basesoc_timer_reload_storage_10" BEL
+        "u1/main_basesoc_timer_reload_storage_9" BEL
+        "u1/main_basesoc_timer_reload_storage_8" BEL
+        "u1/main_basesoc_timer_reload_storage_7" BEL
+        "u1/main_basesoc_timer_reload_storage_6" BEL
+        "u1/main_basesoc_timer_reload_storage_5" BEL
+        "u1/main_basesoc_timer_reload_storage_4" BEL
+        "u1/main_basesoc_timer_reload_storage_3" BEL
+        "u1/main_basesoc_timer_reload_storage_2" BEL
+        "u1/main_basesoc_timer_reload_storage_1" BEL
+        "u1/main_basesoc_timer_reload_storage_0" BEL
+        "u1/main_basesoc_timer_load_storage_31" BEL
+        "u1/main_basesoc_timer_load_storage_30" BEL
+        "u1/main_basesoc_timer_load_storage_29" BEL
+        "u1/main_basesoc_timer_load_storage_28" BEL
+        "u1/main_basesoc_timer_load_storage_27" BEL
+        "u1/main_basesoc_timer_load_storage_26" BEL
+        "u1/main_basesoc_timer_load_storage_25" BEL
+        "u1/main_basesoc_timer_load_storage_24" BEL
+        "u1/main_basesoc_timer_load_storage_23" BEL
+        "u1/main_basesoc_timer_load_storage_22" BEL
+        "u1/main_basesoc_timer_load_storage_21" BEL
+        "u1/main_basesoc_timer_load_storage_20" BEL
+        "u1/main_basesoc_timer_load_storage_19" BEL
+        "u1/main_basesoc_timer_load_storage_18" BEL
+        "u1/main_basesoc_timer_load_storage_17" BEL
+        "u1/main_basesoc_timer_load_storage_16" BEL
+        "u1/main_basesoc_timer_load_storage_15" BEL
+        "u1/main_basesoc_timer_load_storage_14" BEL
+        "u1/main_basesoc_timer_load_storage_13" BEL
+        "u1/main_basesoc_timer_load_storage_12" BEL
+        "u1/main_basesoc_timer_load_storage_11" BEL
+        "u1/main_basesoc_timer_load_storage_10" BEL
+        "u1/main_basesoc_timer_load_storage_9" BEL
+        "u1/main_basesoc_timer_load_storage_8" BEL
+        "u1/main_basesoc_timer_load_storage_7" BEL
+        "u1/main_basesoc_timer_load_storage_6" BEL
+        "u1/main_basesoc_timer_load_storage_5" BEL
+        "u1/main_basesoc_timer_load_storage_4" BEL
+        "u1/main_basesoc_timer_load_storage_3" BEL
+        "u1/main_basesoc_timer_load_storage_2" BEL
+        "u1/main_basesoc_timer_load_storage_1" BEL
+        "u1/main_basesoc_timer_load_storage_0" BEL
+        "u1/main_ctrl_reg_storage_23" BEL "u1/main_ctrl_reg_storage_22" BEL
+        "u1/main_ctrl_reg_storage_21" BEL "u1/main_ctrl_reg_storage_20" BEL
+        "u1/main_ctrl_reg_storage_19" BEL "u1/main_ctrl_reg_storage_18" BEL
+        "u1/main_ctrl_reg_storage_17" BEL "u1/main_ctrl_reg_storage_16" BEL
+        "u1/main_ctrl_reg_storage_15" BEL "u1/main_ctrl_reg_storage_14" BEL
+        "u1/main_ctrl_reg_storage_13" BEL "u1/main_ctrl_reg_storage_12" BEL
+        "u1/main_ctrl_reg_storage_11" BEL "u1/main_ctrl_reg_storage_10" BEL
+        "u1/main_ctrl_reg_storage_9" BEL "u1/main_ctrl_reg_storage_8" BEL
+        "u1/main_ctrl_reg_storage_7" BEL "u1/main_ctrl_reg_storage_6" BEL
+        "u1/main_ctrl_reg_storage_5" BEL "u1/main_ctrl_reg_storage_4" BEL
+        "u1/main_ctrl_reg_storage_3" BEL "u1/main_ctrl_reg_storage_2" BEL
+        "u1/main_ctrl_reg_storage_1" BEL "u1/main_ctrl_reg_storage_0" BEL
+        "u1/main_ctrl_storage_3" BEL "u1/main_ctrl_storage_2" BEL
+        "u1/main_ctrl_storage_1" BEL "u1/main_ctrl_storage_0" BEL
+        "u1/main_master_addr_storage_6" BEL "u1/main_master_addr_storage_5"
+        BEL "u1/main_master_addr_storage_4" BEL
+        "u1/main_master_addr_storage_3" BEL "u1/main_master_addr_storage_2"
+        BEL "u1/main_master_addr_storage_1" BEL
+        "u1/main_master_addr_storage_0" BEL
+        "u1/main_master_settings_storage_16" BEL
+        "u1/main_master_settings_storage_15" BEL
+        "u1/main_master_settings_storage_14" BEL
+        "u1/main_master_settings_storage_13" BEL
+        "u1/main_master_settings_storage_12" BEL
+        "u1/main_master_settings_storage_11" BEL
+        "u1/main_master_settings_storage_10" BEL
+        "u1/main_master_settings_storage_9" BEL
+        "u1/main_master_settings_storage_8" BEL
+        "u1/main_master_settings_storage_7" BEL
+        "u1/main_master_settings_storage_6" BEL
+        "u1/main_master_settings_storage_5" BEL
+        "u1/main_master_settings_storage_4" BEL
+        "u1/main_master_settings_storage_3" BEL
+        "u1/main_master_settings_storage_2" BEL
+        "u1/main_master_settings_storage_1" BEL
+        "u1/main_master_settings_storage_0" BEL "u1/main_phy_storage_1" BEL
+        "u1/main_phy_storage_0" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_31" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_30" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_29" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_28" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_27" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_26" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_25" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_24" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_23" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_22" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_21" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_20" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_19" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_18" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_17" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_16" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_15" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_14" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_13" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_12" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_11" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_10" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_9" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_8" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_7" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_6" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_5" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_4" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_3" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_2" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_1" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_data_0" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_valid" BEL
+        "u1/main_basesoc_uart_pending_re" BEL
+        "u1/main_basesoc_timer_pending_re" BEL
+        "u1/main_basesoc_timer_update_value_re" BEL "u1/main_phy_bytes_recv_2"
+        BEL "u1/main_phy_bytes_recv_1" BEL "u1/main_phy_bytes_recv_0" BEL
+        "u1/main_phy_bytes_send_2" BEL "u1/main_phy_bytes_send_1" BEL
+        "u1/main_phy_bytes_send_0" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_0" BEL
+        "u1/main_basesoc_rx_phase_30" BEL "u1/main_basesoc_rx_phase_29" BEL
+        "u1/main_basesoc_rx_phase_28" BEL "u1/main_basesoc_rx_phase_27" BEL
+        "u1/main_basesoc_rx_phase_26" BEL "u1/main_basesoc_rx_phase_25" BEL
+        "u1/main_basesoc_rx_phase_24" BEL "u1/main_basesoc_rx_phase_23" BEL
+        "u1/main_basesoc_rx_phase_22" BEL "u1/main_basesoc_rx_phase_21" BEL
+        "u1/main_basesoc_rx_phase_20" BEL "u1/main_basesoc_rx_phase_19" BEL
+        "u1/main_basesoc_rx_phase_18" BEL "u1/main_basesoc_rx_phase_17" BEL
+        "u1/main_basesoc_rx_phase_16" BEL "u1/main_basesoc_rx_phase_15" BEL
+        "u1/main_basesoc_rx_phase_14" BEL "u1/main_basesoc_rx_phase_13" BEL
+        "u1/main_basesoc_rx_phase_12" BEL "u1/main_basesoc_rx_phase_11" BEL
+        "u1/main_basesoc_rx_phase_10" BEL "u1/main_basesoc_rx_phase_9" BEL
+        "u1/main_basesoc_rx_phase_8" BEL "u1/main_basesoc_rx_phase_7" BEL
+        "u1/main_basesoc_rx_phase_6" BEL "u1/main_basesoc_rx_phase_5" BEL
+        "u1/main_basesoc_rx_phase_4" BEL "u1/main_basesoc_rx_phase_3" BEL
+        "u1/main_basesoc_rx_phase_2" BEL "u1/main_basesoc_tx_phase_31" BEL
+        "u1/main_basesoc_tx_phase_30" BEL "u1/main_basesoc_tx_phase_29" BEL
+        "u1/main_basesoc_tx_phase_28" BEL "u1/main_basesoc_tx_phase_27" BEL
+        "u1/main_basesoc_tx_phase_26" BEL "u1/main_basesoc_tx_phase_25" BEL
+        "u1/main_basesoc_tx_phase_24" BEL "u1/main_basesoc_tx_phase_22" BEL
+        "u1/main_basesoc_tx_phase_21" BEL "u1/main_basesoc_tx_phase_19" BEL
+        "u1/main_basesoc_tx_phase_16" BEL "u1/main_basesoc_tx_phase_8" BEL
+        "u1/main_basesoc_tx_phase_6" BEL "u1/main_basesoc_tx_phase_3" BEL
+        "u1/main_basesoc_uart_rx_trigger_d" BEL
+        "u1/builder_csr_bankarray_sel_r" BEL
+        "u1/main_basesoc_timer_zero_trigger_d" BEL
+        "u1/main_basesoc_uart_tx_trigger_d" BEL "u1/main_basesoc_rx_rx_d" BEL
+        "u1/main_basesoc_basesoc_ram_bus_ack" BEL "u1/builder_slave_sel_r_3"
+        BEL "u1/builder_slave_sel_r_2" BEL "u1/builder_slave_sel_r_1" BEL
+        "u1/builder_slave_sel_r_0" BEL "u1/builder_impl_xilinxmultiregimpl1"
+        BEL "u1/builder_impl_xilinxmultiregimpl0" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_31" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_30" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_29" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_28" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_27" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_26" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_25" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_24" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_23" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_22" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_21" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_20" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_19" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_18" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_17" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_16" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_15" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_14" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_13" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_12" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_11" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_10" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_9" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_8" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_7" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_6" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_5" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_4" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_3" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_2" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_1" BEL
+        "u1/serv_rf_top/cpu/bufreg2/dat_0" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_4" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_3" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_2" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_r_3" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_r_2" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_r_1" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_r_0" BEL
+        "u1/serv_rf_top/cpu/decode/op26" BEL "u1/serv_rf_top/cpu/decode/op22"
+        BEL "u1/serv_rf_top/cpu/decode/funct3_2" BEL
+        "u1/serv_rf_top/cpu/decode/funct3_1" BEL
+        "u1/serv_rf_top/cpu/decode/funct3_0" BEL
+        "u1/serv_rf_top/cpu/decode/op21" BEL "u1/serv_rf_top/cpu/decode/op20"
+        BEL "u1/serv_rf_top/cpu/decode/opcode_4" BEL
+        "u1/serv_rf_top/cpu/decode/opcode_3" BEL
+        "u1/serv_rf_top/cpu/decode/opcode_2" BEL
+        "u1/serv_rf_top/cpu/decode/opcode_1" BEL
+        "u1/serv_rf_top/cpu/decode/opcode_0" BEL
+        "u1/serv_rf_top/cpu/decode/imm30" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_8" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_7" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_6" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_5" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_4" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_3" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_2" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_1" BEL
+        "u1/serv_rf_top/cpu/immdec/imm19_12_20_0" BEL
+        "u1/serv_rf_top/cpu/immdec/imm11_7_4" BEL
+        "u1/serv_rf_top/cpu/immdec/imm11_7_3" BEL
+        "u1/serv_rf_top/cpu/immdec/imm11_7_2" BEL
+        "u1/serv_rf_top/cpu/immdec/imm11_7_1" BEL
+        "u1/serv_rf_top/cpu/immdec/imm11_7_0" BEL
+        "u1/serv_rf_top/cpu/immdec/imm24_20_4" BEL
+        "u1/serv_rf_top/cpu/immdec/imm24_20_3" BEL
+        "u1/serv_rf_top/cpu/immdec/imm24_20_2" BEL
+        "u1/serv_rf_top/cpu/immdec/imm24_20_1" BEL
+        "u1/serv_rf_top/cpu/immdec/imm24_20_0" BEL
+        "u1/serv_rf_top/cpu/immdec/imm30_25_5" BEL
+        "u1/serv_rf_top/cpu/immdec/imm30_25_4" BEL
+        "u1/serv_rf_top/cpu/immdec/imm30_25_3" BEL
+        "u1/serv_rf_top/cpu/immdec/imm30_25_2" BEL
+        "u1/serv_rf_top/cpu/immdec/imm30_25_1" BEL
+        "u1/serv_rf_top/cpu/immdec/imm30_25_0" BEL
+        "u1/serv_rf_top/cpu/immdec/imm31" BEL
+        "u1/serv_rf_top/cpu/bufreg/lsb_1" BEL
+        "u1/serv_rf_top/cpu/bufreg/lsb_0" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_31" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_30" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_29" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_28" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_27" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_26" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_25" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_24" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_23" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_22" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_21" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_20" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_19" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_18" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_17" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_16" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_15" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_14" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_13" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_12" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_11" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_10" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_9" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_8" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_7" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_6" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_5" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_4" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_3" BEL
+        "u1/serv_rf_top/cpu/bufreg/data_2" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_31" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_30" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_29" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_28" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_27" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_26" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_25" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_24" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_23" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_22" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_21" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_20" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_19" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_18" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_17" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_16" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_15" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_14" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_13" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_12" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_11" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_10" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_9" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_8" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_7" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_6" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_5" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_4" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_3" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_2" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_1" BEL
+        "u1/serv_rf_top/cpu/ctrl/o_ibus_adr_0" BEL
+        "u1/serv_rf_top/cpu/ctrl/pc_plus_offset_cy_r" BEL
+        "u1/serv_rf_top/cpu/ctrl/pc_plus_4_cy_r" BEL
+        "u1/serv_rf_top/cpu/alu/add_cy_r" BEL
+        "u1/serv_rf_top/cpu/csr/mcause3_0_3" BEL
+        "u1/serv_rf_top/cpu/csr/mcause3_0_2" BEL
+        "u1/serv_rf_top/cpu/csr/mcause3_0_1" BEL
+        "u1/serv_rf_top/cpu/csr/mcause3_0_0" BEL
+        "u1/serv_rf_top/rf_ram_if/rcnt_4" BEL
+        "u1/serv_rf_top/rf_ram_if/rcnt_3" BEL
+        "u1/serv_rf_top/rf_ram_if/rcnt_2" BEL
+        "u1/serv_rf_top/rf_ram_if/rcnt_0" BEL "u1/serv_rf_top/rf_ram_if/rgnt"
+        BEL "u1/serv_rf_top/rf_ram_if/rtrig1" BEL
+        "u1/serv_rf_top/rf_ram_if/rreq_r" BEL
+        "u1/serv_rf_top/rf_ram_if/wdata0_r_0" BEL
+        "u1/serv_rf_top/rf_ram_if/rdata0_1" BEL
+        "u1/serv_rf_top/rf_ram_if/rdata0_0" BEL
+        "u1/serv_rf_top/rf_ram_if/wdata1_r_1" BEL
+        "u1/serv_rf_top/rf_ram_if/wdata1_r_0" BEL
+        "u1/serv_rf_top/rf_ram_if/wen1_r" BEL
+        "u1/serv_rf_top/rf_ram_if/wen0_r" BEL "u2/v_count_9" BEL
+        "u2/v_count_8" BEL "u2/v_count_7" BEL "u2/v_count_6" BEL
+        "u2/v_count_5" BEL "u2/v_count_4" BEL "u2/v_count_3" BEL
+        "u2/v_count_2" BEL "u2/v_count_1" BEL "u2/v_count_0" BEL
+        "u2/h_count_10" BEL "u2/h_count_9" BEL "u2/h_count_8" BEL
+        "u2/h_count_7" BEL "u2/h_count_6" BEL "u2/h_count_5" BEL
+        "u2/h_count_4" BEL "u2/h_count_3" BEL "u2/h_count_2" BEL
+        "u2/h_count_1" BEL "u2/h_count_0" BEL "u2/row_9" BEL "u2/row_8" BEL
+        "u2/row_7" BEL "u2/row_6" BEL "u2/row_5" BEL "u2/row_4" BEL "u2/row_3"
+        BEL "u2/row_2" BEL "u2/row_1" BEL "u2/row_0" BEL "u2/col_9" BEL
+        "u2/col_8" BEL "u2/col_7" BEL "u2/col_6" BEL "u2/col_5" BEL "u2/col_4"
+        BEL "u2/col_3" BEL "u2/col_2" BEL "u2/col_1" BEL "u2/col_0" BEL
+        "u2/vga_hsync" BEL "u2/vga_vsync" BEL "u1/serial_tx" BEL
+        "u1/main_basesoc_uart_tx_fifo_readable" BEL
+        "u1/main_basesoc_rx_phase_31" BEL "u1/main_basesoc_tx_phase_23" BEL
+        "u1/main_basesoc_tx_phase_20" BEL "u1/main_basesoc_tx_phase_18" BEL
+        "u1/main_basesoc_tx_phase_17" BEL "u1/main_basesoc_tx_phase_15" BEL
+        "u1/main_basesoc_tx_phase_14" BEL "u1/main_basesoc_tx_phase_13" BEL
+        "u1/main_basesoc_tx_phase_12" BEL "u1/main_basesoc_tx_phase_11" BEL
+        "u1/main_basesoc_tx_phase_10" BEL "u1/main_basesoc_tx_phase_9" BEL
+        "u1/main_basesoc_tx_phase_7" BEL "u1/main_basesoc_tx_phase_5" BEL
+        "u1/main_basesoc_tx_phase_4" BEL "u1/main_basesoc_tx_phase_2" BEL
+        "u1/builder_grant" BEL "u1/builder_wishbone2csr_state" BEL
+        "u1/main_basesoc_timer_zero_pending" BEL
+        "u1/main_basesoc_uart_rx_fifo_readable" BEL
+        "u1/main_basesoc_uart_rx_pending" BEL
+        "u1/main_basesoc_uart_tx_pending" BEL "u1/builder_rs232phyrx_state"
+        BEL "u1/builder_rs232phytx_state" BEL "u2/u1/blue_7" BEL
+        "u2/u1/blue_6" BEL "u2/u1/blue_5" BEL "u2/u1/blue_4" BEL
+        "u2/u1/blue_3" BEL "u2/u1/blue_2" BEL "u2/u1/blue_1" BEL
+        "u2/u1/blue_0" BEL "u2/u1/red_7" BEL "u2/u1/red_6" BEL "u2/u1/red_5"
+        BEL "u2/u1/red_4" BEL "u2/u1/red_3" BEL "u2/u1/red_2" BEL
+        "u2/u1/red_1" BEL "u2/u1/red_0" BEL "u2/u1/green_7" BEL
+        "u2/u1/green_6" BEL "u2/u1/green_5" BEL "u2/u1/green_4" BEL
+        "u2/u1/green_3" BEL "u2/u1/green_2" BEL "u2/u1/green_1" BEL
+        "u2/u1/green_0" BEL "u1/main_phy_nack" BEL "u1/main_phy_tx_done" BEL
+        "u1/main_basesoc_timer_pending_r" BEL
+        "u1/main_basesoc_timer_update_value_storage" BEL
+        "u1/main_basesoc_timer_enable_storage" BEL
+        "u1/main_basesoc_timer_en_storage" BEL "u1/main_master_active_storage"
+        BEL "u1/main_phy_clk" BEL "u1/builder_litei2c_state_FSM_FFd4" BEL
+        "u1/serv_rf_top/rf_ram/regzero" BEL "u1/main_basesoc_rx_tick" BEL
+        "u1/main_basesoc_tx_tick" BEL "u1/main_basesoc_ram_bus_ack" BEL
+        "u1/main_basesoc_ram_bus_ram_bus_ack" BEL
+        "u1/serv_rf_top/cpu/state/ibus_cyc" BEL
+        "u1/serv_rf_top/cpu/state/stage_two_req" BEL
+        "u1/serv_rf_top/cpu/state/o_cnt_done" BEL
+        "u1/serv_rf_top/cpu/immdec/imm7" BEL "u1/serv_rf_top/cpu/bufreg/c_r"
+        BEL "u1/serv_rf_top/cpu/alu/cmp_r" BEL
+        "u1/serv_rf_top/cpu/mem_if/signbit" BEL
+        "u1/serv_rf_top/cpu/csr/mcause31" BEL
+        "u1/serv_rf_top/cpu/csr/mstatus_mpie" BEL
+        "u1/serv_rf_top/cpu/csr/mstatus_mie" BEL
+        "u1/serv_rf_top/rf_ram_if/rcnt_1" BEL
+        "u1/serv_rf_top/rf_ram_if/rdata1_0" BEL
+        "u1/serv_rf_top/cpu/state/misalign_trap_sync_r" BEL
+        "u1/serv_rf_top/cpu/state/o_ctrl_jump" BEL
+        "u1/serv_rf_top/cpu/state/init_done" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_0" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_31" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_30" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_29" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_28" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_27" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_26" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_25" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_24" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_23" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_22" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_21" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_20" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_19" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_18" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_0" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_0" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_23" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_22" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_21" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_20" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_19" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_18" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_17" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_16" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_15" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_14" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_13" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_12" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_11" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_10" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_9" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_8" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_0" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_0" BEL
+        "u1/main_phy_sr_cnt_7" BEL "u1/main_phy_sr_cnt_6" BEL
+        "u1/main_phy_sr_cnt_2" BEL "u1/main_phy_sr_cnt_1" BEL
+        "u1/main_phy_sr_cnt_0" BEL "u1/main_phy_sr_cnt_3" BEL
+        "u1/main_phy_sr_cnt_5" BEL "u1/main_phy_sr_cnt_4" BEL "u1/FDPE_1" BEL
+        "u1/FDPE" BEL "u1/builder_grant_1" BEL
+        "u1/serv_rf_top/cpu/decode/funct3_1_1" BEL "u1/builder_grant_2" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_2_1" BEL
+        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_1_1" BEL
+        "u1/clk100_BUFG" PIN "u1/IDDR2_pins<1>" PIN "u1/IDDR2_pins<2>" PIN
+        "u1/IDDR2_pins<1>" PIN "u1/IDDR2_pins<2>" PIN
+        "u1/Mram_main_ram15_pins<9>" PIN "u1/Mram_main_ram14_pins<9>" PIN
+        "u1/Mram_main_ram16_pins<9>" PIN "u1/Mram_main_ram12_pins<9>" PIN
+        "u1/Mram_main_ram11_pins<9>" PIN "u1/Mram_main_ram13_pins<9>" PIN
+        "u1/Mram_main_ram10_pins<9>" PIN "u1/Mram_main_ram9_pins<9>" PIN
+        "u1/Mram_main_ram8_pins<9>" PIN "u1/Mram_main_ram7_pins<9>" PIN
+        "u1/Mram_main_ram5_pins<9>" PIN "u1/Mram_main_ram4_pins<9>" PIN
+        "u1/Mram_main_ram6_pins<9>" PIN "u1/Mram_main_ram2_pins<9>" PIN
+        "u1/Mram_main_ram1_pins<9>" PIN "u1/Mram_main_ram3_pins<9>" PIN
+        "u1/Mram_sram4_pins<9>" PIN "u1/Mram_sram2_pins<9>" PIN
+        "u1/Mram_sram1_pins<9>" PIN "u1/Mram_sram3_pins<9>" PIN
+        "u1/serv_rf_top/rf_ram/Mram_memory_pins<24>" PIN
+        "u1/serv_rf_top/rf_ram/Mram_memory_pins<25>" PIN
+        "u1_Mram_rom16_pins<13>" PIN "u1_Mram_rom15_pins<13>" PIN
+        "u1_Mram_rom14_pins<13>" PIN "u1_Mram_rom13_pins<13>" PIN
+        "u1_Mram_rom12_pins<13>" PIN "u1_Mram_rom11_pins<13>" PIN
+        "u1_Mram_rom10_pins<13>" PIN "u1_Mram_rom9_pins<13>" PIN
+        "u1_Mram_rom8_pins<13>" PIN "u1_Mram_rom7_pins<13>" PIN
+        "u1_Mram_rom6_pins<13>" PIN "u1_Mram_rom5_pins<13>" PIN
+        "u1_Mram_rom4_pins<13>" PIN "u1_Mram_rom3_pins<13>" PIN
+        "u1_Mram_rom2_pins<13>" PIN "u1_Mram_rom1_pins<13>" PIN
+        "u2/u1_Mram_row[31]_read_port_8_OUT<0>_pins<13>" BEL "vga_clk_out" BEL
+        "u1/Mram_storage22/SP" BEL "u1/Mram_storage22/DP" BEL
+        "u1/Mram_storage21/SP" BEL "u1/Mram_storage21/DP" BEL
+        "u1/Mram_storage_121/SP" BEL "u1/Mram_storage_121/DP" BEL
+        "u1/Mram_storage_122/SP" BEL "u1/Mram_storage_122/DP" BEL
+        "u1/Mram_storage1_RAMA_D1" BEL "u1/Mram_storage1_RAMA" BEL
+        "u1/Mram_storage1_RAMB_D1" BEL "u1/Mram_storage1_RAMB" BEL
+        "u1/Mram_storage1_RAMC_D1" BEL "u1/Mram_storage1_RAMC" BEL
+        "u1/Mram_storage1_RAMD_D1" BEL "u1/Mram_storage1_RAMD" BEL
+        "u1/Mram_storage_11_RAMA_D1" BEL "u1/Mram_storage_11_RAMA" BEL
+        "u1/Mram_storage_11_RAMB_D1" BEL "u1/Mram_storage_11_RAMB" BEL
+        "u1/Mram_storage_11_RAMC_D1" BEL "u1/Mram_storage_11_RAMC" BEL
+        "u1/Mram_storage_11_RAMD_D1" BEL "u1/Mram_storage_11_RAMD" PIN
+        "u1/ODDR2_pins<1>" PIN "u1/ODDR2_pins<2>" PIN "u1/ODDR2_pins<1>" PIN
+        "u1/ODDR2_pins<2>" PIN "u1/ODDR2_1_pins<1>" PIN "u1/ODDR2_1_pins<2>"
+        PIN "u1/ODDR2_1_pins<1>" PIN "u1/ODDR2_1_pins<2>" PIN
+        "u1/ODDR2_2_pins<1>" PIN "u1/ODDR2_2_pins<2>" PIN "u1/ODDR2_2_pins<1>"
+        PIN "u1/ODDR2_2_pins<2>" PIN "u1/ODDR2_3_pins<1>" PIN
+        "u1/ODDR2_3_pins<2>" PIN "u1/ODDR2_3_pins<1>" PIN
+        "u1/ODDR2_3_pins<2>";
+TSclk100 = PERIOD TIMEGRP "PRDclk100" 20 ns HIGH 50%;
+SCHEMATIC END;
+

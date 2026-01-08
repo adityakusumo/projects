@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/spartan6_board.xst" -ofn "/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/spartan6_board.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan6_board.ucf -p xc6slx25-ftg256-2 spartan6_board.ngc spartan6_board.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spartan6_board_map.ncd spartan6_board.ngd spartan6_board.pcf 
+par -w -intstyle ise -ol high -mt off spartan6_board_map.ncd spartan6_board.ncd spartan6_board.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spartan6_board.twx spartan6_board.ncd -o spartan6_board.twr spartan6_board.pcf -ucf spartan6_board.ucf 
+bitgen -intstyle ise -f spartan6_board.ut spartan6_board.ncd 
