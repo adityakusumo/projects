@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TSclk100 = PERIOD TIMEGRP "PRDclk100" 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 228224 paths analyzed, 6137 endpoints analyzed, 0 failing endpoints
+ 251775 paths analyzed, 6229 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  12.931ns.
+ Minimum period is  10.772ns.
 --------------------------------------------------------------------------------
 
-Paths for end point u1/main_master_rx_fifo_pipe_valid_source_payload_data_4 (SLICE_X26Y34.CE), 506 paths
+Paths for end point u1/Mram_main_ram5 (RAMB16_X1Y8.WEA2), 65 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     7.069ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_4 (FF)
+Slack (setup path):     9.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/serv_rf_top/cpu/ctrl/o_ibus_adr_19 (FF)
+  Destination:          u1/Mram_main_ram5 (RAM)
   Requirement:          20.000ns
-  Data Path Delay:      12.755ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
+  Data Path Delay:      10.811ns (Levels of Logic = 5)
+  Clock Path Skew:      0.074ns (0.518 - 0.444)
   Source Clock:         u1/clk100_BUFG rising at 0.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -52,35 +52,41 @@ Slack (setup path):     7.069ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_4
+  Maximum Data Path at Slow Process Corner: u1/serv_rf_top/cpu/ctrl/o_ibus_adr_19 to u1/Mram_main_ram5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
-                                                       u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
-                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X26Y21.B2      net (fanout=12)       3.268   u1/main_basesoc_ibus_cyc
-    SLICE_X26Y21.B       Tilo                  0.254   N265
-                                                       u1/builder_csr_bankarray_csrbank0_sel<13>1_SW0
-    SLICE_X27Y40.D4      net (fanout=8)        1.944   N214
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.313   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_4
+    SLICE_X28Y38.DQ      Tcko                  0.476   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<19>
+                                                       u1/serv_rf_top/cpu/ctrl/o_ibus_adr_19
+    SLICE_X27Y38.A1      net (fanout=2)        1.528   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<19>
+    SLICE_X27Y38.A       Tilo                  0.259   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<27>
+                                                       u1/builder_slave_sel<1><29>14
+    SLICE_X32Y38.D5      net (fanout=1)        0.995   u1/builder_slave_sel<1><29>14
+    SLICE_X32Y38.D       Tilo                  0.235   u1/mem_adr0<3>
+                                                       u1/builder_slave_sel<1><29>15
+    SLICE_X26Y40.C4      net (fanout=19)       1.058   u1/builder_slave_sel<1><29>1
+    SLICE_X26Y40.C       Tilo                  0.255   u1/builder_slave_sel_r<3>
+                                                       u1/builder_slave_sel<2><29>
+    SLICE_X13Y35.A3      net (fanout=5)        1.642   u1/builder_slave_sel<2>
+    SLICE_X13Y35.A       Tilo                  0.259   u1/write_ctrl54
+                                                       u1/main_basesoc_we<2>1
+    SLICE_X5Y31.C1       net (fanout=8)        1.610   u1/main_basesoc_we<2>
+    SLICE_X5Y31.CMUX     Tilo                  0.337   u1/write_ctrl38
+                                                       u1/write_ctrl34
+    RAMB16_X1Y8.WEA2     net (fanout=1)        1.827   u1/write_ctrl34
+    RAMB16_X1Y8.CLKA     Trcck_WEA             0.330   u1/Mram_main_ram5
+                                                       u1/Mram_main_ram5
     -------------------------------------------------  ---------------------------
-    Total                                     12.755ns (1.561ns logic, 11.194ns route)
-                                                       (12.2% logic, 87.8% route)
+    Total                                     10.811ns (2.151ns logic, 8.660ns route)
+                                                       (19.9% logic, 80.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     9.680ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_4 (FF)
+Slack (setup path):     9.319ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/serv_rf_top/cpu/bufreg/data_18 (FF)
+  Destination:          u1/Mram_main_ram5 (RAM)
   Requirement:          20.000ns
-  Data Path Delay:      10.144ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
+  Data Path Delay:      10.720ns (Levels of Logic = 5)
+  Clock Path Skew:      0.074ns (0.518 - 0.444)
   Source Clock:         u1/clk100_BUFG rising at 0.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -91,38 +97,41 @@ Slack (setup path):     9.680ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_4
+  Maximum Data Path at Slow Process Corner: u1/serv_rf_top/cpu/bufreg/data_18 to u1/Mram_main_ram5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
-                                                       u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
-                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X26Y38.C4      net (fanout=12)       1.673   u1/main_basesoc_ibus_cyc
-    SLICE_X26Y38.C       Tilo                  0.255   u1/serv_rf_top/cpu/bufreg/lsb<0>
-                                                       u1/Mmux_builder_interface1_adr11_1
-    SLICE_X26Y38.D5      net (fanout=2)        0.247   u1/Mmux_builder_interface1_adr11
-    SLICE_X26Y38.D       Tilo                  0.254   u1/serv_rf_top/cpu/bufreg/lsb<0>
-                                                       u1/Mmux_builder_csr_bankarray_interface0_bank_bus_adr[8]_GND_2_o_select_467_OUT23211
-    SLICE_X27Y40.D6      net (fanout=30)       0.426   u1/Mmux__n2330110
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.313   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_4
+    SLICE_X29Y38.AQ      Tcko                  0.430   u1/serv_rf_top/cpu/bufreg/data<21>
+                                                       u1/serv_rf_top/cpu/bufreg/data_18
+    SLICE_X28Y38.B1      net (fanout=2)        1.730   u1/serv_rf_top/cpu/bufreg/data<18>
+    SLICE_X28Y38.B       Tilo                  0.235   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<19>
+                                                       u1/builder_slave_sel<1><29>12
+    SLICE_X32Y38.D6      net (fanout=1)        0.772   u1/builder_slave_sel<1><29>12
+    SLICE_X32Y38.D       Tilo                  0.235   u1/mem_adr0<3>
+                                                       u1/builder_slave_sel<1><29>15
+    SLICE_X26Y40.C4      net (fanout=19)       1.058   u1/builder_slave_sel<1><29>1
+    SLICE_X26Y40.C       Tilo                  0.255   u1/builder_slave_sel_r<3>
+                                                       u1/builder_slave_sel<2><29>
+    SLICE_X13Y35.A3      net (fanout=5)        1.642   u1/builder_slave_sel<2>
+    SLICE_X13Y35.A       Tilo                  0.259   u1/write_ctrl54
+                                                       u1/main_basesoc_we<2>1
+    SLICE_X5Y31.C1       net (fanout=8)        1.610   u1/main_basesoc_we<2>
+    SLICE_X5Y31.CMUX     Tilo                  0.337   u1/write_ctrl38
+                                                       u1/write_ctrl34
+    RAMB16_X1Y8.WEA2     net (fanout=1)        1.827   u1/write_ctrl34
+    RAMB16_X1Y8.CLKA     Trcck_WEA             0.330   u1/Mram_main_ram5
+                                                       u1/Mram_main_ram5
     -------------------------------------------------  ---------------------------
-    Total                                     10.144ns (1.816ns logic, 8.328ns route)
-                                                       (17.9% logic, 82.1% route)
+    Total                                     10.720ns (2.081ns logic, 8.639ns route)
+                                                       (19.4% logic, 80.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     9.734ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_4 (FF)
+Slack (setup path):     9.338ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/serv_rf_top/cpu/ctrl/o_ibus_adr_29 (FF)
+  Destination:          u1/Mram_main_ram5 (RAM)
   Requirement:          20.000ns
-  Data Path Delay:      10.090ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
+  Data Path Delay:      10.683ns (Levels of Logic = 5)
+  Clock Path Skew:      0.056ns (0.518 - 0.462)
   Source Clock:         u1/clk100_BUFG rising at 0.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -133,41 +142,173 @@ Slack (setup path):     9.734ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_4
+  Maximum Data Path at Slow Process Corner: u1/serv_rf_top/cpu/ctrl/o_ibus_adr_29 to u1/Mram_main_ram5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
+    SLICE_X26Y41.BQ      Tcko                  0.525   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<30>
+                                                       u1/serv_rf_top/cpu/ctrl/o_ibus_adr_29
+    SLICE_X28Y38.A3      net (fanout=2)        1.106   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<29>
+    SLICE_X28Y38.A       Tilo                  0.235   u1/serv_rf_top/cpu/ctrl/o_ibus_adr<19>
+                                                       u1/builder_slave_sel<1><29>13
+    SLICE_X32Y38.D1      net (fanout=1)        1.264   u1/builder_slave_sel<1><29>13
+    SLICE_X32Y38.D       Tilo                  0.235   u1/mem_adr0<3>
+                                                       u1/builder_slave_sel<1><29>15
+    SLICE_X26Y40.C4      net (fanout=19)       1.058   u1/builder_slave_sel<1><29>1
+    SLICE_X26Y40.C       Tilo                  0.255   u1/builder_slave_sel_r<3>
+                                                       u1/builder_slave_sel<2><29>
+    SLICE_X13Y35.A3      net (fanout=5)        1.642   u1/builder_slave_sel<2>
+    SLICE_X13Y35.A       Tilo                  0.259   u1/write_ctrl54
+                                                       u1/main_basesoc_we<2>1
+    SLICE_X5Y31.C1       net (fanout=8)        1.610   u1/main_basesoc_we<2>
+    SLICE_X5Y31.CMUX     Tilo                  0.337   u1/write_ctrl38
+                                                       u1/write_ctrl34
+    RAMB16_X1Y8.WEA2     net (fanout=1)        1.827   u1/write_ctrl34
+    RAMB16_X1Y8.CLKA     Trcck_WEA             0.330   u1/Mram_main_ram5
+                                                       u1/Mram_main_ram5
+    -------------------------------------------------  ---------------------------
+    Total                                     10.683ns (2.176ns logic, 8.507ns route)
+                                                       (20.4% logic, 79.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11 (SLICE_X50Y39.C4), 270 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.288ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/FDPE_1 (FF)
+  Destination:          u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.694ns (Levels of Logic = 5)
+  Clock Path Skew:      0.017ns (0.514 - 0.497)
+  Source Clock:         u1/clk100_BUFG rising at 0.000ns
+  Destination Clock:    u1/clk100_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y0.AQ       Tcko                  0.525   u1/sys_rst
                                                        u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
+    SLICE_X24Y36.B5      net (fanout=167)      3.913   u1/sys_rst
+    SLICE_X24Y36.B       Tilo                  0.235   u1/main_basesoc_ibus_cyc
                                                        u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X30Y43.C3      net (fanout=12)       0.892   u1/main_basesoc_ibus_cyc
-    SLICE_X30Y43.C       Tilo                  0.255   u1/mem_adr0<5>
+    SLICE_X33Y40.A1      net (fanout=13)       1.509   u1/main_basesoc_ibus_cyc
+    SLICE_X33Y40.A       Tilo                  0.259   u1/mem_adr0<5>
+                                                       u1/Mmux_builder_interface1_adr91
+    SLICE_X35Y37.D3      net (fanout=9)        0.920   u1/builder_interface1_adr<4>
+    SLICE_X35Y37.D       Tilo                  0.259   u1/builder_csr_bankarray_sel_r
+                                                       u1/_n2937<8>_1
+    SLICE_X43Y42.B3      net (fanout=3)        1.140   u1/_n2937<8>
+    SLICE_X43Y42.B       Tilo                  0.259   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<19>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT9_SW0
+    SLICE_X50Y39.C4      net (fanout=31)       1.336   N78
+    SLICE_X50Y39.CLK     Tas                   0.339   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<12>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT3
+                                                       u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11
+    -------------------------------------------------  ---------------------------
+    Total                                     10.694ns (1.876ns logic, 8.818ns route)
+                                                       (17.5% logic, 82.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.526ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/FDPE_1 (FF)
+  Destination:          u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.456ns (Levels of Logic = 4)
+  Clock Path Skew:      0.017ns (0.514 - 0.497)
+  Source Clock:         u1/clk100_BUFG rising at 0.000ns
+  Destination Clock:    u1/clk100_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y0.AQ       Tcko                  0.525   u1/sys_rst
+                                                       u1/FDPE_1
+    SLICE_X35Y44.A2      net (fanout=167)      4.860   u1/sys_rst
+    SLICE_X35Y44.A       Tilo                  0.259   N256
+                                                       u1/builder_interface0_cyc_builder_interface0_stb_AND_93_o1
+    SLICE_X35Y37.D1      net (fanout=14)       1.479   u1/builder_interface0_cyc_builder_interface0_stb_AND_93_o
+    SLICE_X35Y37.D       Tilo                  0.259   u1/builder_csr_bankarray_sel_r
+                                                       u1/_n2937<8>_1
+    SLICE_X43Y42.B3      net (fanout=3)        1.140   u1/_n2937<8>
+    SLICE_X43Y42.B       Tilo                  0.259   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<19>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT9_SW0
+    SLICE_X50Y39.C4      net (fanout=31)       1.336   N78
+    SLICE_X50Y39.CLK     Tas                   0.339   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<12>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT3
+                                                       u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11
+    -------------------------------------------------  ---------------------------
+    Total                                     10.456ns (1.641ns logic, 8.815ns route)
+                                                       (15.7% logic, 84.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.788ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/FDPE_1 (FF)
+  Destination:          u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.194ns (Levels of Logic = 5)
+  Clock Path Skew:      0.017ns (0.514 - 0.497)
+  Source Clock:         u1/clk100_BUFG rising at 0.000ns
+  Destination Clock:    u1/clk100_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y0.AQ       Tcko                  0.525   u1/sys_rst
+                                                       u1/FDPE_1
+    SLICE_X24Y36.B5      net (fanout=167)      3.913   u1/sys_rst
+    SLICE_X24Y36.B       Tilo                  0.235   u1/main_basesoc_ibus_cyc
+                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
+    SLICE_X33Y40.B6      net (fanout=13)       1.113   u1/main_basesoc_ibus_cyc
+    SLICE_X33Y40.B       Tilo                  0.259   u1/mem_adr0<5>
                                                        u1/Mmux_builder_interface1_adr101
-    SLICE_X27Y40.C1      net (fanout=4)        1.142   u1/builder_interface1_adr<5>
-    SLICE_X27Y40.C       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/_n2331<8>_1
-    SLICE_X27Y40.D5      net (fanout=3)        0.253   u1/_n2331<8>
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.313   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_4
+    SLICE_X35Y37.D4      net (fanout=9)        0.816   u1/builder_interface1_adr<5>
+    SLICE_X35Y37.D       Tilo                  0.259   u1/builder_csr_bankarray_sel_r
+                                                       u1/_n2937<8>_1
+    SLICE_X43Y42.B3      net (fanout=3)        1.140   u1/_n2937<8>
+    SLICE_X43Y42.B       Tilo                  0.259   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<19>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT9_SW0
+    SLICE_X50Y39.C4      net (fanout=31)       1.336   N78
+    SLICE_X50Y39.CLK     Tas                   0.339   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<12>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT3
+                                                       u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11
     -------------------------------------------------  ---------------------------
-    Total                                     10.090ns (1.821ns logic, 8.269ns route)
-                                                       (18.0% logic, 82.0% route)
+    Total                                     10.194ns (1.876ns logic, 8.318ns route)
+                                                       (18.4% logic, 81.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u1/main_master_rx_fifo_pipe_valid_source_payload_data_0 (SLICE_X26Y34.CE), 506 paths
+Paths for end point u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12 (SLICE_X50Y39.D4), 270 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     7.094ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     9.309ns (requirement - (data path - clock path skew + uncertainty))
   Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_0 (FF)
+  Destination:          u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      12.730ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
+  Data Path Delay:      10.673ns (Levels of Logic = 5)
+  Clock Path Skew:      0.017ns (0.514 - 0.497)
   Source Clock:         u1/clk100_BUFG rising at 0.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -178,35 +319,39 @@ Slack (setup path):     7.094ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_0
+  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
+    SLICE_X42Y0.AQ       Tcko                  0.525   u1/sys_rst
                                                        u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
+    SLICE_X24Y36.B5      net (fanout=167)      3.913   u1/sys_rst
+    SLICE_X24Y36.B       Tilo                  0.235   u1/main_basesoc_ibus_cyc
                                                        u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X26Y21.B2      net (fanout=12)       3.268   u1/main_basesoc_ibus_cyc
-    SLICE_X26Y21.B       Tilo                  0.254   N265
-                                                       u1/builder_csr_bankarray_csrbank0_sel<13>1_SW0
-    SLICE_X27Y40.D4      net (fanout=8)        1.944   N214
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.288   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_0
+    SLICE_X33Y40.A1      net (fanout=13)       1.509   u1/main_basesoc_ibus_cyc
+    SLICE_X33Y40.A       Tilo                  0.259   u1/mem_adr0<5>
+                                                       u1/Mmux_builder_interface1_adr91
+    SLICE_X35Y37.D3      net (fanout=9)        0.920   u1/builder_interface1_adr<4>
+    SLICE_X35Y37.D       Tilo                  0.259   u1/builder_csr_bankarray_sel_r
+                                                       u1/_n2937<8>_1
+    SLICE_X43Y42.B3      net (fanout=3)        1.140   u1/_n2937<8>
+    SLICE_X43Y42.B       Tilo                  0.259   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<19>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT9_SW0
+    SLICE_X50Y39.D4      net (fanout=31)       1.315   N78
+    SLICE_X50Y39.CLK     Tas                   0.339   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<12>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT4
+                                                       u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12
     -------------------------------------------------  ---------------------------
-    Total                                     12.730ns (1.536ns logic, 11.194ns route)
-                                                       (12.1% logic, 87.9% route)
+    Total                                     10.673ns (1.876ns logic, 8.797ns route)
+                                                       (17.6% logic, 82.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     9.705ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     9.547ns (requirement - (data path - clock path skew + uncertainty))
   Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_0 (FF)
+  Destination:          u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      10.119ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
+  Data Path Delay:      10.435ns (Levels of Logic = 4)
+  Clock Path Skew:      0.017ns (0.514 - 0.497)
   Source Clock:         u1/clk100_BUFG rising at 0.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -217,38 +362,36 @@ Slack (setup path):     9.705ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_0
+  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
+    SLICE_X42Y0.AQ       Tcko                  0.525   u1/sys_rst
                                                        u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
-                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X26Y38.C4      net (fanout=12)       1.673   u1/main_basesoc_ibus_cyc
-    SLICE_X26Y38.C       Tilo                  0.255   u1/serv_rf_top/cpu/bufreg/lsb<0>
-                                                       u1/Mmux_builder_interface1_adr11_1
-    SLICE_X26Y38.D5      net (fanout=2)        0.247   u1/Mmux_builder_interface1_adr11
-    SLICE_X26Y38.D       Tilo                  0.254   u1/serv_rf_top/cpu/bufreg/lsb<0>
-                                                       u1/Mmux_builder_csr_bankarray_interface0_bank_bus_adr[8]_GND_2_o_select_467_OUT23211
-    SLICE_X27Y40.D6      net (fanout=30)       0.426   u1/Mmux__n2330110
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.288   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_0
+    SLICE_X35Y44.A2      net (fanout=167)      4.860   u1/sys_rst
+    SLICE_X35Y44.A       Tilo                  0.259   N256
+                                                       u1/builder_interface0_cyc_builder_interface0_stb_AND_93_o1
+    SLICE_X35Y37.D1      net (fanout=14)       1.479   u1/builder_interface0_cyc_builder_interface0_stb_AND_93_o
+    SLICE_X35Y37.D       Tilo                  0.259   u1/builder_csr_bankarray_sel_r
+                                                       u1/_n2937<8>_1
+    SLICE_X43Y42.B3      net (fanout=3)        1.140   u1/_n2937<8>
+    SLICE_X43Y42.B       Tilo                  0.259   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<19>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT9_SW0
+    SLICE_X50Y39.D4      net (fanout=31)       1.315   N78
+    SLICE_X50Y39.CLK     Tas                   0.339   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<12>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT4
+                                                       u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12
     -------------------------------------------------  ---------------------------
-    Total                                     10.119ns (1.791ns logic, 8.328ns route)
-                                                       (17.7% logic, 82.3% route)
+    Total                                     10.435ns (1.641ns logic, 8.794ns route)
+                                                       (15.7% logic, 84.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     9.759ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     9.809ns (requirement - (data path - clock path skew + uncertainty))
   Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_0 (FF)
+  Destination:          u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      10.065ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
+  Data Path Delay:      10.173ns (Levels of Logic = 5)
+  Clock Path Skew:      0.017ns (0.514 - 0.497)
   Source Clock:         u1/clk100_BUFG rising at 0.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -259,240 +402,115 @@ Slack (setup path):     9.759ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_0
+  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
+    SLICE_X42Y0.AQ       Tcko                  0.525   u1/sys_rst
                                                        u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
+    SLICE_X24Y36.B5      net (fanout=167)      3.913   u1/sys_rst
+    SLICE_X24Y36.B       Tilo                  0.235   u1/main_basesoc_ibus_cyc
                                                        u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X30Y43.C3      net (fanout=12)       0.892   u1/main_basesoc_ibus_cyc
-    SLICE_X30Y43.C       Tilo                  0.255   u1/mem_adr0<5>
+    SLICE_X33Y40.B6      net (fanout=13)       1.113   u1/main_basesoc_ibus_cyc
+    SLICE_X33Y40.B       Tilo                  0.259   u1/mem_adr0<5>
                                                        u1/Mmux_builder_interface1_adr101
-    SLICE_X27Y40.C1      net (fanout=4)        1.142   u1/builder_interface1_adr<5>
-    SLICE_X27Y40.C       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/_n2331<8>_1
-    SLICE_X27Y40.D5      net (fanout=3)        0.253   u1/_n2331<8>
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.288   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_0
+    SLICE_X35Y37.D4      net (fanout=9)        0.816   u1/builder_interface1_adr<5>
+    SLICE_X35Y37.D       Tilo                  0.259   u1/builder_csr_bankarray_sel_r
+                                                       u1/_n2937<8>_1
+    SLICE_X43Y42.B3      net (fanout=3)        1.140   u1/_n2937<8>
+    SLICE_X43Y42.B       Tilo                  0.259   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<19>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT9_SW0
+    SLICE_X50Y39.D4      net (fanout=31)       1.315   N78
+    SLICE_X50Y39.CLK     Tas                   0.339   u1/builder_csr_bankarray_interface3_bank_bus_dat_r<12>
+                                                       u1/Mmux_builder_csr_bankarray_interface3_bank_bus_adr[8]_builder_csr_bankarray_csrbank3_load0_w[31]_select_511_OUT4
+                                                       u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12
     -------------------------------------------------  ---------------------------
-    Total                                     10.065ns (1.796ns logic, 8.269ns route)
-                                                       (17.8% logic, 82.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point u1/main_master_rx_fifo_pipe_valid_source_payload_data_5 (SLICE_X26Y34.CE), 506 paths
---------------------------------------------------------------------------------
-Slack (setup path):     7.094ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_5 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      12.730ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
-  Source Clock:         u1/clk100_BUFG rising at 0.000ns
-  Destination Clock:    u1/clk100_BUFG rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
-                                                       u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
-                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X26Y21.B2      net (fanout=12)       3.268   u1/main_basesoc_ibus_cyc
-    SLICE_X26Y21.B       Tilo                  0.254   N265
-                                                       u1/builder_csr_bankarray_csrbank0_sel<13>1_SW0
-    SLICE_X27Y40.D4      net (fanout=8)        1.944   N214
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.288   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_5
-    -------------------------------------------------  ---------------------------
-    Total                                     12.730ns (1.536ns logic, 11.194ns route)
-                                                       (12.1% logic, 87.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     9.705ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_5 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      10.119ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
-  Source Clock:         u1/clk100_BUFG rising at 0.000ns
-  Destination Clock:    u1/clk100_BUFG rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
-                                                       u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
-                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X26Y38.C4      net (fanout=12)       1.673   u1/main_basesoc_ibus_cyc
-    SLICE_X26Y38.C       Tilo                  0.255   u1/serv_rf_top/cpu/bufreg/lsb<0>
-                                                       u1/Mmux_builder_interface1_adr11_1
-    SLICE_X26Y38.D5      net (fanout=2)        0.247   u1/Mmux_builder_interface1_adr11
-    SLICE_X26Y38.D       Tilo                  0.254   u1/serv_rf_top/cpu/bufreg/lsb<0>
-                                                       u1/Mmux_builder_csr_bankarray_interface0_bank_bus_adr[8]_GND_2_o_select_467_OUT23211
-    SLICE_X27Y40.D6      net (fanout=30)       0.426   u1/Mmux__n2330110
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.288   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_5
-    -------------------------------------------------  ---------------------------
-    Total                                     10.119ns (1.791ns logic, 8.328ns route)
-                                                       (17.7% logic, 82.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     9.759ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u1/FDPE_1 (FF)
-  Destination:          u1/main_master_rx_fifo_pipe_valid_source_payload_data_5 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      10.065ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.141ns (0.444 - 0.585)
-  Source Clock:         u1/clk100_BUFG rising at 0.000ns
-  Destination Clock:    u1/clk100_BUFG rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: u1/FDPE_1 to u1/main_master_rx_fifo_pipe_valid_source_payload_data_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y1.AQ       Tcko                  0.476   u1/sys_rst
-                                                       u1/FDPE_1
-    SLICE_X35Y42.B5      net (fanout=187)      4.653   u1/sys_rst
-    SLICE_X35Y42.B       Tilo                  0.259   u1/main_basesoc_ibus_cyc
-                                                       u1/serv_rf_top/cpu/state/o_ibus_cyc1
-    SLICE_X30Y43.C3      net (fanout=12)       0.892   u1/main_basesoc_ibus_cyc
-    SLICE_X30Y43.C       Tilo                  0.255   u1/mem_adr0<5>
-                                                       u1/Mmux_builder_interface1_adr101
-    SLICE_X27Y40.C1      net (fanout=4)        1.142   u1/builder_interface1_adr<5>
-    SLICE_X27Y40.C       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/_n2331<8>_1
-    SLICE_X27Y40.D5      net (fanout=3)        0.253   u1/_n2331<8>
-    SLICE_X27Y40.D       Tilo                  0.259   u1/main_my_module_counter<2>
-                                                       u1/main_master_rx_fifo_pipe_valid_sink_ready3
-    SLICE_X26Y34.CE      net (fanout=4)        1.329   u1/main_master_rx_fifo_pipe_valid_sink_ready
-    SLICE_X26Y34.CLK     Tceck                 0.288   u1/main_master_rx_fifo_pipe_valid_source_payload_data<10>
-                                                       u1/main_master_rx_fifo_pipe_valid_source_payload_data_5
-    -------------------------------------------------  ---------------------------
-    Total                                     10.065ns (1.796ns logic, 8.269ns route)
-                                                       (17.8% logic, 82.2% route)
+    Total                                     10.173ns (1.876ns logic, 8.297ns route)
+                                                       (18.4% logic, 81.6% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TSclk100 = PERIOD TIMEGRP "PRDclk100" 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point u1/Mram_storage21/DP (SLICE_X42Y38.D3), 1 path
+Paths for end point u1/Mram_storage21/DP (SLICE_X38Y47.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.197ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               u1/main_basesoc_uart_tx_fifo_produce_0 (FF)
+Slack (hold path):      0.333ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u1/main_basesoc_uart_tx_fifo_produce_3 (FF)
   Destination:          u1/Mram_storage21/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.199ns (Levels of Logic = 0)
-  Clock Path Skew:      0.002ns (0.033 - 0.031)
+  Data Path Delay:      0.335ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.054 - 0.052)
   Source Clock:         u1/clk100_BUFG rising at 20.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: u1/main_basesoc_uart_tx_fifo_produce_0 to u1/Mram_storage21/DP
+  Minimum Data Path at Fast Process Corner: u1/main_basesoc_uart_tx_fifo_produce_3 to u1/Mram_storage21/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y38.AQ      Tcko                  0.198   u1/main_basesoc_uart_tx_fifo_produce<3>
-                                                       u1/main_basesoc_uart_tx_fifo_produce_0
-    SLICE_X42Y38.D3      net (fanout=6)        0.173   u1/main_basesoc_uart_tx_fifo_produce<0>
-    SLICE_X42Y38.CLK     Tah         (-Th)     0.172   u1/storage_dat1<7>
+    SLICE_X39Y47.CQ      Tcko                  0.198   u1/main_basesoc_uart_tx_fifo_produce<3>
+                                                       u1/main_basesoc_uart_tx_fifo_produce_3
+    SLICE_X38Y47.D6      net (fanout=5)        0.126   u1/main_basesoc_uart_tx_fifo_produce<3>
+    SLICE_X38Y47.CLK     Tah         (-Th)    -0.011   u1/storage_dat1<7>
                                                        u1/Mram_storage21/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.199ns (0.026ns logic, 0.173ns route)
-                                                       (13.1% logic, 86.9% route)
+    Total                                      0.335ns (0.209ns logic, 0.126ns route)
+                                                       (62.4% logic, 37.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u1/Mram_storage22/DP (SLICE_X42Y38.D3), 1 path
+Paths for end point u1/Mram_storage22/DP (SLICE_X38Y47.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.197ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               u1/main_basesoc_uart_tx_fifo_produce_0 (FF)
+Slack (hold path):      0.333ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u1/main_basesoc_uart_tx_fifo_produce_3 (FF)
   Destination:          u1/Mram_storage22/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.199ns (Levels of Logic = 0)
-  Clock Path Skew:      0.002ns (0.033 - 0.031)
+  Data Path Delay:      0.335ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.054 - 0.052)
   Source Clock:         u1/clk100_BUFG rising at 20.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: u1/main_basesoc_uart_tx_fifo_produce_0 to u1/Mram_storage22/DP
+  Minimum Data Path at Fast Process Corner: u1/main_basesoc_uart_tx_fifo_produce_3 to u1/Mram_storage22/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y38.AQ      Tcko                  0.198   u1/main_basesoc_uart_tx_fifo_produce<3>
-                                                       u1/main_basesoc_uart_tx_fifo_produce_0
-    SLICE_X42Y38.D3      net (fanout=6)        0.173   u1/main_basesoc_uart_tx_fifo_produce<0>
-    SLICE_X42Y38.CLK     Tah         (-Th)     0.172   u1/storage_dat1<7>
+    SLICE_X39Y47.CQ      Tcko                  0.198   u1/main_basesoc_uart_tx_fifo_produce<3>
+                                                       u1/main_basesoc_uart_tx_fifo_produce_3
+    SLICE_X38Y47.D6      net (fanout=5)        0.126   u1/main_basesoc_uart_tx_fifo_produce<3>
+    SLICE_X38Y47.CLK     Tah         (-Th)    -0.011   u1/storage_dat1<7>
                                                        u1/Mram_storage22/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.199ns (0.026ns logic, 0.173ns route)
-                                                       (13.1% logic, 86.9% route)
+    Total                                      0.335ns (0.209ns logic, 0.126ns route)
+                                                       (62.4% logic, 37.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u1/Mram_storage21/SP (SLICE_X42Y38.D3), 1 path
+Paths for end point u1/Mram_storage21/SP (SLICE_X38Y47.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.197ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               u1/main_basesoc_uart_tx_fifo_produce_0 (FF)
+Slack (hold path):      0.333ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u1/main_basesoc_uart_tx_fifo_produce_3 (FF)
   Destination:          u1/Mram_storage21/SP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.199ns (Levels of Logic = 0)
-  Clock Path Skew:      0.002ns (0.033 - 0.031)
+  Data Path Delay:      0.335ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.054 - 0.052)
   Source Clock:         u1/clk100_BUFG rising at 20.000ns
   Destination Clock:    u1/clk100_BUFG rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: u1/main_basesoc_uart_tx_fifo_produce_0 to u1/Mram_storage21/SP
+  Minimum Data Path at Fast Process Corner: u1/main_basesoc_uart_tx_fifo_produce_3 to u1/Mram_storage21/SP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y38.AQ      Tcko                  0.198   u1/main_basesoc_uart_tx_fifo_produce<3>
-                                                       u1/main_basesoc_uart_tx_fifo_produce_0
-    SLICE_X42Y38.D3      net (fanout=6)        0.173   u1/main_basesoc_uart_tx_fifo_produce<0>
-    SLICE_X42Y38.CLK     Tah         (-Th)     0.172   u1/storage_dat1<7>
+    SLICE_X39Y47.CQ      Tcko                  0.198   u1/main_basesoc_uart_tx_fifo_produce<3>
+                                                       u1/main_basesoc_uart_tx_fifo_produce_3
+    SLICE_X38Y47.D6      net (fanout=5)        0.126   u1/main_basesoc_uart_tx_fifo_produce<3>
+    SLICE_X38Y47.CLK     Tah         (-Th)    -0.011   u1/storage_dat1<7>
                                                        u1/Mram_storage21/SP
     -------------------------------------------------  ---------------------------
-    Total                                      0.199ns (0.026ns logic, 0.173ns route)
-                                                       (13.1% logic, 86.9% route)
+    Total                                      0.335ns (0.209ns logic, 0.126ns route)
+                                                       (62.4% logic, 37.6% route)
 
 --------------------------------------------------------------------------------
 
@@ -503,7 +521,7 @@ Slack: 16.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: u1/serv_rf_top/rf_ram/Mram_memory/CLKAWRCLK
   Logical resource: u1/serv_rf_top/rf_ram/Mram_memory/CLKAWRCLK
-  Location pin: RAMB8_X1Y9.CLKAWRCLK
+  Location pin: RAMB8_X1Y5.CLKAWRCLK
   Clock network: u1/clk100_BUFG
 --------------------------------------------------------------------------------
 Slack: 16.430ns (period - min period limit)
@@ -511,7 +529,7 @@ Slack: 16.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
   Physical resource: u1/serv_rf_top/rf_ram/Mram_memory/CLKBRDCLK
   Logical resource: u1/serv_rf_top/rf_ram/Mram_memory/CLKBRDCLK
-  Location pin: RAMB8_X1Y9.CLKBRDCLK
+  Location pin: RAMB8_X1Y5.CLKBRDCLK
   Clock network: u1/clk100_BUFG
 --------------------------------------------------------------------------------
 Slack: 16.430ns (period - min period limit)
@@ -519,7 +537,7 @@ Slack: 16.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: u1_Mram_rom10/CLKA
   Logical resource: u1_Mram_rom10/CLKA
-  Location pin: RAMB16_X0Y22.CLKA
+  Location pin: RAMB16_X2Y34.CLKA
   Clock network: u1/clk100_BUFG
 --------------------------------------------------------------------------------
 
@@ -536,7 +554,7 @@ Clock to Setup on destination clock clk100
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk100         |   12.931|         |         |         |
+clk100         |   10.772|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -545,16 +563,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 228224 paths, 0 nets, and 8690 connections
+Constraints cover 251775 paths, 0 nets, and 8729 connections
 
 Design statistics:
-   Minimum period:  12.931ns{1}   (Maximum frequency:  77.334MHz)
+   Minimum period:  10.772ns{1}   (Maximum frequency:  92.833MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Jan  8 11:05:49 2026 
+Analysis completed Thu Jan  8 15:15:06 2026 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -24,7 +24,8 @@ module topmod(
     inout  wire          i2c0_sda,
     input  wire          serial_rx,
     output wire          serial_tx,
-    input  wire          user_btn0,
+    input  wire          rst_btn0,
+	 input  wire          user_btn,
     output wire          user_led0,
     output wire       	 vga_clk_out,    // Pixel clock out
 //    output wire       vga_blank_n,    // Blank signal to ADV7125
@@ -45,13 +46,14 @@ module topmod(
 		.i2c0_sda(i2c0_sda),
 		.serial_rx(serial_rx),
 		.serial_tx(serial_tx),
-		.user_btn0(user_btn0),
-		.user_led0(user_led0)
+		.rst_btn0(rst_btn0),
+		.user_led0(user_led0),
+		.user_btn(user_btn)
 	);
 	
 	VGA_Controller u2(
 		.vga_clk(clk100),        // Pixel clock in
-		.rstn(user_btn0),           // Async active-low reset
+		.rstn(rst_btn0),           // Async active-low reset
 		.obj_color(obj_color_w),
 		.vga_clk_out(vga_clk_out),    // Pixel clock out
 //		.vga_blank_n(),    // Blank signal to ADV7125

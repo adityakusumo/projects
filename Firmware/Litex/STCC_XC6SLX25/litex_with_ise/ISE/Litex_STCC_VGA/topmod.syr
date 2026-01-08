@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: topmod.prj
@@ -154,111 +154,112 @@ Parsing module <topmod>.
 =========================================================================
 
 Elaborating module <topmod>.
-WARNING:HDLCompiler:1016 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2897: Port o_ext_rs1 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2921: Port o_ext_rs1 is not connected to this instance
 
 Elaborating module <spartan6_board>.
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 307: Using initial value of builder_interface0_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 386: Using initial value of main_basesoc_adr_burst since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 388: Using initial value of main_basesoc_basesoc_adr_burst since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 397: Using initial value of main_basesoc_basesoc_ram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 401: Using initial value of main_basesoc_bus_error since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 404: Using initial value of main_basesoc_cpu_rst since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 409: Using initial value of main_basesoc_dbus_bte since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 410: Using initial value of main_basesoc_dbus_cti since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 420: Using initial value of main_basesoc_ibus_bte since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 421: Using initial value of main_basesoc_ibus_cti since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 424: Using initial value of main_basesoc_ibus_dat_w since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 428: Using initial value of main_basesoc_ibus_we since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 452: Using initial value of main_basesoc_ram_adr_burst since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 460: Using initial value of main_basesoc_ram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 468: Using initial value of main_basesoc_ram_bus_ram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 489: Using initial value of main_basesoc_rx_source_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 490: Using initial value of main_basesoc_rx_source_last since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 497: Using initial value of main_basesoc_soc_rst since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 569: Using initial value of main_basesoc_uart_rx_fifo_replace since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 627: Using initial value of main_basesoc_uart_tx_fifo_replace since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 628: Using initial value of main_basesoc_uart_tx_fifo_sink_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 629: Using initial value of main_basesoc_uart_tx_fifo_sink_last since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 795: Using initial value of main_master_tx_fifo_sink_sink_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 854: Using initial value of main_phy_source_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 313: Using initial value of builder_interface0_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 392: Using initial value of main_basesoc_adr_burst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 394: Using initial value of main_basesoc_basesoc_adr_burst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 403: Using initial value of main_basesoc_basesoc_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 407: Using initial value of main_basesoc_bus_error since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 410: Using initial value of main_basesoc_cpu_rst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 415: Using initial value of main_basesoc_dbus_bte since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 416: Using initial value of main_basesoc_dbus_cti since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 426: Using initial value of main_basesoc_ibus_bte since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 427: Using initial value of main_basesoc_ibus_cti since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 430: Using initial value of main_basesoc_ibus_dat_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 434: Using initial value of main_basesoc_ibus_we since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 458: Using initial value of main_basesoc_ram_adr_burst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 466: Using initial value of main_basesoc_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 474: Using initial value of main_basesoc_ram_bus_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 495: Using initial value of main_basesoc_rx_source_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 496: Using initial value of main_basesoc_rx_source_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 503: Using initial value of main_basesoc_soc_rst since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 575: Using initial value of main_basesoc_uart_rx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 633: Using initial value of main_basesoc_uart_tx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 634: Using initial value of main_basesoc_uart_tx_fifo_sink_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 635: Using initial value of main_basesoc_uart_tx_fifo_sink_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 804: Using initial value of main_master_tx_fifo_sink_sink_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 862: Using initial value of main_phy_source_first since it is never assigned
 Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_rom.init\".
 Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_sram.init\".
-WARNING:HDLCompiler:1670 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2805: Signal <sram> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2829: Signal <sram> in initial block is partially initialized.
 Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_mem.init\".
 Reading initialization file \"home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board_main_ram.init\".
-WARNING:HDLCompiler:1670 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2881: Signal <main_ram> in initial block is partially initialized.
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 910: Assignment to main_other_signals ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 921: Assignment to main_basesoc_ibus_err ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 932: Assignment to main_basesoc_dbus_err ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 957: Assignment to main_basesoc_basesoc_ram_bus_dat_w ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 958: Assignment to main_basesoc_basesoc_ram_bus_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 960: Assignment to main_basesoc_basesoc_ram_bus_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 961: Assignment to main_basesoc_basesoc_ram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 962: Assignment to main_basesoc_basesoc_ram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 968: Assignment to main_basesoc_ram_bus_ram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 969: Assignment to main_basesoc_ram_bus_ram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 975: Assignment to main_basesoc_ram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 976: Assignment to main_basesoc_ram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 982: Assignment to builder_interface0_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 983: Assignment to builder_interface0_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 990: Assignment to builder_error ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1003: Assignment to main_basesoc_bus_errors_status ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1096: Assignment to main_basesoc_rx_source_ready ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1102: Assignment to main_basesoc_tx_sink_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1103: Assignment to main_basesoc_tx_sink_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1141: Assignment to main_basesoc_uart_irq ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1157: Assignment to main_basesoc_uart_tx_fifo_level1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1182: Assignment to main_basesoc_uart_rx_fifo_source_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1183: Assignment to main_basesoc_uart_rx_fifo_source_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1187: Assignment to main_basesoc_uart_rx_fifo_level1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1213: Assignment to main_basesoc_timer_irq ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1246: Assignment to main_phy_sink_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1247: Assignment to main_phy_sink_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1687: Assignment to builder_litei2c_request ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1834: Assignment to main_master_rx_fifo_source_source_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1835: Assignment to main_master_rx_fifo_source_source_last ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1859: Result of 30-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1869: Assignment to builder_csr_bankarray_csrbank0_phy_speed_mode0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1878: Assignment to builder_csr_bankarray_csrbank0_master_active0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1887: Assignment to builder_csr_bankarray_csrbank0_master_settings0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1896: Assignment to builder_csr_bankarray_csrbank0_master_addr0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1913: Assignment to builder_csr_bankarray_csrbank0_master_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1938: Assignment to main_master_status_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1949: Assignment to builder_csr_bankarray_csrbank1_ctrl0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1958: Assignment to builder_csr_bankarray_csrbank1_ctrl_reg0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1969: Assignment to builder_csr_bankarray_csrbank2_count_out_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1979: Assignment to main_my_module_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1982: Assignment to builder_csr_bankarray_csrbank3_load0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1991: Assignment to builder_csr_bankarray_csrbank3_reload0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2000: Assignment to builder_csr_bankarray_csrbank3_en0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2009: Assignment to builder_csr_bankarray_csrbank3_update_value0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2017: Assignment to builder_csr_bankarray_csrbank3_value_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2026: Assignment to builder_csr_bankarray_csrbank3_ev_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2045: Assignment to builder_csr_bankarray_csrbank3_ev_enable0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2058: Assignment to main_basesoc_timer_value_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2061: Assignment to main_basesoc_timer_status_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2064: Assignment to main_basesoc_timer_pending_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2065: Assignment to main_basesoc_timer_zero2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2077: Assignment to builder_csr_bankarray_csrbank4_txfull_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2086: Assignment to builder_csr_bankarray_csrbank4_rxempty_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2095: Assignment to builder_csr_bankarray_csrbank4_ev_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2114: Assignment to builder_csr_bankarray_csrbank4_ev_enable0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2122: Assignment to builder_csr_bankarray_csrbank4_txempty_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2131: Assignment to builder_csr_bankarray_csrbank4_rxfull_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2141: Assignment to main_basesoc_uart_txfull_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2143: Assignment to main_basesoc_uart_rxempty_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2150: Assignment to main_basesoc_uart_status_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2157: Assignment to main_basesoc_uart_pending_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2158: Assignment to main_basesoc_uart_tx2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2159: Assignment to main_basesoc_uart_rx2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2162: Assignment to main_basesoc_uart_txempty_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2164: Assignment to main_basesoc_uart_rxfull_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2181: Assignment to builder_csr_bankarray_sram_bus_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2187: Assignment to builder_csr_bankarray_sram_bus_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2193: Assignment to builder_csr_bankarray_sram_bus_dat_w ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2291: Assignment to main_phy_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2850: Assignment to main_basesoc_uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2871: Assignment to main_basesoc_uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1670 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2905: Signal <main_ram> in initial block is partially initialized.
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 929: Assignment to main_basesoc_ibus_err ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 940: Assignment to main_basesoc_dbus_err ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 965: Assignment to main_basesoc_basesoc_ram_bus_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 966: Assignment to main_basesoc_basesoc_ram_bus_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 968: Assignment to main_basesoc_basesoc_ram_bus_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 969: Assignment to main_basesoc_basesoc_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 970: Assignment to main_basesoc_basesoc_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 976: Assignment to main_basesoc_ram_bus_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 977: Assignment to main_basesoc_ram_bus_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 983: Assignment to main_basesoc_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 984: Assignment to main_basesoc_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 990: Assignment to builder_interface0_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 991: Assignment to builder_interface0_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 998: Assignment to builder_error ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1011: Assignment to main_basesoc_bus_errors_status ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1104: Assignment to main_basesoc_rx_source_ready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1110: Assignment to main_basesoc_tx_sink_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1111: Assignment to main_basesoc_tx_sink_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1149: Assignment to main_basesoc_uart_irq ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1165: Assignment to main_basesoc_uart_tx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1190: Assignment to main_basesoc_uart_rx_fifo_source_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1191: Assignment to main_basesoc_uart_rx_fifo_source_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1195: Assignment to main_basesoc_uart_rx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1221: Assignment to main_basesoc_timer_irq ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1254: Assignment to main_phy_sink_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1255: Assignment to main_phy_sink_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1695: Assignment to builder_litei2c_request ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1842: Assignment to main_master_rx_fifo_source_source_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1843: Assignment to main_master_rx_fifo_source_source_last ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1867: Result of 30-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1877: Assignment to builder_csr_bankarray_csrbank0_phy_speed_mode0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1886: Assignment to builder_csr_bankarray_csrbank0_master_active0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1895: Assignment to builder_csr_bankarray_csrbank0_master_settings0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1904: Assignment to builder_csr_bankarray_csrbank0_master_addr0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1921: Assignment to builder_csr_bankarray_csrbank0_master_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1946: Assignment to main_master_status_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1957: Assignment to builder_csr_bankarray_csrbank1_ctrl0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1966: Assignment to builder_csr_bankarray_csrbank1_ctrl_reg0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1974: Assignment to builder_csr_bankarray_csrbank1_button_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1986: Assignment to main_button_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1988: Assignment to builder_csr_bankarray_csrbank2_count_out_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1998: Assignment to main_my_module_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2001: Assignment to builder_csr_bankarray_csrbank3_load0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2010: Assignment to builder_csr_bankarray_csrbank3_reload0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2019: Assignment to builder_csr_bankarray_csrbank3_en0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2028: Assignment to builder_csr_bankarray_csrbank3_update_value0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2036: Assignment to builder_csr_bankarray_csrbank3_value_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2045: Assignment to builder_csr_bankarray_csrbank3_ev_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2064: Assignment to builder_csr_bankarray_csrbank3_ev_enable0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2077: Assignment to main_basesoc_timer_value_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2080: Assignment to main_basesoc_timer_status_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2083: Assignment to main_basesoc_timer_pending_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2084: Assignment to main_basesoc_timer_zero2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2096: Assignment to builder_csr_bankarray_csrbank4_txfull_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2105: Assignment to builder_csr_bankarray_csrbank4_rxempty_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2114: Assignment to builder_csr_bankarray_csrbank4_ev_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2133: Assignment to builder_csr_bankarray_csrbank4_ev_enable0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2141: Assignment to builder_csr_bankarray_csrbank4_txempty_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2150: Assignment to builder_csr_bankarray_csrbank4_rxfull_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2160: Assignment to main_basesoc_uart_txfull_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2162: Assignment to main_basesoc_uart_rxempty_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2169: Assignment to main_basesoc_uart_status_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2176: Assignment to main_basesoc_uart_pending_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2177: Assignment to main_basesoc_uart_tx2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2178: Assignment to main_basesoc_uart_rx2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2181: Assignment to main_basesoc_uart_txempty_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2183: Assignment to main_basesoc_uart_rxfull_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2200: Assignment to builder_csr_bankarray_sram_bus_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2206: Assignment to builder_csr_bankarray_sram_bus_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2212: Assignment to builder_csr_bankarray_sram_bus_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2310: Assignment to main_phy_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2874: Assignment to main_basesoc_uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2895: Assignment to main_basesoc_uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
 
 Elaborating module <serv_rf_top(RESET_PC=1'b0)>.
 
@@ -292,13 +293,13 @@ Elaborating module <serv_csr(RESET_STRATEGY="MINI")>.
 Elaborating module <FDPE(INIT=1'b1)>.
 
 Elaborating module <IOBUF>.
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2963: Assignment to builder_impl_xilinxsdrtristateimpl0__i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2987: Assignment to builder_impl_xilinxsdrtristateimpl0__i ignored, since the identifier is never used
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="C0",INIT=1'b0,SRTYPE="ASYNC")>.
 
 Elaborating module <IDDR2(DDR_ALIGNMENT="C0",INIT_Q0=1'b0,INIT_Q1=1'b0,SRTYPE="ASYNC")>.
-WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 3092: Assignment to builder_impl ignored, since the identifier is never used
-WARNING:HDLCompiler:552 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2900: Input port i_ext_rd[31] is not connected on this instance
+WARNING:HDLCompiler:1127 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 3116: Assignment to builder_impl ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2924: Input port i_ext_rd[31] is not connected on this instance
 
 Elaborating module <VGA_Controller>.
 
@@ -327,10 +328,10 @@ Synthesizing Unit <spartan6_board>.
     Set property "shreg_extract = no" for signal <builder_impl_xilinxmultiregimpl1>.
 WARNING:Xst:2898 - Port 'i_ext_rd', unconnected in block instance 'serv_rf_top', is tied to GND.
 WARNING:Xst:2898 - Port 'i_ext_ready', unconnected in block instance 'serv_rf_top', is tied to GND.
-INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_ext_rs1> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_ext_rs2> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_ext_funct3> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2900: Output port <o_mdu_valid> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2924: Output port <o_ext_rs1> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2924: Output port <o_ext_rs2> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2924: Output port <o_ext_funct3> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" line 2924: Output port <o_mdu_valid> of the instance <serv_rf_top> is unconnected or connected to loadless signal.
 WARNING:Xst:2999 - Signal 'rom', unconnected in block 'spartan6_board', is tied to its initial value.
 WARNING:Xst:2999 - Signal 'mem', unconnected in block 'spartan6_board', is tied to its initial value.
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <rom>, simulation mismatch.
@@ -387,7 +388,7 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem>, s
     Found 8-bit register for signal <main_phy_sr_cnt>.
     Found 3-bit register for signal <main_phy_bytes_send>.
     Found 3-bit register for signal <main_phy_bytes_recv>.
-    Found 1-bit register for signal <main_master_tx_fifo_pipe_valid_source_valid>.
+    Found 1-bit register for signal <builder_litei2c_tx_mux_source_valid>.
     Found 32-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_data>.
     Found 7-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_addr>.
     Found 3-bit register for signal <main_master_tx_fifo_pipe_valid_source_payload_len_tx>.
@@ -408,7 +409,7 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem>, s
     Found 7-bit register for signal <main_master_addr_storage>.
     Found 1-bit register for signal <builder_csr_bankarray_sel_r>.
     Found 32-bit register for signal <builder_csr_bankarray_interface1_bank_bus_dat_r>.
-    Found 4-bit register for signal <main_ctrl_storage>.
+    Found 1-bit register for signal <main_ctrl_storage>.
     Found 24-bit register for signal <main_ctrl_reg_storage>.
     Found 32-bit register for signal <builder_csr_bankarray_interface2_bank_bus_dat_r>.
     Found 32-bit register for signal <builder_csr_bankarray_interface3_bank_bus_dat_r>.
@@ -447,49 +448,50 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem>, s
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 20-bit subtractor for signal <builder_count[19]_GND_2_o_sub_396_OUT> created at line 2311.
-    Found 5-bit subtractor for signal <main_basesoc_uart_tx_fifo_level0[4]_GND_2_o_sub_414_OUT> created at line 2388.
-    Found 5-bit subtractor for signal <main_basesoc_uart_rx_fifo_level0[4]_GND_2_o_sub_423_OUT> created at line 2410.
-    Found 32-bit subtractor for signal <main_basesoc_timer_value[31]_GND_2_o_sub_427_OUT> created at line 2417.
-    Found 6-bit subtractor for signal <PWR_2_o_main_phy_len_tx_capped[2]_sub_432_OUT> created at line 2440.
-    Found 4-bit adder for signal <main_basesoc_tx_count[3]_GND_2_o_add_66_OUT> created at line 1036.
-    Found 4-bit adder for signal <main_basesoc_rx_count[3]_GND_2_o_add_74_OUT> created at line 1075.
-    Found 3-bit adder for signal <main_phy_bytes_send[2]_GND_2_o_add_158_OUT> created at line 1410.
-    Found 3-bit adder for signal <main_phy_bytes_recv[2]_GND_2_o_add_185_OUT> created at line 1521.
-    Found 8-bit adder for signal <main_phy_sr_cnt[7]_GND_2_o_add_206_OUT> created at line 1624.
-    Found 33-bit adder for signal <n1538> created at line 2331.
-    Found 33-bit adder for signal <n1540> created at line 2346.
-    Found 4-bit adder for signal <main_basesoc_uart_tx_fifo_produce[3]_GND_2_o_add_407_OUT> created at line 2377.
-    Found 4-bit adder for signal <main_basesoc_uart_tx_fifo_consume[3]_GND_2_o_add_409_OUT> created at line 2380.
-    Found 5-bit adder for signal <main_basesoc_uart_tx_fifo_level0[4]_GND_2_o_add_411_OUT> created at line 2384.
-    Found 4-bit adder for signal <main_basesoc_uart_rx_fifo_produce[3]_GND_2_o_add_416_OUT> created at line 2399.
-    Found 4-bit adder for signal <main_basesoc_uart_rx_fifo_consume[3]_GND_2_o_add_418_OUT> created at line 2402.
-    Found 5-bit adder for signal <main_basesoc_uart_rx_fifo_level0[4]_GND_2_o_add_420_OUT> created at line 2406.
-    Found 7-bit adder for signal <main_phy_cnt[6]_GND_2_o_add_437_OUT> created at line 2450.
-    Found 2-bit adder for signal <main_phy_sub_cnt[1]_GND_2_o_add_439_OUT> created at line 2455.
-    Found 3-bit adder for signal <main_my_module_counter[2]_GND_2_o_add_456_OUT> created at line 2508.
-    Found 26-bit adder for signal <main_my_module_timer[25]_GND_2_o_add_457_OUT> created at line 2510.
-    Found 32-bit shifter logical left for signal <main_phy_sink_payload_data[31]_PWR_2_o_shift_left_432_OUT> created at line 2440
+    Found 20-bit subtractor for signal <builder_count[19]_GND_2_o_sub_394_OUT> created at line 2330.
+    Found 5-bit subtractor for signal <main_basesoc_uart_tx_fifo_level0[4]_GND_2_o_sub_412_OUT> created at line 2407.
+    Found 5-bit subtractor for signal <main_basesoc_uart_rx_fifo_level0[4]_GND_2_o_sub_421_OUT> created at line 2429.
+    Found 32-bit subtractor for signal <main_basesoc_timer_value[31]_GND_2_o_sub_425_OUT> created at line 2436.
+    Found 6-bit subtractor for signal <PWR_2_o_main_phy_len_tx_capped[2]_sub_430_OUT> created at line 2459.
+    Found 4-bit adder for signal <main_basesoc_tx_count[3]_GND_2_o_add_65_OUT> created at line 1044.
+    Found 4-bit adder for signal <main_basesoc_rx_count[3]_GND_2_o_add_73_OUT> created at line 1083.
+    Found 3-bit adder for signal <main_phy_bytes_send[2]_GND_2_o_add_157_OUT> created at line 1418.
+    Found 3-bit adder for signal <main_phy_bytes_recv[2]_GND_2_o_add_184_OUT> created at line 1529.
+    Found 8-bit adder for signal <main_phy_sr_cnt[7]_GND_2_o_add_205_OUT> created at line 1632.
+    Found 33-bit adder for signal <n1533> created at line 2350.
+    Found 33-bit adder for signal <n1535> created at line 2365.
+    Found 4-bit adder for signal <main_basesoc_uart_tx_fifo_produce[3]_GND_2_o_add_405_OUT> created at line 2396.
+    Found 4-bit adder for signal <main_basesoc_uart_tx_fifo_consume[3]_GND_2_o_add_407_OUT> created at line 2399.
+    Found 5-bit adder for signal <main_basesoc_uart_tx_fifo_level0[4]_GND_2_o_add_409_OUT> created at line 2403.
+    Found 4-bit adder for signal <main_basesoc_uart_rx_fifo_produce[3]_GND_2_o_add_414_OUT> created at line 2418.
+    Found 4-bit adder for signal <main_basesoc_uart_rx_fifo_consume[3]_GND_2_o_add_416_OUT> created at line 2421.
+    Found 5-bit adder for signal <main_basesoc_uart_rx_fifo_level0[4]_GND_2_o_add_418_OUT> created at line 2425.
+    Found 7-bit adder for signal <main_phy_cnt[6]_GND_2_o_add_435_OUT> created at line 2469.
+    Found 2-bit adder for signal <main_phy_sub_cnt[1]_GND_2_o_add_437_OUT> created at line 2474.
+    Found 3-bit adder for signal <main_my_module_counter[2]_GND_2_o_add_454_OUT> created at line 2527.
+    Found 26-bit adder for signal <main_my_module_timer[25]_GND_2_o_add_455_OUT> created at line 2529.
+    Found 32-bit shifter logical left for signal <main_phy_sink_payload_data[31]_PWR_2_o_shift_left_430_OUT> created at line 2459
     Found 4x7-bit Read Only RAM for signal <main_phy_div>
-    Found 32-bit 7-to-1 multiplexer for signal <_n2330> created at line 2515.
-    Found 32-bit 8-to-1 multiplexer for signal <_n2349> created at line 2584.
-    Found 1-bit 8-to-1 multiplexer for signal <_n2377> created at line 2639.
-    Found 3-bit comparator greater for signal <PWR_2_o_main_phy_sink_payload_len_tx[2]_LessThan_130_o> created at line 1263
-    Found 7-bit comparator equal for signal <main_phy_cnt[6]_main_phy_div[6]_equal_135_o> created at line 1284
-    Found 3-bit comparator greater for signal <GND_2_o_main_phy_sink_payload_len_tx[2]_LessThan_151_o> created at line 1379
-    Found 3-bit comparator greater for signal <main_phy_bytes_send[2]_main_phy_sink_payload_len_tx[2]_LessThan_169_o> created at line 1430
-    Found 3-bit comparator greater for signal <GND_2_o_main_phy_sink_payload_len_rx[2]_LessThan_170_o> created at line 1435
-    Found 3-bit comparator greater for signal <main_phy_bytes_recv[2]_main_phy_sink_payload_len_rx[2]_LessThan_193_o> created at line 1530
-    Found 8-bit comparator greater for signal <main_phy_sr_cnt[7]_GND_2_o_LessThan_206_o> created at line 1622
-    Found 7-bit comparator greater for signal <main_phy_cnt[6]_main_phy_div[6]_LessThan_437_o> created at line 2449
-    Found 2-bit comparator greater for signal <main_phy_sub_cnt[1]_PWR_2_o_LessThan_439_o> created at line 2454
+    Found 32-bit 8-to-1 multiplexer for signal <_n2936> created at line 2607.
+    Found 1-bit 8-to-1 multiplexer for signal <_n2970> created at line 2662.
+    Found 1-bit 4-to-1 multiplexer for signal <_n2984> created at line 2575.
+    Found 32-bit 7-to-1 multiplexer for signal <_n3003> created at line 2534.
+    Found 3-bit comparator greater for signal <PWR_2_o_main_phy_sink_payload_len_tx[2]_LessThan_129_o> created at line 1271
+    Found 7-bit comparator equal for signal <main_phy_cnt[6]_main_phy_div[6]_equal_134_o> created at line 1292
+    Found 3-bit comparator greater for signal <GND_2_o_main_phy_sink_payload_len_tx[2]_LessThan_150_o> created at line 1387
+    Found 3-bit comparator greater for signal <main_phy_bytes_send[2]_main_phy_sink_payload_len_tx[2]_LessThan_168_o> created at line 1438
+    Found 3-bit comparator greater for signal <GND_2_o_main_phy_sink_payload_len_rx[2]_LessThan_169_o> created at line 1443
+    Found 3-bit comparator greater for signal <main_phy_bytes_recv[2]_main_phy_sink_payload_len_rx[2]_LessThan_192_o> created at line 1538
+    Found 8-bit comparator greater for signal <main_phy_sr_cnt[7]_GND_2_o_LessThan_205_o> created at line 1630
+    Found 7-bit comparator greater for signal <main_phy_cnt[6]_main_phy_div[6]_LessThan_435_o> created at line 2468
+    Found 2-bit comparator greater for signal <main_phy_sub_cnt[1]_PWR_2_o_LessThan_437_o> created at line 2473
 INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal clk100 may hinder XST clustering optimizations.
     Summary:
 	inferred   7 RAM(s).
 	inferred  20 Adder/Subtractor(s).
-	inferred 807 D-type flip-flop(s).
+	inferred 804 D-type flip-flop(s).
 	inferred   9 Comparator(s).
-	inferred 161 Multiplexer(s).
+	inferred 166 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 	inferred   1 Finite State Machine(s).
 Unit <spartan6_board> synthesized.
@@ -795,7 +797,7 @@ Macro Statistics
  7-bit subtractor                                      : 1
  8-bit adder                                           : 1
 # Registers                                            : 148
- 1-bit register                                        : 72
+ 1-bit register                                        : 73
  10-bit register                                       : 2
  11-bit register                                       : 1
  12-bit register                                       : 2
@@ -808,7 +810,7 @@ Macro Statistics
  3-bit register                                        : 7
  30-bit register                                       : 1
  32-bit register                                       : 20
- 4-bit register                                        : 10
+ 4-bit register                                        : 9
  5-bit register                                        : 6
  6-bit register                                        : 2
  7-bit register                                        : 4
@@ -823,9 +825,9 @@ Macro Statistics
  7-bit comparator equal                                : 1
  7-bit comparator greater                              : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 202
- 1-bit 2-to-1 multiplexer                              : 129
- 1-bit 4-to-1 multiplexer                              : 1
+# Multiplexers                                         : 207
+ 1-bit 2-to-1 multiplexer                              : 133
+ 1-bit 4-to-1 multiplexer                              : 2
  1-bit 8-to-1 multiplexer                              : 1
  12-bit 2-to-1 multiplexer                             : 2
  14-bit 2-to-1 multiplexer                             : 2
@@ -1101,8 +1103,8 @@ Macro Statistics
  7-bit up counter                                      : 1
 # Accumulators                                         : 1
  3-bit up accumulator                                  : 1
-# Registers                                            : 918
- Flip-Flops                                            : 918
+# Registers                                            : 915
+ Flip-Flops                                            : 915
 # Comparators                                          : 21
  12-bit comparator greater                             : 5
  12-bit comparator lessequal                           : 3
@@ -1112,9 +1114,9 @@ Macro Statistics
  7-bit comparator equal                                : 1
  7-bit comparator greater                              : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 293
- 1-bit 2-to-1 multiplexer                              : 242
- 1-bit 4-to-1 multiplexer                              : 1
+# Multiplexers                                         : 298
+ 1-bit 2-to-1 multiplexer                              : 246
+ 1-bit 4-to-1 multiplexer                              : 2
  1-bit 8-to-1 multiplexer                              : 1
  14-bit 2-to-1 multiplexer                             : 2
  2-bit 2-to-1 multiplexer                              : 1
@@ -1325,9 +1327,8 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u2/col_11> has a co
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block topmod, actual ratio is 13.
-FlipFlop u1/builder_grant has been replicated 2 time(s)
+FlipFlop u1/builder_grant has been replicated 3 time(s)
 FlipFlop u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_1 has been replicated 1 time(s)
-FlipFlop u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_2 has been replicated 1 time(s)
 FlipFlop u1/serv_rf_top/cpu/decode/funct3_1 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -1336,8 +1337,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 968
- Flip-Flops                                            : 968
+# Registers                                            : 965
+ Flip-Flops                                            : 965
 
 =========================================================================
 
@@ -1360,28 +1361,28 @@ Top Level Output File Name         : topmod.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2044
+# BELS                             : 2014
 #      GND                         : 1
 #      INV                         : 78
 #      LUT1                        : 56
-#      LUT2                        : 127
-#      LUT3                        : 298
-#      LUT4                        : 145
-#      LUT5                        : 340
-#      LUT6                        : 581
+#      LUT2                        : 128
+#      LUT3                        : 243
+#      LUT4                        : 151
+#      LUT5                        : 289
+#      LUT6                        : 652
 #      MUXCY                       : 154
-#      MUXF7                       : 72
+#      MUXF7                       : 70
 #      MUXF8                       : 32
 #      VCC                         : 1
 #      XORCY                       : 159
-# FlipFlops/Latches                : 973
-#      FD                          : 107
+# FlipFlops/Latches                : 970
+#      FD                          : 108
 #      FDC                         : 13
 #      FDCE                        : 30
 #      FDE                         : 124
 #      FDP                         : 2
-#      FDR                         : 266
-#      FDRE                        : 417
+#      FDR                         : 259
+#      FDRE                        : 420
 #      FDS                         : 2
 #      FDSE                        : 7
 #      IDDR2                       : 1
@@ -1393,8 +1394,8 @@ Primitive and Black Box Usage:
 #      RAMB8BWER                   : 2
 # Clock Buffers                    : 1
 #      BUFG                        : 1
-# IO Buffers                       : 34
-#      IBUF                        : 3
+# IO Buffers                       : 35
+#      IBUF                        : 4
 #      IOBUF                       : 2
 #      OBUF                        : 29
 
@@ -1405,22 +1406,22 @@ Selected Device : 6slx25ftg256-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             973  out of  30064     3%  
- Number of Slice LUTs:                 1641  out of  15032    10%  
-    Number used as Logic:              1625  out of  15032    10%  
+ Number of Slice Registers:             970  out of  30064     3%  
+ Number of Slice LUTs:                 1613  out of  15032    10%  
+    Number used as Logic:              1597  out of  15032    10%  
     Number used as Memory:               16  out of   3664     0%  
        Number used as RAM:               16
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1806
-   Number with an unused Flip Flop:     833  out of   1806    46%  
-   Number with an unused LUT:           165  out of   1806     9%  
-   Number of fully used LUT-FF pairs:   808  out of   1806    44%  
-   Number of unique control sets:        57
+ Number of LUT Flip Flop pairs used:   1765
+   Number with an unused Flip Flop:     795  out of   1765    45%  
+   Number with an unused LUT:           152  out of   1765     8%  
+   Number of fully used LUT-FF pairs:   818  out of   1765    46%  
+   Number of unique control sets:        60
 
 IO Utilization: 
- Number of IOs:                          34
- Number of bonded IOBs:                  34  out of    186    18%  
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    186    18%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               37  out of     52    71%  
@@ -1448,7 +1449,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk100                             | IBUF+BUFG              | 1022  |
+clk100                             | IBUF+BUFG              | 1019  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1459,7 +1460,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 10.850ns (Maximum Frequency: 92.166MHz)
+   Minimum period: 10.956ns (Maximum Frequency: 91.274MHz)
    Minimum input arrival time before clock: 4.459ns
    Maximum output required time after clock: 4.202ns
    Maximum combinational path delay: 4.921ns
@@ -1470,10 +1471,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk100'
-  Clock period: 10.850ns (frequency: 92.166MHz)
-  Total number of paths / destination ports: 225190 / 3410
+  Clock period: 10.956ns (frequency: 91.274MHz)
+  Total number of paths / destination ports: 244997 / 3406
 -------------------------------------------------------------------------
-Delay:               5.425ns (Levels of Logic = 3)
+Delay:               5.478ns (Levels of Logic = 3)
   Source:            u1/main_phy_cnt_4 (FF)
   Destination:       u1/ODDR2_3 (FF)
   Source Clock:      clk100 rising
@@ -1484,28 +1485,28 @@ Delay:               5.425ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              7   0.525   1.340  u1/main_phy_cnt_4 (u1/main_phy_cnt_4)
-     LUT6:I1->O            1   0.254   0.910  u1/main_phy_cnt[6]_main_phy_div[6]_equal_135_o75_SW0 (N187)
-     LUT6:I3->O           16   0.235   1.182  u1/main_phy_cnt[6]_main_phy_div[6]_equal_135_o75 (u1/main_phy_cnt[6]_main_phy_div[6]_equal_135_o)
+     LUT6:I1->O            1   0.254   0.910  u1/main_phy_cnt[6]_main_phy_div[6]_equal_134_o75_SW0 (N183)
+     LUT6:I3->O           18   0.235   1.235  u1/main_phy_cnt[6]_main_phy_div[6]_equal_134_o75 (u1/main_phy_cnt[6]_main_phy_div[6]_equal_134_o)
      LUT6:I5->O            2   0.254   0.725  u1/main_phy_sda_oe_INV_248_o5 (u1/main_phy_sda_oe_INV_248_o)
      ODDR2:D1                  0.000          u1/ODDR2_3
     ----------------------------------------
-    Total                      5.425ns (1.268ns logic, 4.157ns route)
-                                       (23.4% logic, 76.6% route)
+    Total                      5.478ns (1.268ns logic, 4.210ns route)
+                                       (23.1% logic, 76.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk100'
-  Total number of paths / destination ports: 47 / 47
+  Total number of paths / destination ports: 48 / 48
 -------------------------------------------------------------------------
 Offset:              4.459ns (Levels of Logic = 2)
-  Source:            user_btn0 (PAD)
+  Source:            rst_btn0 (PAD)
   Destination:       u2/v_count_9 (FF)
   Destination Clock: clk100 rising
 
-  Data Path: user_btn0 to u2/v_count_9
+  Data Path: rst_btn0 to u2/v_count_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.328   0.681  user_btn0_IBUF (user_btn0_IBUF)
+     IBUF:I->O             1   1.328   0.681  rst_btn0_IBUF (rst_btn0_IBUF)
      INV:I->O             45   0.255   1.736  u1/builder_impl_xilinxasyncresetsynchronizerimpl1_INV_0 (u1/builder_impl_xilinxasyncresetsynchronizerimpl)
      FDC:CLR                   0.459          u2/vga_vsync
     ----------------------------------------
@@ -1517,15 +1518,15 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk100'
   Total number of paths / destination ports: 28 / 28
 -------------------------------------------------------------------------
 Offset:              4.202ns (Levels of Logic = 1)
-  Source:            u1/main_ctrl_storage_0 (FF)
+  Source:            u1/main_ctrl_storage (FF)
   Destination:       user_led0 (PAD)
   Source Clock:      clk100 rising
 
-  Data Path: u1/main_ctrl_storage_0 to user_led0
+  Data Path: u1/main_ctrl_storage to user_led0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.525   0.765  u1/main_ctrl_storage_0 (u1/main_ctrl_storage_0)
+     FDR:C->Q              3   0.525   0.765  u1/main_ctrl_storage (u1/main_ctrl_storage)
      OBUF:I->O                 2.912          user_led0_OBUF (user_led0)
     ----------------------------------------
     Total                      4.202ns (3.437ns logic, 0.765ns route)
@@ -1559,21 +1560,21 @@ Clock to Setup on destination clock clk100
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk100         |   10.174|         |    5.425|         |
+clk100         |   10.072|         |    5.478|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.68 secs
+Total CPU time to Xst completion: 17.79 secs
  
 --> 
 
 
-Total memory usage is 402376 kilobytes
+Total memory usage is 402340 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  253 (   0 filtered)
+Number of warnings :  254 (   0 filtered)
 Number of infos    :   32 (   0 filtered)
 

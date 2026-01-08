@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Jan  8 11:05:42 2026
+Thu Jan  8 15:14:58 2026
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -207,7 +207,7 @@ Pinout by Pin Number:
 |M9        |clk100     |IOB      |IO_L29P_GCLK3_2              |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |M10       |           |IOBS     |IO_L16N_VREF_2               |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |M11       |           |IOBS     |IO_L2N_CMPMOSI_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|M12       |           |IOBM     |IO_L2P_CMPCLK_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|M12       |rst_btn0   |IOB      |IO_L2P_CMPCLK_2              |INPUT    |LVCMOS33   |2             |          |         |PULLUP     |NONE     |         |LOCATED   |NO         |NONE            |
 |M13       |vga_b<0>   |IOB      |IO_L74P_AWAKE_1              |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |M14       |           |IOBS     |IO_L74N_DOUT_BUSY_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |M15       |vga_g<5>   |IOB      |IO_L46P_FCS_B_M1DQ2_1        |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
@@ -265,7 +265,7 @@ Pinout by Pin Number:
 |T3        |           |IOBS     |IO_L65N_CSO_B_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T4        |           |IOBS     |IO_L63N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T5        |           |IOBS     |IO_L48N_RDWR_B_VREF_2        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|T6        |user_btn0  |IOB      |IO_L47N_2                    |INPUT    |LVCMOS33   |2             |          |         |PULLUP     |NONE     |         |LOCATED   |NO         |NONE            |
+|T6        |user_btn   |IOB      |IO_L47N_2                    |INPUT    |LVCMOS33   |2             |          |         |PULLUP     |NONE     |         |LOCATED   |NO         |NONE            |
 |T7        |           |IOBS     |IO_L32N_GCLK28_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T8        |           |IOBS     |IO_L30N_GCLK0_USERCCLK_2     |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T9        |           |IOBS     |IO_L23N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
