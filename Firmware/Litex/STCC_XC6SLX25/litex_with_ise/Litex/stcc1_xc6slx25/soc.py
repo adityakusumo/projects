@@ -112,13 +112,16 @@ class BaseSoC(SoCCore):
         # self.submodules.led_drive = LEDDriver(led)   
         
         # CSRs   
+        # Led CSR - From Firmware to Hardware
         self.ctrl = CSRStorage(4, description="4-bit Control Bus")
         self.comb += [
             led.eq(self.ctrl.storage[0]),           # 1st bit
             self.other_signals.eq(self.ctrl.storage[1:4])    # 2nd through 4th bits
         ]
+        # UART CSR - From Hardware to Firmware
         self.submodules.my_module = MyModule(sys_clk_freq=int(50e6))
         
+        # CSR for ISE
         my_external_bus = [
             ("from_litex_ctrl", 0, Pins(24))
         ]
