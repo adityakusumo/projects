@@ -128,6 +128,9 @@ qiuqiu</pre>
   </tr>    
 </table>
 
+The VGA output will look like this:
+![VGA](Firmware/Litex/STCC_XC6SLX25/litex_with_ise/doc/VGA_smile.gif)
+
 ---
 
 > [!TIP]
