@@ -1,11 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jan 08 15:14:41 2026
+// Written by: Map P.20131013 on Fri Jan 09 08:58:12 2026
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "i2c0_sda" LOCATE = SITE "P9" LEVEL 1;
 COMP "i2c0_scl" LOCATE = SITE "N5" LEVEL 1;
 COMP "vga_clk_out" LOCATE = SITE "E11" LEVEL 1;
+COMP "user_led20" LOCATE = SITE "P16" LEVEL 1;
 COMP "vga_hsync" LOCATE = SITE "N16" LEVEL 1;
 COMP "clk100" LOCATE = SITE "M9" LEVEL 1;
 COMP "serial_rx" LOCATE = SITE "E15" LEVEL 1;
@@ -35,7 +36,7 @@ COMP "vga_r<4>" LOCATE = SITE "G16" LEVEL 1;
 COMP "vga_r<5>" LOCATE = SITE "H15" LEVEL 1;
 COMP "vga_r<6>" LOCATE = SITE "H16" LEVEL 1;
 COMP "vga_r<7>" LOCATE = SITE "H14" LEVEL 1;
-COMP "user_led0" LOCATE = SITE "P16" LEVEL 1;
+COMP "user_led0" LOCATE = SITE "K12" LEVEL 1;
 COMP "rst_btn0" LOCATE = SITE "M12" LEVEL 1;
 COMP "user_btn" LOCATE = SITE "T6" LEVEL 1;
 PIN u1/IDDR2_pins<1> = BEL "u1/IDDR2" PINNAME CLK0;
@@ -57,9 +58,9 @@ PIN u1/Mram_main_ram2_pins<9> = BEL "u1/Mram_main_ram2" PINNAME CLKA;
 PIN u1/Mram_main_ram4_pins<9> = BEL "u1/Mram_main_ram4" PINNAME CLKA;
 PIN u1/Mram_main_ram1_pins<9> = BEL "u1/Mram_main_ram1" PINNAME CLKA;
 PIN u1/Mram_sram4_pins<9> = BEL "u1/Mram_sram4" PINNAME CLKA;
-PIN u1/Mram_sram2_pins<9> = BEL "u1/Mram_sram2" PINNAME CLKA;
-PIN u1/Mram_sram1_pins<9> = BEL "u1/Mram_sram1" PINNAME CLKA;
 PIN u1/Mram_sram3_pins<9> = BEL "u1/Mram_sram3" PINNAME CLKA;
+PIN u1/Mram_sram1_pins<9> = BEL "u1/Mram_sram1" PINNAME CLKA;
+PIN u1/Mram_sram2_pins<9> = BEL "u1/Mram_sram2" PINNAME CLKA;
 PIN u1/serv_rf_top/rf_ram/Mram_memory_pins<24> = BEL
         "u1/serv_rf_top/rf_ram/Mram_memory" PINNAME CLKAWRCLK;
 PIN u1/serv_rf_top/rf_ram/Mram_memory_pins<25> = BEL
@@ -92,10 +93,10 @@ PIN u1/ODDR2_3_pins<1> = BEL "u1/ODDR2_3" PINNAME CK0;
 PIN u1/ODDR2_3_pins<2> = BEL "u1/ODDR2_3" PINNAME CK1;
 TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/inst_LPM_FF_0" BEL "u1/inst_LPM_FF_1" BEL
-        "u1/main_basesoc_rx_count_3" BEL "u1/main_basesoc_rx_count_1" BEL
-        "u1/main_basesoc_rx_count_0" BEL "u1/main_basesoc_rx_count_2" BEL
-        "u1/main_basesoc_tx_count_3" BEL "u1/main_basesoc_tx_count_1" BEL
-        "u1/main_basesoc_tx_count_0" BEL "u1/main_basesoc_tx_count_2" BEL
+        "u1/main_basesoc_rx_count_3" BEL "u1/main_basesoc_rx_count_2" BEL
+        "u1/main_basesoc_rx_count_0" BEL "u1/main_basesoc_rx_count_1" BEL
+        "u1/main_basesoc_tx_count_3" BEL "u1/main_basesoc_tx_count_2" BEL
+        "u1/main_basesoc_tx_count_0" BEL "u1/main_basesoc_tx_count_1" BEL
         "u1/main_my_module_counter_2" BEL "u1/main_my_module_counter_1" BEL
         "u1/main_my_module_counter_0" BEL "u1/main_phy_sub_cnt_1" BEL
         "u1/main_phy_sub_cnt_0" BEL "u1/builder_litei2c_state_FSM_FFd2" BEL
@@ -126,55 +127,75 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/builder_litei2c_state_FSM_FFd28" BEL
         "u1/builder_litei2c_state_FSM_FFd26" BEL
         "u1/builder_litei2c_state_FSM_FFd29" BEL "u1/main_phy_cnt_6" BEL
-        "u1/main_phy_cnt_5" BEL "u1/main_phy_cnt_3" BEL "u1/main_phy_cnt_2"
-        BEL "u1/main_phy_cnt_4" BEL "u1/main_phy_cnt_0" BEL
-        "u1/main_phy_cnt_1" BEL "u1/builder_count_19" BEL
-        "u1/builder_count_18" BEL "u1/builder_count_16" BEL
-        "u1/builder_count_15" BEL "u1/builder_count_17" BEL
-        "u1/builder_count_14" BEL "u1/builder_count_13" BEL
-        "u1/builder_count_11" BEL "u1/builder_count_10" BEL
-        "u1/builder_count_12" BEL "u1/builder_count_8" BEL
-        "u1/builder_count_7" BEL "u1/builder_count_9" BEL "u1/builder_count_5"
-        BEL "u1/builder_count_4" BEL "u1/builder_count_6" BEL
-        "u1/builder_count_3" BEL "u1/builder_count_2" BEL "u1/builder_count_0"
-        BEL "u1/builder_count_1" BEL "u1/main_basesoc_uart_rx_fifo_consume_3"
-        BEL "u1/main_basesoc_uart_rx_fifo_consume_2" BEL
-        "u1/main_basesoc_uart_rx_fifo_consume_1" BEL
-        "u1/main_basesoc_uart_rx_fifo_consume_0" BEL
-        "u1/main_basesoc_uart_rx_fifo_produce_3" BEL
-        "u1/main_basesoc_uart_rx_fifo_produce_2" BEL
-        "u1/main_basesoc_uart_rx_fifo_produce_1" BEL
-        "u1/main_basesoc_uart_rx_fifo_produce_0" BEL
+        "u1/main_phy_cnt_5" BEL "u1/main_phy_cnt_4" BEL "u1/main_phy_cnt_2"
+        BEL "u1/main_phy_cnt_1" BEL "u1/main_phy_cnt_3" BEL
+        "u1/main_phy_cnt_0" BEL "u1/builder_count_18" BEL
+        "u1/builder_count_17" BEL "u1/builder_count_19" BEL
+        "u1/builder_count_15" BEL "u1/builder_count_14" BEL
+        "u1/builder_count_16" BEL "u1/builder_count_12" BEL
+        "u1/builder_count_11" BEL "u1/builder_count_13" BEL
+        "u1/builder_count_9" BEL "u1/builder_count_8" BEL
+        "u1/builder_count_10" BEL "u1/builder_count_6" BEL
+        "u1/builder_count_5" BEL "u1/builder_count_7" BEL "u1/builder_count_3"
+        BEL "u1/builder_count_2" BEL "u1/builder_count_4" BEL
+        "u1/builder_count_1" BEL "u1/builder_count_0" BEL
         "u1/main_basesoc_uart_rx_fifo_level0_4" BEL
         "u1/main_basesoc_uart_rx_fifo_level0_3" BEL
         "u1/main_basesoc_uart_rx_fifo_level0_2" BEL
         "u1/main_basesoc_uart_rx_fifo_level0_1" BEL
         "u1/main_basesoc_uart_rx_fifo_level0_0" BEL
-        "u1/main_basesoc_uart_tx_fifo_level0_4" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_3" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_2" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_1" BEL
+        "u1/main_basesoc_uart_rx_fifo_produce_0" BEL
         "u1/main_basesoc_uart_tx_fifo_level0_3" BEL
         "u1/main_basesoc_uart_tx_fifo_level0_2" BEL
         "u1/main_basesoc_uart_tx_fifo_level0_1" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_3" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_2" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_1" BEL
+        "u1/main_basesoc_uart_rx_fifo_consume_0" BEL
         "u1/main_basesoc_uart_tx_fifo_consume_3" BEL
         "u1/main_basesoc_uart_tx_fifo_consume_2" BEL
         "u1/main_basesoc_uart_tx_fifo_consume_1" BEL
         "u1/main_basesoc_uart_tx_fifo_consume_0" BEL
-        "u1/main_my_module_timer_25" BEL "u1/main_my_module_timer_24" BEL
-        "u1/main_my_module_timer_23" BEL "u1/main_my_module_timer_22" BEL
-        "u1/main_my_module_timer_21" BEL "u1/main_my_module_timer_20" BEL
-        "u1/main_my_module_timer_19" BEL "u1/main_my_module_timer_18" BEL
-        "u1/main_my_module_timer_17" BEL "u1/main_my_module_timer_16" BEL
-        "u1/main_my_module_timer_15" BEL "u1/main_my_module_timer_14" BEL
-        "u1/main_my_module_timer_13" BEL "u1/main_my_module_timer_12" BEL
-        "u1/main_my_module_timer_11" BEL "u1/main_my_module_timer_10" BEL
-        "u1/main_my_module_timer_9" BEL "u1/main_my_module_timer_8" BEL
-        "u1/main_my_module_timer_7" BEL "u1/main_my_module_timer_6" BEL
-        "u1/main_my_module_timer_5" BEL "u1/main_my_module_timer_4" BEL
-        "u1/main_my_module_timer_3" BEL "u1/main_my_module_timer_2" BEL
-        "u1/main_my_module_timer_1" BEL "u1/main_my_module_timer_0" BEL
         "u1/main_basesoc_uart_tx_fifo_produce_3" BEL
         "u1/main_basesoc_uart_tx_fifo_produce_2" BEL
         "u1/main_basesoc_uart_tx_fifo_produce_1" BEL
         "u1/main_basesoc_uart_tx_fifo_produce_0" BEL
+        "u1/main_my_blinker_counter_31" BEL "u1/main_my_blinker_counter_30"
+        BEL "u1/main_my_blinker_counter_29" BEL
+        "u1/main_my_blinker_counter_28" BEL "u1/main_my_blinker_counter_27"
+        BEL "u1/main_my_blinker_counter_26" BEL
+        "u1/main_my_blinker_counter_25" BEL "u1/main_my_blinker_counter_24"
+        BEL "u1/main_my_blinker_counter_23" BEL
+        "u1/main_my_blinker_counter_22" BEL "u1/main_my_blinker_counter_21"
+        BEL "u1/main_my_blinker_counter_20" BEL
+        "u1/main_my_blinker_counter_19" BEL "u1/main_my_blinker_counter_18"
+        BEL "u1/main_my_blinker_counter_17" BEL
+        "u1/main_my_blinker_counter_16" BEL "u1/main_my_blinker_counter_15"
+        BEL "u1/main_my_blinker_counter_14" BEL
+        "u1/main_my_blinker_counter_13" BEL "u1/main_my_blinker_counter_12"
+        BEL "u1/main_my_blinker_counter_11" BEL
+        "u1/main_my_blinker_counter_10" BEL "u1/main_my_blinker_counter_9" BEL
+        "u1/main_my_blinker_counter_8" BEL "u1/main_my_blinker_counter_7" BEL
+        "u1/main_my_blinker_counter_6" BEL "u1/main_my_blinker_counter_5" BEL
+        "u1/main_my_blinker_counter_4" BEL "u1/main_my_blinker_counter_3" BEL
+        "u1/main_my_blinker_counter_2" BEL "u1/main_my_blinker_counter_1" BEL
+        "u1/main_my_blinker_counter_0" BEL "u1/main_my_module_timer_25" BEL
+        "u1/main_my_module_timer_24" BEL "u1/main_my_module_timer_23" BEL
+        "u1/main_my_module_timer_22" BEL "u1/main_my_module_timer_21" BEL
+        "u1/main_my_module_timer_20" BEL "u1/main_my_module_timer_19" BEL
+        "u1/main_my_module_timer_18" BEL "u1/main_my_module_timer_17" BEL
+        "u1/main_my_module_timer_16" BEL "u1/main_my_module_timer_15" BEL
+        "u1/main_my_module_timer_14" BEL "u1/main_my_module_timer_13" BEL
+        "u1/main_my_module_timer_12" BEL "u1/main_my_module_timer_11" BEL
+        "u1/main_my_module_timer_10" BEL "u1/main_my_module_timer_9" BEL
+        "u1/main_my_module_timer_8" BEL "u1/main_my_module_timer_7" BEL
+        "u1/main_my_module_timer_6" BEL "u1/main_my_module_timer_5" BEL
+        "u1/main_my_module_timer_4" BEL "u1/main_my_module_timer_3" BEL
+        "u1/main_my_module_timer_2" BEL "u1/main_my_module_timer_1" BEL
+        "u1/main_my_module_timer_0" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_17" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_16" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_15" BEL
@@ -263,37 +284,37 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/storage_1_dat1_5" BEL "u1/storage_1_dat1_4" BEL
         "u1/storage_1_dat1_3" BEL "u1/storage_1_dat1_2" BEL
         "u1/storage_1_dat1_1" BEL "u1/storage_1_dat1_0" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_31" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_30" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_29" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_28" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_27" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_26" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_25" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_24" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_23" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_22" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_21" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_20" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_19" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_18" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_17" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_16" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_15" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_14" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_13" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_12" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_11" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_10" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_9" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_8" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_7" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_6" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_5" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_4" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_3" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_2" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_31" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_30" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_29" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_28" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_27" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_26" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_25" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_24" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_23" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_22" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_21" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_20" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_19" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_18" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_17" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_16" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_15" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_14" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_13" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_12" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_11" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_10" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_9" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_8" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_1" BEL
         "u1/main_basesoc_timer_value_status_31" BEL
         "u1/main_basesoc_timer_value_status_30" BEL
         "u1/main_basesoc_timer_value_status_29" BEL
@@ -383,6 +404,26 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/storage_dat1_1" BEL "u1/storage_dat1_0" BEL "u1/mem_adr0_5" BEL
         "u1/mem_adr0_4" BEL "u1/mem_adr0_3" BEL "u1/mem_adr0_2" BEL
         "u1/mem_adr0_1" BEL "u1/mem_adr0_0" BEL
+        "u1/main_my_blinker_storage_31" BEL "u1/main_my_blinker_storage_30"
+        BEL "u1/main_my_blinker_storage_29" BEL
+        "u1/main_my_blinker_storage_28" BEL "u1/main_my_blinker_storage_27"
+        BEL "u1/main_my_blinker_storage_26" BEL
+        "u1/main_my_blinker_storage_25" BEL "u1/main_my_blinker_storage_24"
+        BEL "u1/main_my_blinker_storage_23" BEL
+        "u1/main_my_blinker_storage_22" BEL "u1/main_my_blinker_storage_21"
+        BEL "u1/main_my_blinker_storage_20" BEL
+        "u1/main_my_blinker_storage_19" BEL "u1/main_my_blinker_storage_18"
+        BEL "u1/main_my_blinker_storage_17" BEL
+        "u1/main_my_blinker_storage_16" BEL "u1/main_my_blinker_storage_15"
+        BEL "u1/main_my_blinker_storage_14" BEL
+        "u1/main_my_blinker_storage_13" BEL "u1/main_my_blinker_storage_12"
+        BEL "u1/main_my_blinker_storage_11" BEL
+        "u1/main_my_blinker_storage_10" BEL "u1/main_my_blinker_storage_9" BEL
+        "u1/main_my_blinker_storage_8" BEL "u1/main_my_blinker_storage_7" BEL
+        "u1/main_my_blinker_storage_6" BEL "u1/main_my_blinker_storage_5" BEL
+        "u1/main_my_blinker_storage_4" BEL "u1/main_my_blinker_storage_3" BEL
+        "u1/main_my_blinker_storage_2" BEL "u1/main_my_blinker_storage_1" BEL
+        "u1/main_my_blinker_storage_0" BEL
         "u1/main_basesoc_uart_enable_storage_1" BEL
         "u1/main_basesoc_uart_enable_storage_0" BEL
         "u1/main_basesoc_uart_pending_r_1" BEL
@@ -520,14 +561,14 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/main_master_tx_fifo_pipe_valid_source_payload_data_0" BEL
         "u1/main_master_tx_fifo_pipe_valid_source_valid" BEL
         "u1/main_basesoc_uart_pending_re" BEL
-        "u1/main_basesoc_timer_pending_re" BEL
-        "u1/main_basesoc_timer_update_value_re" BEL "u1/main_phy_bytes_recv_2"
-        BEL "u1/main_phy_bytes_recv_1" BEL "u1/main_phy_bytes_recv_0" BEL
+        "u1/main_basesoc_timer_update_value_re" BEL
+        "u1/main_basesoc_timer_pending_re" BEL "u1/main_phy_bytes_recv_2" BEL
+        "u1/main_phy_bytes_recv_1" BEL "u1/main_phy_bytes_recv_0" BEL
         "u1/main_phy_bytes_send_2" BEL "u1/main_phy_bytes_send_1" BEL
         "u1/main_phy_bytes_send_0" BEL
-        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_2" BEL
-        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_1" BEL
-        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_0" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_0" BEL
         "u1/main_basesoc_rx_phase_30" BEL "u1/main_basesoc_rx_phase_29" BEL
         "u1/main_basesoc_rx_phase_28" BEL "u1/main_basesoc_rx_phase_27" BEL
         "u1/main_basesoc_rx_phase_26" BEL "u1/main_basesoc_rx_phase_25" BEL
@@ -752,8 +793,8 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u2/u1/red_1" BEL "u2/u1/red_0" BEL "u2/u1/green_7" BEL
         "u2/u1/green_6" BEL "u2/u1/green_5" BEL "u2/u1/green_4" BEL
         "u2/u1/green_3" BEL "u2/u1/green_2" BEL "u2/u1/green_1" BEL
-        "u2/u1/green_0" BEL "u1/main_phy_nack" BEL "u1/main_phy_tx_done" BEL
-        "u1/main_basesoc_timer_enable_storage" BEL
+        "u2/u1/green_0" BEL "u1/main_phy_nack" BEL "u1/user_led20" BEL
+        "u1/main_phy_tx_done" BEL "u1/main_basesoc_timer_enable_storage" BEL
         "u1/main_basesoc_timer_pending_r" BEL
         "u1/main_basesoc_timer_update_value_storage" BEL
         "u1/main_basesoc_timer_en_storage" BEL "u1/main_ctrl_storage" BEL
@@ -776,7 +817,6 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/serv_rf_top/cpu/state/misalign_trap_sync_r" BEL
         "u1/serv_rf_top/cpu/state/o_ctrl_jump" BEL
         "u1/serv_rf_top/cpu/state/init_done" BEL
-        "u1/main_basesoc_uart_tx_fifo_level0_0" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_31" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_30" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_29" BEL
@@ -793,13 +833,14 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_18" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_1" BEL
         "u1/builder_csr_bankarray_interface0_bank_bus_dat_r_0" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_7" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_6" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_5" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_4" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_3" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_2" BEL
-        "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_1" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_0" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_1" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_23" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_22" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_21" BEL
@@ -823,12 +864,45 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_3" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_2" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_31" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_30" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_29" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_28" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_27" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_26" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_25" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_24" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_23" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_22" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_21" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_20" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_19" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_18" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_17" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_16" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_15" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_14" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_13" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_12" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_11" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_10" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_9" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_8" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_7" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_6" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_5" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_4" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_3" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_2" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_1" BEL
+        "u1/builder_csr_bankarray_interface2_bank_bus_dat_r_0" BEL
+        "u1/builder_csr_bankarray_interface5_bank_bus_dat_r_0" BEL
         "u1/builder_csr_bankarray_interface4_bank_bus_dat_r_0" BEL
-        "u1/builder_csr_bankarray_interface3_bank_bus_dat_r_0" BEL
+        "u1/main_basesoc_uart_tx_fifo_level0_4" BEL
         "u1/builder_csr_bankarray_interface1_bank_bus_dat_r_0" BEL "u1/FDPE_1"
-        BEL "u1/FDPE" BEL "u1/builder_grant_1" BEL "u1/builder_grant_2" BEL
-        "u1/serv_rf_top/cpu/decode/funct3_1_1" BEL "u1/builder_grant_3" BEL
-        "u1/main_master_tx_fifo_pipe_valid_source_payload_len_tx_1_1" BEL
+        BEL "u1/FDPE" BEL "u1/builder_grant_1" BEL
+        "u1/serv_rf_top/cpu/decode/funct3_1_1" BEL "u1/builder_grant_2" BEL
+        "u1/builder_grant_3" BEL "u1/builder_litei2c_state_FSM_FFd3_1" BEL
         "u1/clk100_BUFG" PIN "u1/IDDR2_pins<1>" PIN "u1/IDDR2_pins<2>" PIN
         "u1/IDDR2_pins<1>" PIN "u1/IDDR2_pins<2>" PIN
         "u1/Mram_main_ram16_pins<9>" PIN "u1/Mram_main_ram15_pins<9>" PIN
@@ -839,8 +913,8 @@ TIMEGRP PRDclk100 = BEL "u1/inst_LPM_FF1_0" BEL "u1/inst_LPM_FF1_1" BEL
         "u1/Mram_main_ram6_pins<9>" PIN "u1/Mram_main_ram5_pins<9>" PIN
         "u1/Mram_main_ram3_pins<9>" PIN "u1/Mram_main_ram2_pins<9>" PIN
         "u1/Mram_main_ram4_pins<9>" PIN "u1/Mram_main_ram1_pins<9>" PIN
-        "u1/Mram_sram4_pins<9>" PIN "u1/Mram_sram2_pins<9>" PIN
-        "u1/Mram_sram1_pins<9>" PIN "u1/Mram_sram3_pins<9>" PIN
+        "u1/Mram_sram4_pins<9>" PIN "u1/Mram_sram3_pins<9>" PIN
+        "u1/Mram_sram1_pins<9>" PIN "u1/Mram_sram2_pins<9>" PIN
         "u1/serv_rf_top/rf_ram/Mram_memory_pins<24>" PIN
         "u1/serv_rf_top/rf_ram/Mram_memory_pins<25>" PIN
         "u1_Mram_rom16_pins<13>" PIN "u1_Mram_rom15_pins<13>" PIN

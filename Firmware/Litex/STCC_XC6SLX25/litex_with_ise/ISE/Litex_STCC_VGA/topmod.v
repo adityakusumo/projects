@@ -27,6 +27,7 @@ module topmod(
     input  wire          rst_btn0,
 	 input  wire          user_btn,
     output wire          user_led0,
+	 output wire			 user_led20,
     output wire       	 vga_clk_out,    // Pixel clock out
 //    output wire       vga_blank_n,    // Blank signal to ADV7125
 //    output wire       vga_sync_n,     // Sync signal to ADV7125
@@ -48,6 +49,7 @@ module topmod(
 		.serial_tx(serial_tx),
 		.rst_btn0(rst_btn0),
 		.user_led0(user_led0),
+		.user_led20(user_led20),
 		.user_btn(user_btn)
 	);
 	

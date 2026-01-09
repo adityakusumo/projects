@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-01-08T14:54:16</DateModified>
+  <DateModified>2026-01-09T08:52:47</DateModified>
   <ModuleName>topmod</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/iseconfig/topmod.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/</ImplementationReportsDirectory>
   <DateInitialized>2026-01-08T14:49:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

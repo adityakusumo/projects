@@ -14,6 +14,8 @@ from litex.soc.doc import generate_docs
 from litex.build.generic_platform import *
 from litex.build.parser import LiteXArgumentParser
 
+from blinker import AdjustableBlink
+
 import spartan6_board
 
 kB = 1024
@@ -74,9 +76,12 @@ class MyModule(Module, AutoCSR):
         
 # BaseSoC ------------------------------------------------------------------------------------------
 class BaseSoC(SoCCore):
-    def __init__(self, sys_clk_freq=int(50e6), toolchain="ise", **kwargs):
+    def __init__(self, sys_clk_freq=int(50e6), toolchain="ise", platform=None, **kwargs):
 
-        platform = spartan6_board.Platform(toolchain=toolchain)
+        # If no platform is provided (Hardware mode), use Spartan6
+        if platform is None:
+            platform = spartan6_board.Platform(toolchain=toolchain)
+        # platform = spartan6_board.Platform(toolchain=toolchain)
 
         kwargs["integrated_rom_size"] = 0x10000
         
@@ -113,7 +118,10 @@ class BaseSoC(SoCCore):
         
         # Led output
         led = platform.request("user_led", 0) # Requests the first LED from platform
-        # self.submodules.led_drive = LEDDriver(led)   
+
+        # Led output on blinker.py
+        led0 = platform.request("user_led2", 0)
+        self.submodules.my_blinker = AdjustableBlink(led0)
         
         # CSRs   
         # Led CSR - From Firmware to Hardware

@@ -139,6 +139,12 @@ void vga_color_control(void)
     }
 }
 
+void const_led_blink_ms(uint32_t period){
+    uint32_t clkdiv;
+    clkdiv = 50000*period;
+    my_blinker_period_write(clkdiv);
+}
+
 int main(void)
 {
     char buffer[32];
@@ -147,6 +153,8 @@ int main(void)
     printf("i love sawit menn >< <3\n\r");
 
     i2c_master_active_write(1);
+
+    const_led_blink_ms(100);
 
     while (1)
     {

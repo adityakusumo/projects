@@ -5,316 +5,319 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2921: Port <arg fmt="%s" index="1">o_ext_rs1</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2975: Port <arg fmt="%s" index="1">o_ext_rs1</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 313: Using initial value of <arg fmt="%s" index="1">builder_interface0_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 327: Using initial value of <arg fmt="%s" index="1">builder_interface0_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 392: Using initial value of <arg fmt="%s" index="1">main_basesoc_adr_burst</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 406: Using initial value of <arg fmt="%s" index="1">main_basesoc_adr_burst</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 394: Using initial value of <arg fmt="%s" index="1">main_basesoc_basesoc_adr_burst</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 408: Using initial value of <arg fmt="%s" index="1">main_basesoc_basesoc_adr_burst</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 403: Using initial value of <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 417: Using initial value of <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 407: Using initial value of <arg fmt="%s" index="1">main_basesoc_bus_error</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 421: Using initial value of <arg fmt="%s" index="1">main_basesoc_bus_error</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 410: Using initial value of <arg fmt="%s" index="1">main_basesoc_cpu_rst</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 424: Using initial value of <arg fmt="%s" index="1">main_basesoc_cpu_rst</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 415: Using initial value of <arg fmt="%s" index="1">main_basesoc_dbus_bte</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 429: Using initial value of <arg fmt="%s" index="1">main_basesoc_dbus_bte</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 416: Using initial value of <arg fmt="%s" index="1">main_basesoc_dbus_cti</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 430: Using initial value of <arg fmt="%s" index="1">main_basesoc_dbus_cti</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 426: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_bte</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 440: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_bte</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 427: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_cti</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 441: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_cti</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 430: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_dat_w</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 444: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_dat_w</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 434: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_we</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 448: Using initial value of <arg fmt="%s" index="1">main_basesoc_ibus_we</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 458: Using initial value of <arg fmt="%s" index="1">main_basesoc_ram_adr_burst</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 472: Using initial value of <arg fmt="%s" index="1">main_basesoc_ram_adr_burst</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 466: Using initial value of <arg fmt="%s" index="1">main_basesoc_ram_bus_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 480: Using initial value of <arg fmt="%s" index="1">main_basesoc_ram_bus_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 474: Using initial value of <arg fmt="%s" index="1">main_basesoc_ram_bus_ram_bus_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 488: Using initial value of <arg fmt="%s" index="1">main_basesoc_ram_bus_ram_bus_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 495: Using initial value of <arg fmt="%s" index="1">main_basesoc_rx_source_first</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 509: Using initial value of <arg fmt="%s" index="1">main_basesoc_rx_source_first</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 496: Using initial value of <arg fmt="%s" index="1">main_basesoc_rx_source_last</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 510: Using initial value of <arg fmt="%s" index="1">main_basesoc_rx_source_last</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 503: Using initial value of <arg fmt="%s" index="1">main_basesoc_soc_rst</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 517: Using initial value of <arg fmt="%s" index="1">main_basesoc_soc_rst</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 575: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_replace</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 589: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_replace</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 633: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_replace</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 647: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_replace</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 634: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_sink_first</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 648: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_sink_first</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 635: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_sink_last</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 649: Using initial value of <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_sink_last</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 804: Using initial value of <arg fmt="%s" index="1">main_master_tx_fifo_sink_sink_first</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 818: Using initial value of <arg fmt="%s" index="1">main_master_tx_fifo_sink_sink_first</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 862: Using initial value of <arg fmt="%s" index="1">main_phy_source_first</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 879: Using initial value of <arg fmt="%s" index="1">main_phy_source_first</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2829: Signal &lt;<arg fmt="%s" index="1">sram</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2883: Signal &lt;<arg fmt="%s" index="1">sram</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2905: Signal &lt;<arg fmt="%s" index="1">main_ram</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2959: Signal &lt;<arg fmt="%s" index="1">main_ram</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 929: Assignment to <arg fmt="%s" index="1">main_basesoc_ibus_err</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 946: Assignment to <arg fmt="%s" index="1">main_basesoc_ibus_err</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 940: Assignment to <arg fmt="%s" index="1">main_basesoc_dbus_err</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 957: Assignment to <arg fmt="%s" index="1">main_basesoc_dbus_err</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 965: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_dat_w</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 982: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_dat_w</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 966: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_sel</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 983: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_sel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 968: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 985: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 969: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 986: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 970: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 987: Assignment to <arg fmt="%s" index="1">main_basesoc_basesoc_ram_bus_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 976: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_ram_bus_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 993: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_ram_bus_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 977: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_ram_bus_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 994: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_ram_bus_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 983: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1000: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 984: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1001: Assignment to <arg fmt="%s" index="1">main_basesoc_ram_bus_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 990: Assignment to <arg fmt="%s" index="1">builder_interface0_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1007: Assignment to <arg fmt="%s" index="1">builder_interface0_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 991: Assignment to <arg fmt="%s" index="1">builder_interface0_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1008: Assignment to <arg fmt="%s" index="1">builder_interface0_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 998: Assignment to <arg fmt="%s" index="1">builder_error</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1015: Assignment to <arg fmt="%s" index="1">builder_error</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1011: Assignment to <arg fmt="%s" index="1">main_basesoc_bus_errors_status</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1028: Assignment to <arg fmt="%s" index="1">main_basesoc_bus_errors_status</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1104: Assignment to <arg fmt="%s" index="1">main_basesoc_rx_source_ready</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1121: Assignment to <arg fmt="%s" index="1">main_basesoc_rx_source_ready</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1110: Assignment to <arg fmt="%s" index="1">main_basesoc_tx_sink_first</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1127: Assignment to <arg fmt="%s" index="1">main_basesoc_tx_sink_first</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1111: Assignment to <arg fmt="%s" index="1">main_basesoc_tx_sink_last</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1128: Assignment to <arg fmt="%s" index="1">main_basesoc_tx_sink_last</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1149: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_irq</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1166: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_irq</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1165: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_level1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1182: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_level1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1190: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_source_first</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1207: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_source_first</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1191: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_source_last</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1208: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_source_last</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1195: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_level1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1212: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_level1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1221: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_irq</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1238: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_irq</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1254: Assignment to <arg fmt="%s" index="1">main_phy_sink_first</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1271: Assignment to <arg fmt="%s" index="1">main_phy_sink_first</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1255: Assignment to <arg fmt="%s" index="1">main_phy_sink_last</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1272: Assignment to <arg fmt="%s" index="1">main_phy_sink_last</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1695: Assignment to <arg fmt="%s" index="1">builder_litei2c_request</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1712: Assignment to <arg fmt="%s" index="1">builder_litei2c_request</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1842: Assignment to <arg fmt="%s" index="1">main_master_rx_fifo_source_source_first</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1859: Assignment to <arg fmt="%s" index="1">main_master_rx_fifo_source_source_first</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1843: Assignment to <arg fmt="%s" index="1">main_master_rx_fifo_source_source_last</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1860: Assignment to <arg fmt="%s" index="1">main_master_rx_fifo_source_source_last</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1867: Result of <arg fmt="%d" index="1">30</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1884: Result of <arg fmt="%d" index="1">30</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1877: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_phy_speed_mode0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1894: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_phy_speed_mode0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1886: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_active0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1903: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_active0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1895: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_settings0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1912: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_settings0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1904: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_addr0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1921: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_addr0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1921: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_status_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1938: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank0_master_status_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1946: Assignment to <arg fmt="%s" index="1">main_master_status_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1963: Assignment to <arg fmt="%s" index="1">main_master_status_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1957: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank1_ctrl0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1974: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank1_ctrl0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1966: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank1_ctrl_reg0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1983: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank1_ctrl_reg0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1974: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank1_button_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1991: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank1_button_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1986: Assignment to <arg fmt="%s" index="1">main_button_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2003: Assignment to <arg fmt="%s" index="1">main_button_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1988: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank2_count_out_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2006: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank2_period0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 1998: Assignment to <arg fmt="%s" index="1">main_my_module_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2016: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_count_out_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2001: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_load0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2026: Assignment to <arg fmt="%s" index="1">main_my_module_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2010: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_reload0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2029: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_load0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2019: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_en0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2038: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_reload0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2028: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_update_value0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2047: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_en0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2036: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_value_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2056: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_update_value0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2045: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_ev_status_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2064: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_value_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2064: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank3_ev_enable0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2073: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_ev_status_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2077: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_value_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2092: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_ev_enable0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2080: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_status_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2105: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_value_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2083: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_pending_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2108: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_status_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2084: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_zero2</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2111: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_pending_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2096: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_txfull_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2112: Assignment to <arg fmt="%s" index="1">main_basesoc_timer_zero2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2105: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_rxempty_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2124: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank5_txfull_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2114: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_ev_status_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2133: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank5_rxempty_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2133: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_ev_enable0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2142: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank5_ev_status_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2141: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_txempty_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2161: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank5_ev_enable0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2150: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank4_rxfull_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2169: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank5_txempty_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2160: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_txfull_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2178: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_csrbank5_rxfull_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2162: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rxempty_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2188: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_txfull_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2169: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_status_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2190: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rxempty_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2176: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_pending_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2197: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_status_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2177: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_tx2</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2204: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_pending_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2178: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx2</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2205: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_tx2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2181: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_txempty_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2206: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2183: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rxfull_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2209: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_txempty_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2200: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_sram_bus_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2211: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rxfull_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2206: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_sram_bus_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2230: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_sram_bus_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2212: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_sram_bus_dat_w</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2237: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_sram_bus_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2310: Assignment to <arg fmt="%s" index="1">main_phy_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2244: Assignment to <arg fmt="%s" index="1">builder_csr_bankarray_sram_bus_dat_w</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2874: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2342: Assignment to <arg fmt="%s" index="1">main_phy_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2895: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2928: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_tx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2949: Assignment to <arg fmt="%s" index="1">main_basesoc_uart_rx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/serv_rf_ram_if.v" Line 80: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2987: Assignment to <arg fmt="%s" index="1">builder_impl_xilinxsdrtristateimpl0__i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 3041: Assignment to <arg fmt="%s" index="1">builder_impl_xilinxsdrtristateimpl0__i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 3116: Assignment to <arg fmt="%s" index="1">builder_impl</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 3170: Assignment to <arg fmt="%s" index="1">builder_impl</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2924: Input port <arg fmt="%s" index="1">i_ext_rd[31]</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v" Line 2978: Input port <arg fmt="%s" index="1">i_ext_rd[31]</arg> is not connected on this instance
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/dit/Xilinx_Prj/ISE/1_STCC/Litex_STCC_VGA/VGA_Controller.v" Line 63: Assignment to <arg fmt="%s" index="1">vga_sync_n</arg> ignored, since the identifier is never used
@@ -335,16 +338,16 @@
 <msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">i_ext_ready</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">serv_rf_top</arg>&apos;, is tied to GND.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2924</arg>: Output port &lt;<arg fmt="%s" index="3">o_ext_rs1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2978</arg>: Output port &lt;<arg fmt="%s" index="3">o_ext_rs1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2924</arg>: Output port &lt;<arg fmt="%s" index="3">o_ext_rs2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2978</arg>: Output port &lt;<arg fmt="%s" index="3">o_ext_rs2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2924</arg>: Output port &lt;<arg fmt="%s" index="3">o_ext_funct3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2978</arg>: Output port &lt;<arg fmt="%s" index="3">o_ext_funct3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2924</arg>: Output port &lt;<arg fmt="%s" index="3">o_mdu_valid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/dit/litex_prj/stcc1_xc6slx25/build/spartan6_board/gateware/spartan6_board.v</arg>&quot; line <arg fmt="%s" index="2">2978</arg>: Output port &lt;<arg fmt="%s" index="3">o_mdu_valid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">serv_rf_top</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">rom</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">spartan6_board</arg>&apos;, is tied to its initial value.
@@ -404,7 +407,7 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;builder_csr_bankarray_interface4_bank_bus_dat_r_9&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_10&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_11&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_12&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_13&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_14&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_15&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_16&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_17&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_18&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_19&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_20&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_21&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_22&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_23&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_24&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_25&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_26&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_27&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_28&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_29&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_30&gt; &lt;builder_csr_bankarray_interface4_bank_bus_dat_r_31&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">28 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;builder_csr_bankarray_interface3_bank_bus_dat_r_4&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_5&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_6&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_7&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_8&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_9&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_10&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_11&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_12&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_13&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_14&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_15&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_16&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_17&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_18&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_19&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_20&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_21&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_22&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_23&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_24&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_25&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_26&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_27&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_28&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_29&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_30&gt; &lt;builder_csr_bankarray_interface3_bank_bus_dat_r_31&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_3&gt; </arg>
@@ -416,13 +419,7 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">28 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;builder_csr_bankarray_interface2_bank_bus_dat_r_4&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_5&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_6&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_7&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_8&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_9&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_10&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_11&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_12&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_13&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_14&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_15&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_16&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_17&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_18&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_19&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_20&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_21&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_22&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_23&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_24&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_25&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_26&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_27&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_28&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_29&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_30&gt; &lt;builder_csr_bankarray_interface2_bank_bus_dat_r_31&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface1_bank_bus_dat_r_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;builder_csr_bankarray_interface1_bank_bus_dat_r_25&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_26&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_27&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_28&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_29&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_30&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_31&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_7&gt; </arg>
@@ -434,7 +431,13 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_9&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;builder_csr_bankarray_interface5_bank_bus_dat_r_9&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_10&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_11&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_12&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_13&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_14&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_15&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_16&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_17&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_18&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_19&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_20&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_21&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_22&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_23&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_24&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_25&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_26&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_27&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_28&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_29&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_30&gt; &lt;builder_csr_bankarray_interface5_bank_bus_dat_r_31&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sram_adr0_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;main_ram_adr0_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface1_bank_bus_dat_r_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;builder_csr_bankarray_interface1_bank_bus_dat_r_25&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_26&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_27&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_28&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_29&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_30&gt; &lt;builder_csr_bankarray_interface1_bank_bus_dat_r_31&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">row_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">19 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;row_13&gt; &lt;row_14&gt; &lt;row_15&gt; &lt;row_16&gt; &lt;row_17&gt; &lt;row_18&gt; &lt;row_19&gt; &lt;row_20&gt; &lt;row_21&gt; &lt;row_22&gt; &lt;row_23&gt; &lt;row_24&gt; &lt;row_25&gt; &lt;row_26&gt; &lt;row_27&gt; &lt;row_28&gt; &lt;row_29&gt; &lt;row_30&gt; &lt;row_31&gt; </arg>
@@ -443,13 +446,13 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">col_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">19 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;col_13&gt; &lt;col_14&gt; &lt;col_15&gt; &lt;col_16&gt; &lt;col_17&gt; &lt;col_18&gt; &lt;col_19&gt; &lt;col_20&gt; &lt;col_21&gt; &lt;col_22&gt; &lt;col_23&gt; &lt;col_24&gt; &lt;col_25&gt; &lt;col_26&gt; &lt;col_27&gt; &lt;col_28&gt; &lt;col_29&gt; &lt;col_30&gt; &lt;col_31&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface1_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">col_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -522,163 +525,163 @@
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface1_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface4_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface5_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface2_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface3_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">builder_csr_bankarray_interface1_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spartan6_board</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

@@ -10,8 +10,8 @@ _io = [
     ("clk100", 0, Pins("M9"), IOStandard("LVCMOS33")),
 
     # Leds
-    ("user_led", 0, Pins("P16"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),
-    # ("user_led", 1, Pins("P118"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),   
+    ("user_led", 0, Pins("K12"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),
+    ("user_led2", 0, Pins("P16"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),
     
     # Button
     ("rst_btn", 0, Pins("M12"), IOStandard("LVCMOS33"), Drive("8"), Misc("SLEW = FAST"), Misc("PULLUP")),  
