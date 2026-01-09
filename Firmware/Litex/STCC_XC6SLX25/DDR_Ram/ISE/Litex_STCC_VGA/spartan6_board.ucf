@@ -1,0 +1,46 @@
+NET "serial_tx" LOC=D16 | IOSTANDARD=LVCMOS33; # serial:0.tx
+NET "serial_rx" LOC=E15 | IOSTANDARD=LVCMOS33; # serial:0.rx
+NET "clk100" LOC=M9 | IOSTANDARD=LVCMOS33; # clk100:0
+NET "rst_btn0" LOC=M12 | IOSTANDARD=LVCMOS33 | DRIVE=8 | SLEW = FAST | PULLUP; # user_btn:0
+NET "i2c0_scl" LOC=N5 | IOSTANDARD=LVCMOS33; # i2c:0.scl
+NET "i2c0_sda" LOC=P9 | IOSTANDARD=LVCMOS33; # i2c:0.sda
+NET "user_led0" LOC=K12 | IOSTANDARD=LVCMOS33 | DRIVE=8 | SLEW = FAST | PULLUP; # user_led:0
+NET "user_led20" LOC=P16 | IOSTANDARD=LVCMOS33 | DRIVE=8 | SLEW = FAST | PULLUP; # user_led:0
+NET "user_btn" LOC=T6 | IOSTANDARD=LVCMOS33 | DRIVE=8 | SLEW = FAST | PULLUP; # user_btn:0
+
+
+NET "clk100" TNM_NET = "PRDclk100";
+TIMESPEC "TSclk100" = PERIOD "PRDclk100" 20.0 ns HIGH 50%;
+
+## VGA Connection
+NET "vga_*" IOSTANDARD = LVCMOS33;
+net "vga_clk_out" loc = e11;#e11;
+net "vga_hsync" loc = n16;
+net "vga_vsync" loc = p15;#p15;
+#############################################
+net "vga_r<0>" loc = e16;
+net "vga_r<1>" loc = f15;
+net "vga_r<2>" loc = f16;
+net "vga_r<3>" loc = f14;
+net "vga_r<4>" loc = g16;
+net "vga_r<5>" loc = h15;
+net "vga_r<6>" loc = h16;
+net "vga_r<7>" loc = h14;
+#############################################
+net "vga_g<0>" loc = j16;
+net "vga_g<1>" loc = k15;
+net "vga_g<2>" loc = k16;
+net "vga_g<3>" loc = k14;
+net "vga_g<4>" loc = l16;
+net "vga_g<5>" loc = m15;
+net "vga_g<6>" loc = m16;
+net "vga_g<7>" loc = n14;
+#############################################
+net "vga_b<0>" loc = m13;
+net "vga_b<1>" loc = l13;
+net "vga_b<2>" loc = l14;
+net "vga_b<3>" loc = j14;
+net "vga_b<4>" loc = h13;
+net "vga_b<5>" loc = g14;
+net "vga_b<6>" loc = e13;
+net "vga_b<7>" loc = d14;
