@@ -118,6 +118,9 @@ case "$1" in
     all)
         $0 b && $0 m && $0 f
         ;;
+    all2)
+        $0 b && $0 l
+        ;;        
     h|--help)
         show_help
         ;;
