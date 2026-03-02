@@ -19,15 +19,51 @@ from blinker import AdjustableBlink
 import spartan6_board
 # from spartan6_board import Platform
 
+from lvds_transmit import LVDSTransmit
+
 kB = 1024
 mB = 1024*kB
 
+# ============================================================
+# Resolution / Timing Constants
+# ============================================================
+HRES  = 960
+VRES  = 1280
 
+HFPOR = 20
+HSYN  = 10
+HBPOR = 30
+
+VFPOR = 10
+VSYN  = 4
+VBPOR = 26
+
+H_MAX      = HRES - 1
+HDAT_BEGIN = HBPOR + HSYN - 1
+HDAT_END   = HDAT_BEGIN + HRES
+HPIXEL_END = HDAT_END + HFPOR
+
+V_MAX      = VRES - 1
+VDAT_BEGIN = VBPOR + VSYN - 1
+VDAT_END   = VDAT_BEGIN + VRES
+VLINE_END  = VDAT_END + VFPOR
+
+# ============================================================
+# Rainbow / Color Bar Constants
+# ============================================================
+NUM_SEGMENTS = 8
+INCREMENT    = VRES // NUM_SEGMENTS
+LINE = [INCREMENT * (i + 1) for i in range(NUM_SEGMENTS)]
+
+CK1DATA = 0b0110001  # "1100011" MSB-first -> bits 0..6
+
+# soc.py:
 # CRG ----------------------------------------------------------------------------------------------
 class CRG(Module):
     def __init__(self, platform, sys_clk_freq):
         self.clock_domains.cd_sys = ClockDomain()
         self.clock_domains.cd_clk_out2 = ClockDomain()
+        # self.clock_domains.cd_fast = ClockDomain()
 
         clk = platform.request("clk50")
         rst_n = platform.request("rst_btn", 0) # Menjadikan button0 sebagai reset
@@ -79,7 +115,7 @@ class CRG(Module):
         self.specials += Instance("BUFG", i_I=pll_fb, o_O=pll_fb_buffered)
 
         # Output buffers linked to Clock Domains
-        self.specials += Instance("BUFG", i_I=clkout0, o_O=self.cd_sys.clk)
+        self.specials += Instance("BUFG", i_I=clkout0, o_O=self.cd_sys.clk) # 39.0MHz clock for lvds input clock
         self.specials += Instance("BUFG", i_I=clkout1, o_O=self.cd_clk_out2.clk)
 
         # self.comb += self.cd_sys.clk.eq(clk)
@@ -221,6 +257,27 @@ class BaseSoC(SoCCore):
         # self.button = CSRStatus(1, description="External User Button")
         # self.comb += self.button.status.eq(user_button)
 
+        # LVDS Transmitter
+        lvds_pads  = platform.request("lvds_tx", 0)
+        bist_o     = platform.request("bist_o", 0)
+        user_button2  = platform.request("user_btn2", 0)
+        self.comb += bist_o.eq(0)
+
+        self.submodules.lvds = LVDSTransmit(platform)
+
+        self.comb += [
+            # Inputs
+            self.lvds.clk_in.eq(self.crg.cd_sys.clk),   # 39MHz from PLL CLKOUT0
+            self.lvds.en_video.eq(user_button),           # user_btn (already requested above)
+            self.lvds.rainbow.eq(user_button2),
+
+            # Outputs
+            lvds_pads.clk_p.eq(self.lvds.ck1in_p),
+            lvds_pads.clk_n.eq(self.lvds.ck1in_n),
+            lvds_pads.data_p.eq(self.lvds.tx_p),
+            lvds_pads.data_n.eq(self.lvds.tx_n),
+            bist_o.eq(self.lvds.bist),
+        ]
 
 # Build --------------------------------------------------------------------------------------------
 def main():    
