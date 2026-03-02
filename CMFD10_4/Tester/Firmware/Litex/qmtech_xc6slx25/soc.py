@@ -27,12 +27,63 @@ mB = 1024*kB
 class CRG(Module):
     def __init__(self, platform, sys_clk_freq):
         self.clock_domains.cd_sys = ClockDomain()
+        self.clock_domains.cd_clk_out2 = ClockDomain()
 
         clk = platform.request("clk50")
         rst_n = platform.request("rst_btn", 0) # Menjadikan button0 sebagai reset
 
-        self.comb += self.cd_sys.clk.eq(clk)
-        self.specials += AsyncResetSynchronizer(self.cd_sys, ~rst_n)
+        # Internal signals for the PLL
+        pll_fb = Signal()
+        pll_fb_buffered = Signal()
+        clkout0 = Signal()
+        clkout1 = Signal()
+        locked = Signal()
+
+        # ----------------------------------------------------------------------
+        # PLL_BASE Instantiation (Matching your VHDL generics)
+        # ----------------------------------------------------------------------
+        self.specials += Instance("PLL_BASE",
+            # Parameters (Generics in VHDL)
+            p_BANDWIDTH          = "OPTIMIZED",
+            p_CLK_FEEDBACK       = "CLKFBOUT",
+            p_COMPENSATION       = "SYSTEM_SYNCHRONOUS",
+            p_DIVCLK_DIVIDE      = 2,
+            p_CLKFBOUT_MULT      = 39,  # 50MHz * 39 / 2 = 975MHz VCO
+            p_CLKIN_PERIOD       = 20.0,
+            p_REF_JITTER         = 0.010,
+
+            # CLKOUT0: 975MHz / 25 = 39.0MHz
+            p_CLKOUT0_DIVIDE     = 25,
+            p_CLKOUT0_PHASE      = 0.0,
+            p_CLKOUT0_DUTY_CYCLE = 0.5,
+
+            # CLKOUT1: 975MHz / 9 = 108.33MHz
+            p_CLKOUT1_DIVIDE     = 9,
+            p_CLKOUT1_PHASE      = 0.0,
+            p_CLKOUT1_DUTY_CYCLE = 0.5,
+
+            # Ports (Port Map in VHDL)
+            i_CLKIN    = clk,
+            i_CLKFBIN  = pll_fb_buffered,
+            i_RST      = 0,
+            o_CLKFBOUT = pll_fb,
+            o_CLKOUT0  = clkout0,
+            o_CLKOUT1  = clkout1,
+            o_LOCKED   = locked
+        )
+
+        # ----------------------------------------------------------------------
+        # Buffering (BUFG)
+        # ----------------------------------------------------------------------
+        # Feedback buffer
+        self.specials += Instance("BUFG", i_I=pll_fb, o_O=pll_fb_buffered)
+
+        # Output buffers linked to Clock Domains
+        self.specials += Instance("BUFG", i_I=clkout0, o_O=self.cd_sys.clk)
+        self.specials += Instance("BUFG", i_I=clkout1, o_O=self.cd_clk_out2.clk)
+
+        # self.comb += self.cd_sys.clk.eq(clk)
+        self.specials += AsyncResetSynchronizer(self.cd_sys, ~rst_n)        
 
 # Create a led blinker module
 class Blink(Module):
@@ -51,7 +102,7 @@ class Blinker(Module):
     def __init__(self, led, sys_clk_freq):
         # 1. Calculate the 'Limit' (e.g., 25,000,000)
         # Toggles every 0.5s for a 1s period
-        limit_value = int(sys_clk_freq / 1)
+        limit_value = 20000000#int(sys_clk_freq / 1)
         
         # 2. Define the Counter Signal
         # max=limit_value tells Migen to calculate the bit-width (e.g., 25 bits)
