@@ -24,3 +24,16 @@ _autosave-*
 
 # --- Lock files (created when a file is open) ---
 *.lck
+
+# Ignore Xilinx junk
+_xmsgs/
+xlnx_auto_0_xdb/
+ise_files/
+*.log
+*.jhd
+*.tcl
+# Keep the important stuff
+!*.vhd
+!*.v
+!*.ucf
+!*.xise
