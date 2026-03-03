@@ -261,7 +261,6 @@ class BaseSoC(SoCCore):
         lvds_pads  = platform.request("lvds_tx", 0)
         bist_o     = platform.request("bist_o", 0)
         user_button2  = platform.request("user_btn2", 0)
-        self.comb += bist_o.eq(0)
 
         self.submodules.lvds = LVDSTransmit(platform)
 
