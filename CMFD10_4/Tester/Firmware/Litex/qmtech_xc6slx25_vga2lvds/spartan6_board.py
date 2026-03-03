@@ -1,0 +1,76 @@
+from litex.build.xilinx import *
+from litex.build.generic_platform import *
+from litex.build.xilinx import XilinxSpartan6Platform
+from litex.build.openfpgaloader import OpenFPGALoader
+
+# IOs ----------------------------------------------------------------------------------------------
+
+_io = [
+    # Clk / Rst
+    ("clk50", 0, Pins("A10"), IOStandard("LVCMOS33")),  # 50MHz oscillator
+
+    # Leds
+    ("user_led", 0, Pins("R9"), IOStandard("LVCMOS33")),
+    ("user_led2", 0, Pins("T9"), IOStandard("LVCMOS33")),
+    
+    # Button
+    ("rst_btn", 0, Pins("D5"), IOStandard("LVCMOS33"), Misc("PULLUP")),  # Active high reset pin
+    ("user_btn", 0, Pins("T8"), IOStandard("LVCMOS33")),    # For Bist mode activation
+    ("user_btn2", 0, Pins("R7"), IOStandard("LVCMOS33")),   # For Rainbow mode activation
+
+    ("bist_o", 0, Pins("B6"), IOStandard("LVCMOS33")),  # BIST lcd mode output pin
+
+    # Serial
+    ("serial", 0,
+        Subsignal("tx", Pins("M11")),
+        Subsignal("rx", Pins("L10")),
+        IOStandard("LVCMOS33")
+    ),
+
+    # LVDS
+    ("lvds_tx", 0,
+        Subsignal("clk_p", Pins("C9")),
+        Subsignal("clk_n", Pins("A9")),
+        Subsignal("data_p", Pins("C13 B12 C11 B8")),
+        Subsignal("data_n", Pins("A13 A12 A11 A8")),
+        IOStandard("LVDS_33")
+     ),
+
+    # SPIFlash (W25Q128JV)
+    # ("spiflash", 0,
+    #     Subsignal("cs_n", Pins("N8"), IOStandard("LVCMOS33")),
+    #     #Subsignal("clk",  Pins("N9"), IOStandard("LVCMOS33")),
+    #     Subsignal("miso", Pins("T8"), IOStandard("LVCMOS33")),
+    #     Subsignal("mosi", Pins("T7"), IOStandard("LVCMOS33")),
+    # ),
+
+    # SPIFlash4x (W25Q128JV)
+    # ("spiflash4x", 0,  # clock needs to be accessed through STARTUPE2
+    #     Subsignal("cs_n", Pins("N8")),
+    #     Subsignal("dq",   Pins("T8 T7 M7 N7")),
+    #     IOStandard("LVCMOS33")
+    # ),
+
+    #I2C
+    # ("i2c", 0,
+    #     Subsignal("scl", Pins("N5"), IOStandard("LVCMOS33")),
+    #     Subsignal("sda", Pins("P9"), IOStandard("LVCMOS33"))
+    # ),
+]
+
+# Platform -----------------------------------------------------------------------------------------
+
+class Platform(XilinxSpartan6Platform):
+    default_clk_name   = "clk50"
+    default_clk_period = 1e9/50e6
+
+    def __init__(self, toolchain="ise", **kwargs):
+        XilinxSpartan6Platform.__init__(self, "xc6slx25-3n-ftg256", _io, toolchain=toolchain)
+        self.toolchain.additional_commands = ["write_bitstream -force -bin_file {build_name}"]
+
+    def create_programmer(self, kit="openfpgaloader"):
+        return OpenFPGALoader(cable="dirtyJtag")
+
+    def do_finalize(self, fragment):
+        XilinxSpartan6Platform.do_finalize(self, fragment)
+        self.add_period_constraint(self.lookup_request("clk50", loose=True), 1e9/50e6)
