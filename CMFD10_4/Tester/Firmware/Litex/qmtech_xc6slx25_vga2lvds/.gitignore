@@ -2,6 +2,9 @@ build/
 __pycache__/
 *.pyc
 
+# Simulation files
+*.vcd
+
 # Prerequisites
 *.d
 
