@@ -7,7 +7,7 @@ from litex.build.openfpgaloader import OpenFPGALoader
 
 _io = [
     # Clk / Rst
-    ("clk50", 0, Pins("A10"), IOStandard("LVCMOS33")),  # 50MHz oscillator
+    ("clk_osc", 0, Pins("E7"), IOStandard("LVCMOS33")),  # 50MHz oscillator
 
     # Leds
     ("user_led", 0, Pins("R9"), IOStandard("LVCMOS33")),
@@ -61,7 +61,7 @@ _io = [
 # Platform -----------------------------------------------------------------------------------------
 
 class Platform(XilinxSpartan6Platform):
-    default_clk_name   = "clk50"
+    default_clk_name   = "clk_osc"
     default_clk_period = 1e9/50e6
 
     def __init__(self, toolchain="ise", **kwargs):
@@ -73,4 +73,4 @@ class Platform(XilinxSpartan6Platform):
 
     def do_finalize(self, fragment):
         XilinxSpartan6Platform.do_finalize(self, fragment)
-        self.add_period_constraint(self.lookup_request("clk50", loose=True), 1e9/50e6)
+        self.add_period_constraint(self.lookup_request("clk_osc", loose=True), 1e9/50e6)

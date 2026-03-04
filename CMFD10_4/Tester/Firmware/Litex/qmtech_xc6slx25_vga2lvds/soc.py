@@ -9,6 +9,8 @@ from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
 from litex.soc.cores.led import LedChaser
 from litex.soc.interconnect.csr import *
+from litex.soc.cores.video import * #VideoTimingGenerator, ColorBarsPattern, video_data_layout
+from litex.soc.interconnect import stream
 from litex.soc.doc import generate_docs
 
 from litex.build.generic_platform import *
@@ -20,7 +22,8 @@ import spartan6_board
 # from spartan6_board import Platform
 
 # from lvds_transmit import LVDSTransmit
-from vga2lvds import VGAToLVDS
+from VGAGenerator import VGAGenerator
+from vga2lvds   import VGAToLVDS
 
 kB = 1024
 mB = 1024*kB
@@ -64,9 +67,8 @@ class CRG(Module):
     def __init__(self, platform, sys_clk_freq):
         self.clock_domains.cd_sys = ClockDomain()
         self.clock_domains.cd_clk_out2 = ClockDomain()
-        # self.clock_domains.cd_fast = ClockDomain()
 
-        clk = platform.request("clk50")
+        clk = platform.request("clk_osc")
         rst_n = platform.request("rst_btn", 0) # Menjadikan button0 sebagai reset
 
         # Internal signals for the PLL
@@ -85,24 +87,24 @@ class CRG(Module):
             p_CLK_FEEDBACK       = "CLKFBOUT",
             p_COMPENSATION       = "SYSTEM_SYNCHRONOUS",
             p_DIVCLK_DIVIDE      = 2,
-            p_CLKFBOUT_MULT      = 39,  # 50MHz * 39 / 2 = 975MHz VCO
-            p_CLKIN_PERIOD       = 20.0,
+            p_CLKFBOUT_MULT      = 25,  # 80MHz * 25 / 2 = 1000MHz VCO
+            p_CLKIN_PERIOD       = 12.5,
             p_REF_JITTER         = 0.010,
 
-            # CLKOUT0: 975MHz / 25 = 39.0MHz
+            # CLKOUT0: 1000MHz / 25 = 40.0MHz
             p_CLKOUT0_DIVIDE     = 25,
             p_CLKOUT0_PHASE      = 0.0,
             p_CLKOUT0_DUTY_CYCLE = 0.5,
 
-            # CLKOUT1: 975MHz / 9 = 108.33MHz
-            p_CLKOUT1_DIVIDE     = 9,
+            # CLKOUT1: 1000MHz / 10 = 100MHz
+            p_CLKOUT1_DIVIDE     = 10,
             p_CLKOUT1_PHASE      = 0.0,
             p_CLKOUT1_DUTY_CYCLE = 0.5,
 
             # Ports (Port Map in VHDL)
             i_CLKIN    = clk,
             i_CLKFBIN  = pll_fb_buffered,
-            i_RST      = 0,
+            i_RST      = ~rst_n, #0,
             o_CLKFBOUT = pll_fb,
             o_CLKOUT0  = clkout0,
             o_CLKOUT1  = clkout1,
@@ -116,7 +118,7 @@ class CRG(Module):
         self.specials += Instance("BUFG", i_I=pll_fb, o_O=pll_fb_buffered)
 
         # Output buffers linked to Clock Domains
-        self.specials += Instance("BUFG", i_I=clkout0, o_O=self.cd_sys.clk) # 39.0MHz clock for lvds input clock
+        self.specials += Instance("BUFG", i_I=clkout0, o_O=self.cd_sys.clk) # 40.0MHz clock for lvds input clock
         self.specials += Instance("BUFG", i_I=clkout1, o_O=self.cd_clk_out2.clk)
 
         # self.comb += self.cd_sys.clk.eq(clk)
@@ -139,14 +141,14 @@ class Blinker(Module):
     def __init__(self, led, sys_clk_freq):
         # 1. Calculate the 'Limit' (e.g., 25,000,000)
         # Toggles every 0.5s for a 1s period
-        limit_value = 20000000#int(sys_clk_freq / 1)
+        limit_value = 50_000_000#int(sys_clk_freq / 1)
         
         # 2. Define the Counter Signal
         # max=limit_value tells Migen to calculate the bit-width (e.g., 25 bits)
         counter = Signal(max=limit_value)
 
         # 3. Synchronous Logic (always @(posedge clk))
-        self.sync += [
+        self.sync.clk_out2 += [
             # Check if counter reached (25,000,000 - 1)
             If(counter == (limit_value - 1),
                 counter.eq(0),     # Reset
@@ -186,7 +188,7 @@ class Blinker(Module):
         
 # BaseSoC ------------------------------------------------------------------------------------------
 class BaseSoC(SoCCore):
-    def __init__(self, sys_clk_freq=int(50e6), toolchain="ise", platform=None, **kwargs):
+    def __init__(self, sys_clk_freq=int(80e6), toolchain="ise", platform=None, **kwargs):
 
         # If no platform is provided (Hardware mode), use Spartan6
         if platform is None:
@@ -229,62 +231,142 @@ class BaseSoC(SoCCore):
         self.submodules.blinker = Blinker(led2, sys_clk_freq)
 
         user_button = platform.request("user_btn")
-        user_button2  = platform.request("user_btn2", 0)
+        # user_button2  = platform.request("user_btn2", 0)
 
 
-        # # LVDS Transmitter
-        # lvds_pads  = platform.request("lvds_tx", 0)
-        # bist_o     = platform.request("bist_o", 0)
-        # self.comb += bist_o.eq(0)
+#         # LVDS Transmitter
+#         lvds_pads  = platform.request("lvds_tx", 0)
+#         bist_o     = platform.request("bist_o", 0)
+#
+#         self.submodules.lvds = LVDSTransmit(platform)
+#
+#         self.comb += [
+#             # Inputs
+#             self.lvds.clk_in.eq(self.crg.cd_sys.clk),   # 39MHz from PLL CLKOUT0
+#             self.lvds.en_video.eq(user_button),           # user_btn (already requested above)
+#             self.lvds.rainbow.eq(user_button2),
+#
+#             # Outputs
+#             lvds_pads.clk_p.eq(self.lvds.ck1in_p),
+#             lvds_pads.clk_n.eq(self.lvds.ck1in_n),
+#             lvds_pads.data_p.eq(self.lvds.tx_p),
+#             lvds_pads.data_n.eq(self.lvds.tx_n),
+#             bist_o.eq(self.lvds.bist),
+#         ]
+
+
+        # lvds_pads = platform.request("lvds_tx", 0)
+        # bist_o    = platform.request("bist_o", 0)
         #
-        # self.submodules.lvds = LVDSTransmit(platform)
+        # # VGA timing + color generator (runs on pixel clock = sys domain = 39MHz)
+        # self.submodules.vga_gen = VGAGenerator()
+        #
+        # # LVDS serializer (generates its own 280MHz clock from pixel clock via DCM)
+        # self.submodules.lvds = VGAToLVDS()
         #
         # self.comb += [
-        #     # Inputs
-        #     self.lvds.clk_in.eq(self.crg.cd_sys.clk),   # 39MHz from PLL CLKOUT0
-        #     self.lvds.en_video.eq(user_button),           # user_btn (already requested above)
-        #     self.lvds.rainbow.eq(user_button2),
+        #     # Button -> rainbow mode
+        #     self.vga_gen.rainbow.eq(user_button2),
+        #     self.lvds.en_video.eq(user_button),
         #
-        #     # Outputs
+        #     # VGAGenerator -> VGAToLVDS
+        #     self.lvds.pclk.eq(self.crg.cd_sys.clk),   # pixel clock from CRG
+        #     self.lvds.de.eq(self.vga_gen.de),
+        #     self.lvds.hsync.eq(self.vga_gen.hsync),
+        #     self.lvds.vsync.eq(self.vga_gen.vsync),
+        #     self.lvds.r.eq(self.vga_gen.r),
+        #     self.lvds.g.eq(self.vga_gen.g),
+        #     self.lvds.b.eq(self.vga_gen.b),
+        #
+        #     # VGAToLVDS -> platform pins
         #     lvds_pads.clk_p.eq(self.lvds.ck1in_p),
         #     lvds_pads.clk_n.eq(self.lvds.ck1in_n),
         #     lvds_pads.data_p.eq(self.lvds.tx_p),
         #     lvds_pads.data_n.eq(self.lvds.tx_n),
+        #
         #     bist_o.eq(self.lvds.bist),
         # ]
 
-        vga_pads  = platform.request("vga", 0)      # your VGA input resource
+
+        # LVDS Transmitter ─────────────────────────────────────────────────────────────
+
+        # Custom 960x1280 portrait @ 60Hz timing
+        # h_blanking = hfpor + hsyn + hbpor = 20 + 10 + 30 = 60
+        # v_blanking = vfpor + vsyn + vbpor = 10 +  4 + 26 = 40
+        TIMING_960x1280_60Hz = {
+            "pix_clk"       : 40e6,        # matches your cd_sys (PLL CLKOUT0)
+            "h_active"      : 960,
+            "h_blanking"    : 60,
+            "h_sync_offset" : 30,          # hbpor = back porch (sync comes after active)
+            "h_sync_width"  : 10,          # hsyn
+            "v_active"      : 1280,
+            "v_blanking"    : 40,
+            "v_sync_offset" : 26,          # vbpor
+            "v_sync_width"  : 4,           # vsyn
+        }
+
+        # 1. Timing generator (runs in sys/pixel clock domain)
+        self.submodules.vtg = vtg = VideoTimingGenerator(
+            default_video_timings=TIMING_960x1280_60Hz
+        )
+
+        # 2. Color pattern generator - rainbow button selects between colorbars and white
+        rainbow_btn = platform.request("user_btn2", 0)
+
+        self.submodules.colorbars = colorbars = ColorBarsPattern()
+
+        # Always enabled - never reset the FSM
+        self.comb += colorbars.enable.eq(1)
+
+        # Always connect vtg -> colorbars
+        self.comb += vtg.source.connect(colorbars.vtg_sink)
+
+        # Mux: rainbow_btn=1 -> colorbars output, rainbow_btn=0 -> white
+        video_mux_source = stream.Endpoint(video_data_layout)
+        self.comb += [
+            video_mux_source.valid.eq(colorbars.source.valid),
+            video_mux_source.ready.eq(colorbars.source.ready),  # not needed but clean
+            colorbars.source.ready.eq(1),
+            video_mux_source.de.eq(colorbars.source.de),
+            video_mux_source.hsync.eq(colorbars.source.hsync),
+            video_mux_source.vsync.eq(colorbars.source.vsync),
+            # Only mux the color data
+            If(rainbow_btn,
+                video_mux_source.r.eq(colorbars.source.r),
+                video_mux_source.g.eq(colorbars.source.g),
+                video_mux_source.b.eq(colorbars.source.b),
+            ).Else(
+                video_mux_source.r.eq(0xFF),
+                video_mux_source.g.eq(0xFF),
+                video_mux_source.b.eq(0xFF),
+            )
+        ]
+
+        # Connect vtg -> colorbars timing sink
+        # self.comb += vtg.source.connect(colorbars.vtg_sink)
+
+        # 3. LVDS serializer
         lvds_pads = platform.request("lvds_tx", 0)
         bist_o    = platform.request("bist_o", 0)
 
-        self.submodules.lvds = VGAToLVDS()
-
+        self.submodules.lvds = VGAToLVDS(pclk_freq=40e6)
         self.comb += [
-            # VGA inputs -> module
-            self.lvds.pclk.eq(vga_pads.pclk),
-            self.lvds.de.eq(vga_pads.de),         # or derive from hsync/vsync
-            self.lvds.hsync.eq(vga_pads.hsync),
-            self.lvds.vsync.eq(vga_pads.vsync),
-            self.lvds.r.eq(vga_pads.r),
-            self.lvds.g.eq(vga_pads.g),
-            self.lvds.b.eq(vga_pads.b),
+            video_mux_source.connect(self.lvds.sink),
 
-            self.lvds.en_video.eq(user_button),
-
-            # LVDS outputs -> platform pins
+            # LVDS pad connections
             lvds_pads.clk_p.eq(self.lvds.ck1in_p),
             lvds_pads.clk_n.eq(self.lvds.ck1in_n),
             lvds_pads.data_p.eq(self.lvds.tx_p),
             lvds_pads.data_n.eq(self.lvds.tx_n),
 
-            bist_o.eq(self.lvds.bist),
+            bist_o.eq(~user_button),
         ]
 
 # Build --------------------------------------------------------------------------------------------
 def main():    
     parser = LiteXArgumentParser(platform=spartan6_board.Platform, description="LiteX SoC on Spartan6.")
     parser.add_target_argument("--flash",           action="store_true",    help="Flash bitstream")
-    parser.add_target_argument("--sys-clk-freq",    default=50e6,          help="System clock frequency.")
+    parser.add_target_argument("--sys-clk-freq",    default=80e6,          help="System clock frequency.")
     args = parser.parse_args()
 
     soc = BaseSoC(
