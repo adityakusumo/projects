@@ -7,7 +7,7 @@ from litex.build.openfpgaloader import OpenFPGALoader
 
 _io = [
     # Clk / Rst
-    ("clk_osc", 0, Pins("E7"), IOStandard("LVCMOS33")),  # 50MHz oscillator
+    ("clk_osc", 0, Pins("E7"), IOStandard("LVCMOS33")),  # 80MHz oscillator
 
     # Leds
     ("user_led", 0, Pins("R9"), IOStandard("LVCMOS33")),
