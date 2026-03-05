@@ -1,0 +1,64 @@
+# --- Xilinx ISE Project Junk ---
+*.gise
+*.xise.bak
+*.xmsgs
+*.restore
+*.ise_backup
+*.local
+_xmsgs/
+
+# --- Synthesis & Implementation (Build Artifacts) ---
+# These are generated every time you run the process
+xst/
+_ngo/
+netgen/
+planAhead_run_*/
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.csv
+*.unroutes
+*.xpi
+*.ptwx
+*.bin
+*.mcs
+*.pcf
+*.ncd
+*.map
+*.mrp
+*.ngm
+*.lso
+*.srp
+*.xrpt
+*.twx
+*.twr
+*.drc
+*.bgn
+*.bld
+*.par
+*.xpi
+
+# --- Simulation (ISim) ---
+# ISim creates large folders for every testbench run
+isim/
+isim.log
+isim.cmd
+*.exe
+*.dll
+*.obj
+fuse.log
+fuse.xmsgs
+fuseRelaunch.cmd
+
+# --- Logs and Reports ---
+*.log
+*.txt
+*.xml
+*.html
+*.xwbt
+
+# --- CoreGen & IP Junk ---
+# Keep your .xco or .xci files, but ignore the generated implementation junk
+_relocatable_pkg/
+_remote_sources/

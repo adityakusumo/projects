@@ -1,0 +1,155 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 21, 2021
+ *      Author: DIT
+ */
+#include <xparameters.h>
+#include <xbasic_types.h>
+#include <xstatus.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include "delay.h"
+//#include "font2.h"
+//#include <math.h>
+#include <xuartlite_l.h>
+#include <xuartlite.h>
+#include "uart.h"
+#include "gpio.h"
+
+#define Led0 0x01
+#define Led1 0x02
+#define TIMER_DEVICEID	XPAR_XPS_TIMER_0_DEVICE_ID
+#define LED_ID			XPAR_LEDS_DEVICE_ID
+#define UART_BASEADDR	XPAR_XPS_UARTLITE_0_BASEADDR
+#define UART_DEVICEID	XPAR_XPS_UARTLITE_0_DEVICE_ID
+
+char rxdat=0, rxdatL;
+char txt[30];
+unsigned int len=0, mode=0, cnt=0, cnt2=0;
+
+int main(void)
+{
+	print("Peripheral Initialization..!\r\n");
+	delay_init(TIMER_DEVICEID);
+	uart_init(UART_DEVICEID);
+	gpio_init(LED_ID);
+
+	delay_ms(10);
+	print("Initialization done!!!\r\n");
+	while(0)
+	{
+//		XUartLite_WriteReg(UART_BASEADDR, XUL_RX_FIFO_OFFSET, 1);
+//		XUartLite_ResetFifos(&Uart);
+//		XUartLite_ClearStats(&Uart);
+		rxdat=uart_getchar(UART_BASEADDR);
+		if (rxdat!=0x09 || rxdat!=0x11){++cnt;}		//jika data kosong
+		else{cnt=0;}	//jika ada data day or night
+
+		if(cnt>20){mode=0;}
+		else if(cnt>10){XUartLite_ClearStats(&Uart); mode=1;}
+		else{mode=1;}
+		mode=1;
+
+//		if (rxdat==rxdatL && rxdat==0x11){mode=1;}
+//		else if (rxdat!=rxdatL && rxdat!=0x11){mode=0;}
+//		else {mode=0;}
+
+
+		len=sprintf(txt, "recv:%c mode:%u\r\n", rxdat+1, mode);
+		uart_puts(UART_BASEADDR,(volatile char*)txt);
+
+		if (mode==1) {
+			set(Led0|Led1);
+			delay_ms(50);
+		}else{
+			reset(Led0|Led1);
+			delay_ms(50);
+		}
+		rxdatL = rxdat;
+//		rxdat=0;
+		memset(txt,0,sizeof(txt));
+//		XUartLite_ResetFifos(&Uart);
+//		XUartLite_ClearStats(&Uart);
+//		XUartLite_WriteReg(UART_BASEADDR, XUL_RX_FIFO_OFFSET, 0);
+//		print("Sunda Empire!!!\r\n");
+	}
+	while(0)
+	{
+		rxdat=uart_getchar(UART_BASEADDR);
+
+		len=sprintf(txt, "recv:%c mode:%u\r\n", rxdat+1, mode);
+		uart_puts(UART_BASEADDR,(volatile char*)txt);
+//		rxdat=0x11;
+
+		if (rxdat==0x11 || rxdat==0x09) {
+			set(Led0|Led1);
+			delay_ms(50);
+		}else{
+			reset(Led0|Led1);
+			delay_ms(50);
+		}
+		rxdatL = rxdat;
+//		rxdat=0;
+		memset(txt,0,sizeof(txt));
+		XUartLite_ClearStats(&Uart);
+		delay_ms(212);
+//		print("Sunda Empire!!!\r\n");
+	}
+	while(1)
+	{
+		rxdat=(char)uart_getchar(UART_BASEADDR);
+
+//		rxdat=0x11;
+		mode=0;
+
+		if (rxdat==0xC5){
+			mode=1;
+			len=sprintf(txt, "recv:%c mode:%u\r\n", rxdat+0, mode);
+			uart_puts(UART_BASEADDR,(volatile char*)txt);
+		}
+		else{
+			mode=0;
+			len=sprintf(txt, "recv:%c mode:%u\r\n", rxdat+0, mode);
+			uart_puts(UART_BASEADDR,(volatile char*)txt);
+		}
+
+//		if (rxdat==0xC5){
+////			++cnt;
+//			if(mode==0)
+//				mode=1;
+//			else
+//				mode=0;
+//		}
+////		else if(rxdat==0xDF){
+////			cnt=0;
+////		}
+
+//		if(cnt>5){
+//			if(mode==0)
+//				mode=1;
+//			else
+//				mode=0;
+//		}
+
+		if (mode==0) {
+			set(Led0|Led1);
+			delay_ms(50);
+		}else{
+			reset(Led0|Led1);
+			delay_ms(50);
+		}
+
+		rxdatL = rxdat;
+
+//		len=sprintf(txt, "recv:%c mode:%u\r\n", rxdat+0, mode);
+//		uart_puts(UART_BASEADDR,(volatile char*)txt);
+
+//		rxdat=0;
+//		memset(txt,0,sizeof(txt));
+		XUartLite_ClearStats(&Uart);
+		delay_ms(212);
+//		print("Sunda Empire!!!\r\n");
+	}
+}

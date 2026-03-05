@@ -1,6 +1,6 @@
 ## Prequisite
 
-- hardware board: STCC1-V5a (xc6slx25ftg256)
+- hardware board: QMtech (xc6slx25ftg256-2)
 
 - help
 ```bash
@@ -12,9 +12,9 @@
 - build the bitstream and firmware
 
 ```bash
-./build_firmware.sh b //for building the hardware bitstream
-./build_firmware.sh m //for compiling the firmware
-./build_firmware.sh f //for flashing the bitstream to spi flash using xc3sprog
+./build_firmware.sh b //for building the hardware bitstream and compiling the firmware
+./build_firmware.sh l //for flashing the bitstream to sram using openFpgaLoader
+./build_firmware.sh all2 //combination of b & l option
 ```
 
 - open another terminal and type
@@ -26,6 +26,10 @@ litex_term /dev/ttyACM1 --kernel=firmware/firmware.bin --kernel-adr=0x60000000 -
 - final step: press the FPGA reset button
 
 - viola! you will see this:
+
+<img src="image/lcd_test_demo.gif" width="600" alt="LCD Test Demo">
+
+- and this:
 
 ```bash
         __   _ __      _  __

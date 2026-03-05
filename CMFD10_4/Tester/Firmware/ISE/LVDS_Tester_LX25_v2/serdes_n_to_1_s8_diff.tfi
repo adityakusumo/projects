@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+serdes_n_to_1_s8_diff instance_name (
+    .txioclk(txioclk), 
+    .txserdesstrobe(txserdesstrobe), 
+    .reset(reset), 
+    .gclk(gclk), 
+    .datain(datain), 
+    .dataout_p(dataout_p), 
+    .dataout_n(dataout_n)
+    );
+
+

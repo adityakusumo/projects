@@ -27,6 +27,17 @@
 - Double row header J1 -> QMtech U8 pin num. 3-22 (see firmware ucf constraint for more details)
 3. Connect both LCD flexible cable to MFDB1-V2.0 board FPC connector
 
+## Running Demo
+
+<img src="image/lcd_test_demo.gif" width="600" alt="LCD Test Demo">
+
 > [!note]
 > Please see "image" and "reference" folder for more details
+
+## Firmware Flash Guide
+
+There are 2 version of this tester firmware, ISE and Litex version. Bitstream for both file can be found at:
+
+- ISE: inside Firmware/LVDS_Tester_LX25_v2/boot/
+- Litex: inside Firmware/qmtech_xc6slx25_vga2lvds/bitstream/
         

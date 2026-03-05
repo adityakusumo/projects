@@ -1,0 +1,5 @@
+verilog work "serdes_n_to_1_s8_diff.v"
+verilog work "clock_generator_sdr_s8_diff.v"
+verilog work "lvds_transmit_verilog.v"
+verilog work "tb_lvds_transmit.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

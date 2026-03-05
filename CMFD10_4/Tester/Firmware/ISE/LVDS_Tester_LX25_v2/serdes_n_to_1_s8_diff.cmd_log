@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj LVDS_GenManual_LX25_mb -o /home/dit/Xilinx_Prj/ISE/CMFD_10_Mockup/LVDS_Tester_LX25_v2/serdes_n_to_1_s8_diff.tfi -lib work /home/dit/Xilinx_Prj/ISE/CMFD_10_Mockup/LVDS_Tester_LX25_v2//serdes_n_to_1_s8_diff.v -module serdes_n_to_1_s8_diff -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

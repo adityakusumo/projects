@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+clock_generator_sdr_s8_diff instance_name (
+    .clkin_p(clkin_p), 
+    .clkin_n(clkin_n), 
+    .ioclka(ioclka), 
+    .serdesstrobea(serdesstrobea), 
+    .ioclkbp(ioclkbp), 
+    .ioclkbn(ioclkbn), 
+    .serdesstrobeb(serdesstrobeb), 
+    .gclk(gclk)
+    );
+
+

@@ -1,0 +1,86 @@
+###!!!QMTech Module!!!
+## Setting Design Goals& Strategy untuk tester cek pixel lcd :
+## Kontrol dg diskrit : Timing Performance -> Performance with Physical Synthesis
+# Pin Locations
+NET "clk_in"	LOC = A10 | IOSTANDARD=LVCMOS33 ;
+#NET "clk_in" TNM_NET = clk_in;
+#TIMESPEC TS_clk_in = PERIOD "clk_in" 20 ns HIGH 50%;
+
+NET "rst_n"		LOC = D5 | IOSTANDARD=LVCMOS33 | PULLDOWN;
+#PIN "rst_n_IBUF_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# User Button
+NET "usr_btn[0]"		LOC = T8 | IOSTANDARD=LVCMOS33; #P12 |	IOSTANDARD=LVCMOS33 | PULLUP;	#T8 | IOSTANDARD=LVCMOS33;
+NET "usr_btn[1]"		LOC = R7 | IOSTANDARD=LVCMOS33;
+
+# User LED
+NET "led_o[0]"	LOC = R9	| IOSTANDARD=LVCMOS33;	#R16 |	IOSTANDARD=LVCMOS33;
+NET "led_o[1]"	LOC = R15 |	IOSTANDARD=LVCMOS33;
+NET "led_o[2]"	LOC = T14 |	IOSTANDARD=LVCMOS33;
+
+NET "bist_o"	LOC = B6 |	IOSTANDARD=LVCMOS33;
+
+# UART Debug
+#NET "tx_o"		LOC = M11 |	IOSTANDARD=LVCMOS33;
+#NET "rx_i"		LOC = L10 |	IOSTANDARD=LVCMOS33;	#P12 |	IOSTANDARD=LVCMOS33;
+
+##LVDS Transmit 2!!!!	QMTech
+NET data_out_p2[*]				IOSTANDARD=LVDS_33;
+NET data_out_n2[*]				IOSTANDARD=LVDS_33;
+NET clk_out_p2						IOSTANDARD=LVDS_33;
+NET clk_out_n2						IOSTANDARD=LVDS_33;
+
+NET data_out_p2[0] 				LOC = C13 |	DIFF_TERM = TRUE;#B5
+NET data_out_n2[0] 				LOC = A13 |	DIFF_TERM = TRUE;#B6
+
+NET data_out_p2[1] 				LOC = B12 |	DIFF_TERM = TRUE;#B7
+NET data_out_n2[1] 				LOC = A12 |	DIFF_TERM = TRUE;#B8
+
+NET data_out_p2[2] 				LOC = C11 |	DIFF_TERM = TRUE;#A9
+NET data_out_n2[2] 				LOC = A11 |	DIFF_TERM = TRUE;#A10
+
+NET clk_out_p2						LOC = C9 |	DIFF_TERM = TRUE;#B11
+NET clk_out_n2						LOC = A9 |	DIFF_TERM = TRUE;#B12
+
+NET data_out_p2[3] 				LOC = B8 |	DIFF_TERM = TRUE;#B15
+NET data_out_n2[3] 				LOC = A8 |	DIFF_TERM = TRUE;#B16
+
+
+#NET data_out_p2[0] 				LOC = F7 |	DIFF_TERM = FALSE;#B5
+#NET data_out_n2[0] 				LOC = E6 |	DIFF_TERM = FALSE;#B6
+#
+#NET data_out_p2[1] 				LOC = C7 |	DIFF_TERM = FALSE;#B7
+#NET data_out_n2[1] 				LOC = A7 |	DIFF_TERM = FALSE;#B8
+#
+#NET data_out_p2[2] 				LOC = D6 |	DIFF_TERM = FALSE;#A9
+#NET data_out_n2[2] 				LOC = C6 |	DIFF_TERM = FALSE;#A10
+#
+#NET clk_out_p2						LOC = C9 |	DIFF_TERM = FALSE;#B11
+#NET clk_out_n2						LOC = A9 |	DIFF_TERM = FALSE;#B12
+#
+#NET data_out_p2[3] 				LOC = B8 |	DIFF_TERM = FALSE;#B15
+#NET data_out_n2[3] 				LOC = A8 |	DIFF_TERM = FALSE;#B16
+
+
+#NET data_out_p2[0] 				LOC = B8 |	DIFF_TERM = FALSE;#B5
+#NET data_out_n2[0] 				LOC = A8 |	DIFF_TERM = FALSE;#B6
+#
+#NET data_out_p2[1] 				LOC = C7 |	DIFF_TERM = FALSE;#B7
+#NET data_out_n2[1] 				LOC = A7 |	DIFF_TERM = FALSE;#B8
+#
+#NET data_out_p2[2] 				LOC = B6 |	DIFF_TERM = FALSE;#A9
+#NET data_out_n2[2] 				LOC = A6 |	DIFF_TERM = FALSE;#A10
+#
+#NET clk_out_p2						LOC = E10 |	DIFF_TERM = FALSE;#B11
+#NET clk_out_n2						LOC = C10 |	DIFF_TERM = FALSE;#B12
+#
+#NET data_out_p2[3] 				LOC = B5 |	DIFF_TERM = FALSE;#B15
+#NET data_out_n2[3] 				LOC = A5 |	DIFF_TERM = FALSE;#B16
+
+#PIN "clk_xxmhzbuf_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "clk_in_BUFGP/BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#NET "clk_in" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "*bufio2_inst1.I" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#PIN "LVDS_Tx2/u_clk_gen/clk_ibuf_inst.O" CLOCK_DEDICATED_ROUTE = FALSE;

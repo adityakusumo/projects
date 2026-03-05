@@ -1,0 +1,4 @@
+vhdl work "controller.vhd"
+vhdl work "clk_functional.vhd"
+verilog work "blink_led.v"
+vhdl work "topmod.vhd"

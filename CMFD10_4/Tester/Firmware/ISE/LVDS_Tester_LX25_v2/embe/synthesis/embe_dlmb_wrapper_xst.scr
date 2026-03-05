@@ -1,0 +1,14 @@
+set -tmpdir D:\Xilinx_Prj\CMFD_Tester\LVDS_GenManual_LX25_mb\embe\synthesis\xst_temp_dir\
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc6slx25ftg256-2
+-top embe_dlmb_wrapper
+-ifmt MIXED
+-ifn embe_dlmb_wrapper_xst.prj
+-ofn ../implementation/embe_dlmb_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"D:\Xilinx_Prj\CMFD_Tester\LVDS_GenManual_LX25_mb\embe\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\data\wizards\BsbCores\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\data\wizards\ipxact\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
