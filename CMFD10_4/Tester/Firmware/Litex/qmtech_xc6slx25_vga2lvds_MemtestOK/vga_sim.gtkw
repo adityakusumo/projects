@@ -1,0 +1,53 @@
+[*]
+[*] GTKWave Analyzer v3.3.126 (w)1999-2026 BSI
+[*] Wed Mar  4 03:36:52 2026
+[*]
+[dumpfile] "/home/dit/Git/projects/CMFD10_4/Tester/Firmware/Litex/qmtech_xc6slx25_vga2lvds/vga_sim.vcd"
+[dumpfile_mtime] "Wed Mar  4 03:31:15 2026"
+[dumpfile_size] 23595058
+[savefile] "/home/dit/Git/projects/CMFD10_4/Tester/Firmware/Litex/qmtech_xc6slx25_vga2lvds/vga_sim.gtkw"
+[timestart] 4072000
+[size] 1920 1033
+[pos] -26 -23
+*-19.900000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 269
+[signals_width] 166
+[sst_expanded] 1
+[sst_vpaned_height] 307
+@200
+-Clock & Control
+@28
+VGAGenerator.sys_clk
+VGAGenerator.rainbow
+@200
+-Sync & DE
+@28
+VGAGenerator.hsync
+VGAGenerator.vsync
+VGAGenerator.de
+@200
+-Counters
+@24
+VGAGenerator.px[9:0]
+@25
+VGAGenerator.py[10:0]
+@24
+VGAGenerator.hcount[9:0]
+VGAGenerator.vcount[10:0]
+@28
+VGAGenerator.hcount_ov
+VGAGenerator.vcount_ov
+@200
+-RGB Output (hex)
+@22
+VGAGenerator.r[7:0]
+VGAGenerator.g[7:0]
+VGAGenerator.b[7:0]
+@200
+-Rainbow internals
+@22
+VGAGenerator.r_rainbow[7:0]
+VGAGenerator.g_rainbow[7:0]
+VGAGenerator.b_rainbow[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

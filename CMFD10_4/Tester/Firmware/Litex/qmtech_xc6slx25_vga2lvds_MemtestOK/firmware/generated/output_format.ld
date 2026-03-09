@@ -1,0 +1,1 @@
+/home/dit/Remote_Syncthing/litex_prj/qmtech_xc6slx25_vga2lvds/build/spartan6_board/software/include/generated/output_format.ld
