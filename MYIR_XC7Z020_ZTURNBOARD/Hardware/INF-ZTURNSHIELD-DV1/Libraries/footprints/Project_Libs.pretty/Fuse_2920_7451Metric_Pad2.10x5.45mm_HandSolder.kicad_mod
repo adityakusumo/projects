@@ -1,0 +1,215 @@
+(footprint "Fuse_2920_7451Metric_Pad2.10x5.45mm_HandSolder"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Fuse SMD 2920 (7451 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: http://www.megastar.com/products/fusetronic/polyswitch/PDF/smd2920.pdf), generated with kicad-footprint-generator")
+	(tags "fuse handsolder")
+	(property "Reference" "F1"
+		(at -3.7684 -3.8116 180)
+		(layer "F.SilkS")
+		(uuid "eb8f35ed-6129-4e7b-b38e-a54a5c918b31")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "2920L050DR"
+		(at 0 3.68 180)
+		(layer "F.Fab")
+		(uuid "8642d333-bc66-49bf-826e-ab0ec2bd2017")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e6e8e984-7406-493a-af5a-af2db55a553f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2e352d22-8e50-465c-ab44-3bb3f0e05a83")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Fuse"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e7eb5ebc-c106-4934-b67d-75325b4704c8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PN" "2920L050DR"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ff24e3f-6f4c-4d2b-ada5-dfd1644420e0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.203752 -2.67)
+		(end 2.203752 -2.67)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "db20d444-5614-4dc5-97d1-267903fda85f")
+	)
+	(fp_line
+		(start -2.203752 2.67)
+		(end 2.203752 2.67)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5426ec37-95d4-4ac9-bbeb-ed332c39796e")
+	)
+	(fp_line
+		(start -4.78 -2.98)
+		(end 4.78 -2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f9020bc6-080f-4118-b3a2-b20138381b56")
+	)
+	(fp_line
+		(start -4.78 2.98)
+		(end -4.78 -2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "df53169e-3d0b-41af-aa2e-8f758b9c9d0b")
+	)
+	(fp_line
+		(start 4.78 -2.98)
+		(end 4.78 2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b4c3da9a-5b2d-446e-90e1-5c30aaadae79")
+	)
+	(fp_line
+		(start 4.78 2.98)
+		(end -4.78 2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3cec444e-4192-4a68-9e37-87a5fa848af6")
+	)
+	(fp_line
+		(start -3.6775 -2.56)
+		(end 3.6775 -2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f0b5cee4-2be2-4672-abe4-4c3567d38104")
+	)
+	(fp_line
+		(start -3.6775 2.56)
+		(end -3.6775 -2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7c357671-8b69-4794-94ed-7e54fa37760c")
+	)
+	(fp_line
+		(start 3.6775 -2.56)
+		(end 3.6775 2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f79ad168-eb7f-4572-8304-233591e393c4")
+	)
+	(fp_line
+		(start 3.6775 2.56)
+		(end -3.6775 2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ceb7b0e7-4360-4871-aa27-55aa730a576b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "909229fb-5c6d-48cd-9fbd-a5b58cea3931")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -3.475 0)
+		(size 2.1 5.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.119048)
+		(uuid "5a674814-7d49-4a4a-8140-c4d0025e9545")
+	)
+	(pad "2" smd roundrect
+		(at 3.475 0)
+		(size 2.1 5.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.119048)
+		(uuid "23584aae-ec15-48bd-934d-79e832dc417f")
+	)
+	(model "${KIPRJMOD}/Libraries/3dshapes/2920L185DR.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

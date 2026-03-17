@@ -1,0 +1,257 @@
+(footprint "L_Bourns-SRN8040_8x8.15mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Bourns SRN8040 series SMD inductor 8x8.15mm, https://www.bourns.com/docs/Product-Datasheets/SRN8040.pdf")
+	(tags "Bourns SRN8040 SMD inductor")
+	(property "Reference" "L1"
+		(at 0.09 -5.23 0)
+		(layer "F.SilkS")
+		(uuid "485be57a-7d41-42b9-866d-6de0f1ccd090")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "33u"
+		(at 0.17 5.23 0)
+		(layer "F.Fab")
+		(uuid "88106578-fed0-4dca-b1f9-7fc6480fa2ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f7cd2d29-ecfe-424a-b046-1204a95c53a1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3f75b44a-051e-4df4-b78d-d0cbfc340b73")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Inductor"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7776cf9-7bd5-4593-8da4-de64d2bf921b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PN" "-"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4758c66f-7565-411b-ac48-0269756bed70")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.25 4.2)
+		(end 1.25 4.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2c309684-3ec2-4be4-9053-0808fc9cf49c")
+	)
+	(fp_line
+		(start 1.25 -4.2)
+		(end -1.25 -4.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "474d36b5-2cd1-4121-bb3a-df6ee73bf819")
+	)
+	(fp_line
+		(start -4.35 -4.35)
+		(end -4.35 4.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2280b0bf-1466-43b1-8f7f-f5d04689e408")
+	)
+	(fp_line
+		(start -4.35 -4.35)
+		(end 4.35 -4.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e8f2af2d-c481-4ec6-808d-d6ada04dc9f4")
+	)
+	(fp_line
+		(start -4.35 4.35)
+		(end 4.35 4.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "024ee48a-21e1-4d81-9ea0-8e406649b921")
+	)
+	(fp_line
+		(start 4.35 -4.35)
+		(end 4.35 4.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0f53f811-c0db-4615-bfdc-6ac3e3f08904")
+	)
+	(fp_line
+		(start -4 -1.96)
+		(end -4 1.96)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9533aa91-dd21-4544-a969-245ce910b7ef")
+	)
+	(fp_line
+		(start -1.8 -4.075)
+		(end 1.8 -4.075)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4093108e-9111-43ed-ab79-0417e158d938")
+	)
+	(fp_line
+		(start 1.8 4.075)
+		(end -1.8 4.075)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "37c6efef-acc9-4625-9baf-1c06d3008ffd")
+	)
+	(fp_line
+		(start 4 -1.96)
+		(end 4 1.96)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "096fe62c-dcc9-4d80-b134-64204ffb3b34")
+	)
+	(fp_arc
+		(start -3.99824 -1.964613)
+		(mid -3.085179 -3.213611)
+		(end -1.8 -4.075)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1ef19c54-0190-40bb-b957-c3c7698ac4c2")
+	)
+	(fp_arc
+		(start -1.804314 4.072598)
+		(mid -3.088411 3.209878)
+		(end -4 1.96)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b0989962-f88b-4c05-bc60-7cf83d2a8aac")
+	)
+	(fp_arc
+		(start 1.799817 -4.074587)
+		(mid 3.086639 -3.211582)
+		(end 4 -1.96)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "784d74fd-d03e-431b-b343-a2f9b4769a09")
+	)
+	(fp_arc
+		(start 3.99824 1.964613)
+		(mid 3.085179 3.213611)
+		(end 1.8 4.075)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "99b307f2-ec86-4bfc-9eb8-74cf6006a323")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.127 0 0)
+		(layer "F.Fab")
+		(uuid "bbc82eab-7a2d-43ad-af01-b7dd91275406")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.8 0)
+		(size 2.6 8.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "ffdb9d82-1af9-4cbf-9d32-1d13ff9f9548")
+	)
+	(pad "2" smd rect
+		(at 2.8 0)
+		(size 2.6 8.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "a157db7e-6025-415b-a02a-238428342556")
+	)
+	(model "${KIPRJMOD}/Libraries/3dshapes/SND0705.STEP"
+		(offset
+			(xyz 0 0 5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 180)
+		)
+	)
+)

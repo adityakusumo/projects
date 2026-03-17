@@ -1,0 +1,141 @@
+(footprint "GDT_2pin_Tube"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 5.207 -11.0744 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d59ca601-3bc6-448b-ba7f-df07a7ae990f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "GDT_2pin_Tube"
+		(at 5.207 -5.9944 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c18b3f40-5e64-4aff-be9b-b3db89ea6e8a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f3974f61-8b40-4df3-83e3-a4465e7596dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb10e5e3-7666-4282-8b24-bdfd7d2a12f9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7e1a3834-6a39-4d45-ab32-27ee3043aeb0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 8.2677 3.9878)
+		(end 1.8923 -3.9878)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "89f72272-6755-45dc-8b94-c2415e29a434")
+	)
+	(fp_poly
+		(pts
+			(xy 3.429 -0.0254) (xy 1.9812 0.5588) (xy 1.9812 -0.5588)
+		)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "c893f5f1-bbbf-4910-89ae-e3bb5cb6065c")
+	)
+	(fp_poly
+		(pts
+			(xy 6.8326 0.0254) (xy 8.2804 -0.5588) (xy 8.2804 0.5588)
+		)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "e30f2d77-78e4-4a01-be5d-d9c4fd8c1806")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 5.207 -8.0744 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "68448a6e-e8f9-4288-b697-83c5d8ff2c88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2.5 2.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6e558185-757d-4432-b522-9c98c796f47f")
+	)
+	(pad "3" thru_hole circle
+		(at 10.16 0)
+		(size 2.5 2.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c8f18a44-96db-4665-99c5-7370412a2276")
+	)
+	(model "${KIPRJMOD}/Libraries/3dshapes/gasDischargeTubeA.STEP"
+		(offset
+			(xyz 2 0 4)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -90)
+		)
+	)
+)

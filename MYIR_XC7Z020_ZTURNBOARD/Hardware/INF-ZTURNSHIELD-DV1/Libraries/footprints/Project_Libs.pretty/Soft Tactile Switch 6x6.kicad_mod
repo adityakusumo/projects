@@ -1,0 +1,164 @@
+(footprint "Soft Tactile Switch 6x6"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -2.8956 -7.0104 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9f06893b-8c59-4729-8d7a-66b0de81250c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "1Z_button"
+		(at -1.324172 7.1882 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "ac9a6fee-7b37-472a-a831-92d35d268dc1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9c09f980-3272-40dc-94ac-5d7d35776fbf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb8014fd-47f3-45dc-b4b0-dbfd2f6cbd2b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c07a6394-b3f2-4d19-a8cd-8e3b87565cb8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.9591 -2.9337)
+		(end 2.9591 -2.9337)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7328a55a-6fe1-4aeb-912c-4ea65c72eb6f")
+	)
+	(fp_line
+		(start -2.9591 -1.0414)
+		(end -2.9591 -2.9337)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4c7e0aa8-63d6-4bff-88aa-64f636f5b95e")
+	)
+	(fp_line
+		(start -2.9591 2.9591)
+		(end -2.9591 1.0668)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ff2c165b-fcf1-4e49-a130-75315ee7c31f")
+	)
+	(fp_line
+		(start -2.9591 2.9591)
+		(end 2.9591 2.9591)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b81bd43c-084d-4a5d-88ab-195d5e5035a2")
+	)
+	(fp_line
+		(start 2.9591 -1.0414)
+		(end 2.9591 -2.9337)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9124d28b-b335-4013-a30f-8fe9c53e5b12")
+	)
+	(fp_line
+		(start 2.9591 2.9591)
+		(end 2.9591 1.0668)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "334fe293-3e67-4319-8c33-ffefcb519490")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -2.8956 -7.0104 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5dd34e0e-3803-4e6f-a482-1581e1894ab9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -3.302 0.0508 180)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "c4e5f4b1-3784-4173-92ec-f445bea03d2c")
+	)
+	(pad "2" smd roundrect
+		(at 3.302 0.0254 180)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "38d2e88e-817b-499b-a8dc-6ffe82e53baa")
+	)
+	(model "${KIPRJMOD}/Libraries/3dshapes/Tactle_Switch_6x6mm_Soft.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 180)
+		)
+	)
+)

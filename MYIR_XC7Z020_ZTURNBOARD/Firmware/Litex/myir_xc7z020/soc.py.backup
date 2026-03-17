@@ -1,0 +1,201 @@
+from migen import *
+from migen.genlib.resetsync import AsyncResetSynchronizer
+
+from litex.gen import *
+from litei2c import LiteI2C
+from litex.soc.cores.clock import *
+# from litex.soc.cores.gpio import *
+from litex.soc.integration.soc_core import *
+from litex.soc.integration.builder import *
+from litex.soc.cores.led import LedChaser
+from litex.soc.cores.gpio import GPIOOut
+
+from litex.build.parser import LiteXArgumentParser
+
+# from litex_boards.platforms import alinx_ax7020
+from litex.soc.integration.soc import SoCRegion
+from litex.soc.cores.cpu import zynq7000
+from litex.soc.interconnect import wishbone, axi
+
+import zynq_board
+
+kB = 1024
+mB = 1024*kB
+
+
+# CRG ----------------------------------------------------------------------------------------------
+class CRG(Module):
+    def __init__(self, platform, sys_clk_freq):
+        self.clock_domains.cd_sys = ClockDomain()
+
+        clk = platform.request("clk_osc")
+        rst_n = platform.request("rst_btn", 0) # Menjadikan button0 sebagai reset
+
+        self.comb += self.cd_sys.clk.eq(clk)
+        self.specials += AsyncResetSynchronizer(self.cd_sys, ~rst_n)
+
+# Create a led blinker module
+class Blink(Module):
+    def __init__(self, led):
+        self.counter = Signal(25)
+        
+        # combinatorial assignment
+        self.comb += [
+            led.eq(self.counter[24])
+        ]
+        
+        # synchronous assignment
+        self.sync += self.counter.eq(self.counter + 1)
+
+class Blinker(Module):
+    def __init__(self, led, sys_clk_freq):
+        # 1. Calculate the 'Limit' (e.g., 25,000,000)
+        # Toggles every 0.5s for a 1s period
+        limit_value = 12_000_000#int(sys_clk_freq / 1)
+
+        # 2. Define the Counter Signal
+        # max=limit_value tells Migen to calculate the bit-width (e.g., 25 bits)
+        counter = Signal(max=limit_value)
+
+        # 3. Synchronous Logic (always @(posedge clk))
+        self.sync += [
+            # Check if counter reached (25,000,000 - 1)
+            If(counter == (limit_value - 1),
+                counter.eq(0),     # Reset
+                led.eq(~led)       # Toggle
+            ).Else(
+                counter.eq(counter + 1)
+            )
+        ]
+
+class RGBCycler(Module):
+    def __init__(self, led_r, led_g, led_b, btn, sys_clk_freq):
+        sys_clk_freq=int(sys_clk_freq)
+        # Colors: black, white, red, green, blue, yellow, magenta, cyan
+        # Encoded as (R, G, B) bits
+        colors = [
+            (0, 0, 0),  # black
+            (1, 1, 1),  # white
+            (1, 0, 0),  # red
+            (0, 1, 0),  # green
+            (0, 0, 1),  # blue
+            (1, 1, 0),  # yellow
+            (1, 0, 1),  # magenta
+            (0, 1, 1),  # cyan
+        ]
+        num_colors = len(colors)  # 8
+
+        # Counter counts up to sys_clk_freq for a 1s period per color
+        counter = Signal(max=int(sys_clk_freq*2))
+
+        # 3-bit state to index into the color table (0–7)
+        state = Signal(3)
+
+        # Synchronous counter and state advance
+        self.sync += [
+            If(btn,
+                If(counter == ((sys_clk_freq*2) - 1),
+                    counter.eq(0),
+                    If(state == (num_colors - 1),
+                        state.eq(0)
+                    ).Else(
+                        state.eq(state + 1)
+                    )
+                ).Else(
+                    counter.eq(counter + 1)
+                )
+            ).Else(
+                counter.eq(0),
+                state.eq(0)
+            )
+        ]
+
+        # Combinational output: decode state to RGB
+        # Build a chain of If/Elif for each color
+        cases = {i: [led_r.eq(~r), led_g.eq(~g), led_b.eq(~b)] for i, (r, g, b) in enumerate(colors)}
+        self.comb += [
+            If(btn,
+                Case(state, cases)
+            ).Else(
+                led_r.eq(1), led_g.eq(1), led_b.eq(1)
+            )
+        ]
+
+
+# BaseSoC ------------------------------------------------------------------------------------------
+class BaseSoC(SoCCore):
+    def __init__(self, sys_clk_freq=int(12e6), **kwargs):
+
+        platform = zynq_board.Platform()
+
+        SoCCore.__init__(self, platform, sys_clk_freq,      
+            ident                   = "LiteX SoC on XC7Z020.",
+            **kwargs
+        )
+
+        self.submodules.crg = CRG(platform, sys_clk_freq)
+
+        # ledsanim = LedsAnim(pads=platform.request_all("user_led"), sys_clk_freq=sys_clk_freq, period=0.03)
+        # self.submodules.ledsanim = ledsanim
+        # self.add_csr("ledsanim")
+        
+        # RAM for BootLoader -----------------------------------------------------------------------
+        # BASE_MEM1_ORIGIN        = 0x60000000
+        # self.add_ram(name="main_ram", origin=BASE_MEM1_ORIGIN, size=10*kB)
+        
+        # uartbone
+        #self.add_uartbone(uart_name="serial", baudrate=115200) 
+
+        #i2c
+        pad_i2c = platform.request("i2c", 0)
+        self.submodules.i2c = LiteI2C(pads=pad_i2c, sys_clk_freq=sys_clk_freq)
+        # self.add_csr("i2c")
+
+        #button
+        user_btn = platform.request("user_btn", 0)
+
+        #blink led
+        led_b = platform.request("rgb_led", 0)
+        led_g = platform.request("rgb_led", 1)
+        led_r = platform.request("rgb_led", 2)
+        # self.submodules.blinker = Blinker(led0, sys_clk_freq)
+        # self.submodules.rgb_cycler = RGBCycler(led_r, led_g, led_b, user_btn, sys_clk_freq)
+        
+        # # GPIO LED
+        # # GPIO -------------------------------------------------------------------------------------
+        # user_leds = platform.request_all("gpio_out")
+        # self.gpio = GPIOOut(user_leds)
+        # self.add_csr("gpio")
+        status_led = platform.request("user_led", 0)  # adjust to your platform's led resource name
+        self.submodules.status_led = GPIOOut(status_led)
+        
+                 
+
+# Build --------------------------------------------------------------------------------------------
+def main():    
+    parser = LiteXArgumentParser(platform=zynq_board.Platform, description="LiteX SoC on XC7Z020.")
+    # parser.add_target_argument("--flash",           action="store_true",    help="Flash bitstream")
+    parser.add_target_argument("--sys-clk-freq",    default=12e6,          help="System clock frequency.")
+    args = parser.parse_args()
+
+    soc = BaseSoC(
+        # toolchain           = args.toolchain,
+        sys_clk_freq        = args.sys_clk_freq,
+        **parser.soc_argdict
+    )
+    # builder = Builder(soc, **parser.builder_argdict)
+    builder = Builder(soc, compile_gateware=True, compile_software=True)
+
+    if args.build:
+        builder.build(**parser.toolchain_argdict)
+    
+    if args.load:
+        prog = soc.platform.create_programmer()
+        prog.load_bitstream(builder.get_bitstream_filename(mode="sram", ext=".bit"))
+
+    # if args.flash:
+    #     prog = soc.platform.create_programmer()
+    #     prog.flash(0, builder.get_bitstream_filename(mode="flash", ext=".bit"), fpga_part="xc6slx25ftg256")
+
+if __name__ == "__main__":
+    main()

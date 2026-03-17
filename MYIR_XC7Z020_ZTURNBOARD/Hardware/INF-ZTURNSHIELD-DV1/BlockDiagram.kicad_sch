@@ -1,0 +1,503 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "55a7c649-8776-4e7c-8df3-f29e929bb631")
+	(paper "A4")
+	(lib_symbols)
+	(text "Zturn Board\nXC7Z020"
+		(exclude_from_sim no)
+		(at 152.146 87.376 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "1e90d5c9-c87d-4668-bc4d-f231f169866c")
+	)
+	(text "ADC\n"
+		(exclude_from_sim no)
+		(at 86.106 104.521 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "29ef1ff4-e846-45e2-bda1-9101d82509b5")
+	)
+	(text "LVDS"
+		(exclude_from_sim no)
+		(at 135.89 136.779 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "4b6ca2df-94ae-420b-8d89-18d176c19eb3")
+	)
+	(text "Power\nSupply"
+		(exclude_from_sim no)
+		(at 151.384 39.37 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "61182a84-a8f3-4ddc-9c0c-2487125d8efd")
+	)
+	(text "VID\nDECODER"
+		(exclude_from_sim no)
+		(at 85.598 74.93 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "67dee9b9-a00b-4d76-b281-05ef71f6666a")
+	)
+	(text "LCD"
+		(exclude_from_sim no)
+		(at 215.138 51.562 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "76407374-51c3-40e0-999b-e1c4cdde75cc")
+	)
+	(text "DAC"
+		(exclude_from_sim no)
+		(at 215.138 81.534 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "912cab31-8f3b-42bd-8edf-7505d387af52")
+	)
+	(text "VID\nENCODER\n"
+		(exclude_from_sim no)
+		(at 217.551 112.903 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "abe5e27b-d32d-46cf-8717-83ee797c15e0")
+	)
+	(text "I/O\n"
+		(exclude_from_sim no)
+		(at 170.434 136.525 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "d0b0517f-268a-4427-8d78-e5a51439af8e")
+	)
+	(sheet
+		(at 123.19 61.595)
+		(size 58.42 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 194 0 0 1.0000)
+		)
+		(uuid "0b8d4591-5dd6-4e94-a45f-183df33b0c02")
+		(property "Sheetname" "Z-TurnBoard"
+			(at 123.19 60.8834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheet3.kicad_sch"
+			(at 123.19 112.9796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 198.755 41.275)
+		(size 33.02 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "225ca4d0-84a2-4a3b-90aa-0017f9791062")
+		(property "Sheetname" "LCD_CTRL"
+			(at 198.755 40.5634 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheet4.kicad_sch"
+			(at 198.755 62.1796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 137.795 28.575)
+		(size 27.94 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "3f02f75c-3a0f-48f9-939a-71be6b7789e6")
+		(property "Sheetname" "PSU"
+			(at 137.795 27.8634 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PSU.kicad_sch"
+			(at 137.795 52.0196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 127)
+		(size 26.035 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "52a205a7-ad88-439d-b404-a6c0c8646949")
+		(property "Sheetname" "IO CAP"
+			(at 157.48 126.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheet2.kicad_sch"
+			(at 157.48 146.6346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 199.39 99.06)
+		(size 36.83 29.21)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "549412f0-b8a0-48c7-83a5-c9f55a5b5ae0")
+		(property "Sheetname" "VIDEO_ENCODER"
+			(at 199.39 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "VIDEO_ENCODER.kicad_sch"
+			(at 199.39 128.8546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 67.945 62.865)
+		(size 36.195 26.67)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "65b4e0f9-f078-4d93-9740-605a8f56159f")
+		(property "Sheetname" "VIDEO_DECODER"
+			(at 67.945 62.1534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "VIDEO_DECODER.kicad_sch"
+			(at 67.945 90.1196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 198.755 71.755)
+		(size 33.02 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "88d5276a-25d8-4df0-9434-79269f0f4b5d")
+		(property "Sheetname" "DAC"
+			(at 198.755 71.0434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DAC.kicad_sch"
+			(at 198.755 91.3896 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 73.66 96.52)
+		(size 24.13 14.605)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "aeaa7219-a7b6-47f5-8350-deac70d3170d")
+		(property "Sheetname" "ADC"
+			(at 73.66 95.8084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 73.66 111.7096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 121.92 127)
+		(size 27.94 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "cf18838e-8d9e-45d3-a736-1fca5b221f7e")
+		(property "Sheetname" "LVDS"
+			(at 121.92 126.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LVDS.kicad_sch"
+			(at 121.92 146.6346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ZTURNSHIELD-V1a"
+				(path "/e5fb06cd-3402-4131-ae10-f0d1d5c11636/73f93fff-8941-4368-8a95-820ae1276974"
+					(page "6")
+				)
+			)
+		)
+	)
+)
