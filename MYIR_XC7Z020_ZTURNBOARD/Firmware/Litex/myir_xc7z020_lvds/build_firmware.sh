@@ -143,6 +143,13 @@ case "$1" in
         xc3sprog -c "$CABLE_TYPE" -I"$BSCAN" "$BITSTREAM"
         ;;
 
+    s)
+        echo "--- Run Simulation ---"
+        litex_sim --cpu-type=vexriscv \
+            --integrated-main-ram-size=0x8000 \
+            --ram-init=firmware/firmware.bin
+        ;;
+
     all)
         echo "--- Full Flow: Build → Firmware → Flash ---"
         "$0" b && "$0" m && "$0" f
