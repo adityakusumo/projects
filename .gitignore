@@ -37,3 +37,93 @@ ise_files/
 !*.v
 !*.ucf
 !*.xise
+
+# Python
+pycache/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+env/
+venv/
+ENV/
+.env
+
+# Virtual environments
+.venv/
+
+# Byte-compiled / optimized files
+*.pyc
+*.pyo
+
+# Distribution / packaging
+build/
+!build/*/gateware/*.sv
+!build/*/gateware/*.v
+!build/*/software/include/
+!build/*/software/*/*.elf
+!build/*/software/*/*.bin
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+# LiteX / Migen specific - generated build outputs
+build/
+*.vcd                # simulation waveforms
+*.gtkw
+*.lxt
+*.vvp
+
+# FPGA vendor tools temporary files
+*.jou
+*.log
+*.str
+*.xpr
+*.cache/
+*.runs/
+*.hw/
+*.sim/
+*.srcs/
+*.gen/
+*.ip_user_files/
+*.eda/
+*.dcp
+*.bit
+*.bin
+*.mcs
+*.pof
+
+# LiteX-Boards specific (if you use it)
+litex_boards/targets/ip/
+litex_boards/targets/libeos/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*\~
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Sphinx / documentation
+docs/_build/
+
+# Coverage / testing
+.coverage
+htmlcov/
+.tox/
+.noseids
